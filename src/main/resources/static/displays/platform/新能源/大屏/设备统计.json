@@ -1,0 +1,31 @@
+{
+  "v": "6.2.1",
+  "p": {
+    "autoAdjustIndex": true,
+    "hierarchicalRendering": true
+  },
+  "a": {
+    "displayType": "platform",
+    "init": "gv.adjustZoom = function () { return 1; }\ngv.setPannable(false)\ngv.setScrollBarVisible(false)"
+  },
+  "d": [
+    {
+      "c": "ht.Node",
+      "i": 8446,
+      "p": {
+        "displayName": "统计信息",
+        "image": "symbols/gauge/统计信息.json",
+        "position": {
+          "x": -7.76668,
+          "y": 104.85022
+        }
+      },
+      "s": {
+        "interactive": true
+      },
+      "a": {
+        "symbol.type": "gauge"
+      }
+    }
+  ]
+}

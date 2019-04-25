@@ -1,0 +1,52 @@
+{
+  "modified": "Wed Jan 02 2019 17:56:53 GMT+0800 (中国标准时间)",
+  "background": "rgb(61,61,61)",
+  "width": 551,
+  "height": 101,
+  "attachStyle": "close",
+  "comps": [
+    {
+      "type": "image",
+      "name": "symbols/htdesign/label/属性框单信息.json",
+      "displayName": "属性框单信息",
+      "rect": [
+        0,
+        0,
+        551,
+        101
+      ]
+    },
+    {
+      "type": "text",
+      "text": "厦门 - 集美育种场",
+      "align": "center",
+      "color": "rgb(247,247,247)",
+      "font": "12px Arial",
+      "scaleX": 2,
+      "scaleY": 2,
+      "rotation": 6.28319,
+      "rect": [
+        357.43924,
+        42.5322,
+        58.23046,
+        20.06385
+      ]
+    },
+    {
+      "type": "text",
+      "text": "图扑集团",
+      "align": "center",
+      "color": "rgb(247,247,247)",
+      "font": "bold 12px Arial",
+      "scaleX": 4,
+      "scaleY": 4,
+      "rotation": 6.28319,
+      "rect": [
+        132.95418,
+        42.78561,
+        34.72587,
+        15.42877
+      ]
+    }
+  ]
+}

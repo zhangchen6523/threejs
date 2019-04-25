@@ -1,0 +1,67 @@
+{
+  "v": "6.2.8",
+  "p": {
+    "background": "rgb(0,0,0)",
+    "envmap": "assets/贴图/环境光/天空.jpg",
+    "autoAdjustIndex": true,
+    "hierarchicalRendering": true,
+    "postProcessingData": {
+      "Bloom": {
+        "enable": true,
+        "strength": 0.2,
+        "threshold": 0.33,
+        "radius": 0.4
+      }
+    }
+  },
+  "d": [
+    {
+      "c": "ht.Node",
+      "i": 327,
+      "p": {
+        "position": {
+          "x": 62.72917,
+          "y": 109.81681
+        },
+        "anchorElevation": 0,
+        "scale": {
+          "x": 0.1,
+          "y": 0.1
+        },
+        "scaleTall": 0.1,
+        "width": 485.74548,
+        "height": 48.0508
+      },
+      "s": {
+        "shape3d": "js/warehouse/models/外景配饰/方-灌木丛.json",
+        "wf.visible": "selected",
+        "shape3d.reverse.cull": true,
+        "envmap": 0.2,
+        "wf.short": true
+      }
+    }
+  ],
+  "scene": {
+    "eye": [
+      226.08195,
+      468.70264,
+      485.89393
+    ],
+    "center": [
+      0,
+      0,
+      0
+    ],
+    "near": 10,
+    "far": 10000000,
+    "background": "rgb(0,0,0)",
+    "gridSize": 50,
+    "gridGap": 50,
+    "gridColor": [
+      0.4,
+      0.75,
+      0.85,
+      1
+    ]
+  }
+}

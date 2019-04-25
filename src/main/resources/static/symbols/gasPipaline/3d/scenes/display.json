@@ -1,0 +1,19 @@
+{
+  "modified": "Tue Dec 25 2018 13:25:34 GMT+0800 (中国标准时间)",
+  "dataBindings": [
+    {
+      "attr": "displayURL",
+      "valueType": "URL",
+      "defaultValue": "displays/industry/factory.json"
+    }
+  ],
+  "snapshotURL": "symbols/basic/snapshot_display.json",
+  "renderHTML": "__ht__function(data, gv, cache) {\n    if (!cache.graphView) {\n        var graphView = cache.graphView = new ht.graph.GraphView();\n        graphView.setScrollBarVisible(false);\n        graphView.layoutHTML = function() {\n            gv.layoutHTML(data, graphView, true);\n            var rect = data.getRect();\n            if (cache.lastWidth !== graphView.getWidth() ||\n                cache.lastHeight !== graphView.getHeight() ||\n                cache.lastZoom !== graphView.getZoom()) {\n                cache.lastWidth = graphView.getWidth();\n                cache.lastHeight = graphView.getHeight();\n                cache.lastZoom = graphView.getZoom();\n                setTimeout(function() {\n                    graphView.fitContent(false);\n                }, 500);\n            }\n        };\n        \n        data.g2dView = graphView\n        if(data.onInit){\n            data.onInit(graphView)\n        }\n    }\n    var displayURL = data.a('displayURL');\n    if (cache.graphView.displayURL !== displayURL) {\n        cache.graphView.dm().clear();\n        cache.graphView.displayURL = displayURL;\n        if (displayURL) {\n            ht.Default.xhrLoad(displayURL, function(json) {\n                cache.graphView.dm().deserialize(json);\n                setTimeout(function() {\n                    cache.graphView.fitContent(true);\n                }, 500);\n            });\n        }\n    }\n    return cache.graphView;\n}",
+  "width": 200,
+  "height": 120,
+  "scrollable": true,
+  "interactive": true,
+  "pixelPerfect": false,
+  "attachStyle": "close",
+  "comps": []
+}

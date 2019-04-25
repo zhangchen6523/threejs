@@ -1,0 +1,143 @@
+{
+  "v": "6.2.7",
+  "p": {
+    "background": "rgb(61,61,61)",
+    "envmap": "assets/贴图/环境光/室内2.jpg",
+    "autoAdjustIndex": true,
+    "hierarchicalRendering": true,
+    "postProcessingData": {
+      "Bloom": {
+        "enable": false,
+        "strength": 0.36,
+        "threshold": 0.18,
+        "radius": 0.4
+      }
+    }
+  },
+  "d": [
+    {
+      "c": "ht.Node",
+      "i": 2250,
+      "p": {
+        "displayName": "底图",
+        "anchorElevation": 0,
+        "width": 9726.48491,
+        "height": 7481.91147,
+        "tall": 50
+      },
+      "s": {
+        "all.color": "#DDDDDD",
+        "shape3d": "plane",
+        "shape3d.image": "assets/11111临时文件/99C3CA245EE48A47E08F366B1BFC4F11.jpg",
+        "2d.selectable": false,
+        "3d.selectable": false,
+        "2d.visible": false,
+        "3d.visible": false,
+        "envmap": 0,
+        "2d.movable": false,
+        "3d.movable": false,
+        "2d.editable": false,
+        "3d.editable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 1000,
+      "p": {
+        "displayName": "1号楼",
+        "tag": "detailRoom",
+        "host": {
+          "__i": 1001
+        },
+        "rotation": -0.10472,
+        "position": {
+          "x": -801.9336,
+          "y": -127.14785
+        },
+        "anchorElevation": 0,
+        "scale": {
+          "x": 1,
+          "y": 1.57
+        },
+        "scaleTall": 1,
+        "width": 5507,
+        "height": 5107,
+        "tall": 1000
+      },
+      "s": {
+        "shape3d": "symbols/build/models/大楼/202.json",
+        "shape3d.blend": "rgb(194,223,255)",
+        "select.brightness": 1,
+        "envmap": 0.07,
+        "2d.movable": false,
+        "3d.movable": false,
+        "2d.editable": false,
+        "3d.editable": false,
+        "wf.short": true
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 1002,
+      "p": {
+        "displayName": "传感器1",
+        "parent": {
+          "__i": 1000
+        },
+        "tag": "cgq1",
+        "host": {
+          "__i": 1000
+        },
+        "rotation": -0.10472,
+        "position": {
+          "x": -801.9336,
+          "y": -127.14785
+        },
+        "anchorElevation": 0,
+        "scale": {
+          "x": 1,
+          "y": 1.57
+        },
+        "anchorElevation": 0,
+        "width": 300,
+        "height": 300,
+        "tall": 300
+      },
+      "s": {
+        "all.color": "#60ACFC",
+        "all.reverse.cull": true,
+        "all.transparent": true,
+        "bottom.visible": false,
+        "front.image": "symbols/build/3d场景用/建筑/半透渐变.png",
+        "back.image": "symbols/build/3d场景用/建筑/半透渐变.png",
+        "left.image": "symbols/build/3d场景用/建筑/半透渐变.png",
+        "right.image": "symbols/build/3d场景用/建筑/半透渐变.png",
+        "2d.selectable": true,
+        "3d.selectable": true,
+        "2d.movable": false,
+        "3d.movable": false,
+        "2d.editable": false,
+        "3d.editable": false,
+        "select.brightness": 1
+      }
+    }
+  ],
+  "scene": {
+    "eye": [
+      4023.41825,
+      8876.59701,
+      6008.64778
+    ],
+    "center": [
+      2203.22754,
+      195,
+      -1165.07813
+    ],
+    "near": 10,
+    "far": 2000000,
+    "background": "rgb(61,61,61)",
+    "gridSize": 25,
+    "gridGap": 46,
+    "gridColor": "rgb(49,210,235)"
+  }
+}

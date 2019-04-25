@@ -1,0 +1,92 @@
+{
+  "background": "rgb(166,166,166)",
+  "width": 336,
+  "height": 78,
+  "comps": [
+    {
+      "type": "shape",
+      "background": "rgb(89,87,87)",
+      "borderColor": "rgb(89,87,87)",
+      "borderCap": "round",
+      "shadowColor": "#1ABC9C",
+      "displayName": "數據-詳細（小）",
+      "scaleX": -1,
+      "rotation": 3.14159,
+      "closePath": true,
+      "points": [
+        0,
+        0.00094,
+        0.00073,
+        78,
+        300.19054,
+        77.99916,
+        336,
+        51.47801,
+        335.99987,
+        0
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgb(255,255,255)",
+      "borderColor": "rgb(89,87,87)",
+      "borderCap": "round",
+      "shadowColor": "#1ABC9C",
+      "displayName": "數據-詳細（小）",
+      "scaleX": -1,
+      "rotation": 3.14159,
+      "closePath": true,
+      "points": [
+        3.03144,
+        3.03173,
+        3.03216,
+        74.96866,
+        299.19744,
+        74.96875,
+        332.96856,
+        49.69052,
+        332.96838,
+        3.03125
+      ]
+    },
+    {
+      "type": "text",
+      "text": "可移动货架",
+      "align": "center",
+      "color": "rgb(79,79,79)",
+      "scaleX": 3,
+      "scaleY": 3,
+      "rect": [
+        21.01552,
+        0.468,
+        222.1263,
+        77.79095
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "#D0011B",
+      "borderColor": "#979797",
+      "shadowColor": "#1ABC9C",
+      "points": [
+        0,
+        50.29543,
+        0,
+        77.71665,
+        27.42122,
+        77.71665
+      ]
+    },
+    {
+      "type": "image",
+      "name": "symbols/仓库demo/60-100.json",
+      "displayName": "60-100",
+      "rect": [
+        252.17024,
+        10.36347,
+        58,
+        58
+      ]
+    }
+  ]
+}

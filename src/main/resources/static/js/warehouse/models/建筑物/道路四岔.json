@@ -1,0 +1,13 @@
+{
+  "modelType": "obj",
+  "obj": "assets/objs/建筑物/道路/道路3.obj",
+  "mtl": "assets/objs/建筑物/道路/道路3.mtl",
+  "reverseFlipMtls": "*",
+  "s3": [
+    0.025,
+    0.025,
+    0.025
+  ],
+  "image": "",
+  "prefix": "assets/objs/建筑物/道路/"
+}

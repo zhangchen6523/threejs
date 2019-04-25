@@ -1,0 +1,22 @@
+{
+  "modified": "Tue Feb 19 2019 16:36:20 GMT+0800 (中国标准时间)",
+  "width": 105,
+  "height": 103,
+  "attachStyle": "close",
+  "comps": [
+    {
+      "type": "rect",
+      "background": "rgb(194,194,194)",
+      "borderColor": "#979797",
+      "gradient": "spread.vertical",
+      "gradientColor": "rgb(255,255,255)",
+      "pixelPerfect": true,
+      "rect": [
+        0.06954,
+        0.16683,
+        104.93046,
+        102.83317
+      ]
+    }
+  ]
+}

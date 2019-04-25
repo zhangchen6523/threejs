@@ -1,0 +1,52 @@
+{
+  "modified": "Wed Jan 02 2019 15:29:09 GMT+0800 (中国标准时间)",
+  "background": "rgb(61,61,61)",
+  "width": 357,
+  "height": 65,
+  "attachStyle": "close",
+  "comps": [
+    {
+      "type": "image",
+      "name": "symbols/htdesign/label/属性框单信息.json",
+      "displayName": "属性框单信息",
+      "rect": [
+        0,
+        0,
+        357,
+        65
+      ]
+    },
+    {
+      "type": "text",
+      "text": "妊娠舍",
+      "align": "center",
+      "color": "rgb(247,247,247)",
+      "font": "12px Arial",
+      "scaleX": 2,
+      "scaleY": 2,
+      "rotation": 6.28319,
+      "rect": [
+        223.11503,
+        24.82533,
+        54.85802,
+        20.06385
+      ]
+    },
+    {
+      "type": "text",
+      "text": "3,000",
+      "align": "center",
+      "color": "rgb(247,247,247)",
+      "font": "bold 12px Arial",
+      "scaleX": 4,
+      "scaleY": 4,
+      "rotation": 6.28319,
+      "rect": [
+        78.24301,
+        25.57122,
+        34.72587,
+        15.42877
+      ]
+    }
+  ]
+}

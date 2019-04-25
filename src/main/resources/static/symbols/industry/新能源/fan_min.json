@@ -1,0 +1,130 @@
+{
+  "background": "rgb(44,46,71)",
+  "width": 54,
+  "height": 54,
+  "comps": [
+    {
+      "type": "arc",
+      "background": "rgba(115,36,36,0.5)",
+      "borderColor": "#979797",
+      "arcFrom": -1.5708,
+      "arcTo": 0.5236,
+      "visible": false,
+      "rect": [
+        2,
+        2,
+        50,
+        50
+      ]
+    },
+    {
+      "type": "arc",
+      "background": "rgba(37,115,36,0.5)",
+      "borderColor": "#979797",
+      "arcFrom": 0.5236,
+      "arcTo": 2.61799,
+      "visible": false,
+      "rect": [
+        2,
+        2,
+        50,
+        50
+      ]
+    },
+    {
+      "type": "arc",
+      "background": "rgba(86,36,115,0.5)",
+      "borderColor": "#979797",
+      "arcFrom": 2.61799,
+      "arcTo": 4.71239,
+      "visible": false,
+      "rect": [
+        2,
+        2,
+        50,
+        50
+      ]
+    },
+    {
+      "type": "oval",
+      "background": "rgba(217,217,217,0.5)",
+      "borderColor": "#979797",
+      "visible": false,
+      "rect": [
+        23,
+        23,
+        8,
+        8
+      ]
+    },
+    {
+      "type": "oval",
+      "borderWidth": 1,
+      "borderColor": "rgba(255,255,255, 0.298039215686275)",
+      "rect": [
+        1.99559,
+        2.0006,
+        50,
+        50
+      ]
+    },
+    {
+      "type": "oval",
+      "background": "rgba(0,0,0,0)",
+      "gradient": "radial.center",
+      "gradientColor": "rgba(99,99,99,0.3)",
+      "shadowColor": "rgb(0,0,0)",
+      "shadowBlur": 13,
+      "shadowOffsetX": 0,
+      "shadowOffsetY": 0,
+      "rect": [
+        17,
+        17,
+        20,
+        20
+      ]
+    },
+    {
+      "type": "oval",
+      "background": "rgb(255,255,255)",
+      "rect": [
+        25,
+        25,
+        4,
+        4
+      ]
+    },
+    {
+      "type": "image",
+      "name": "symbols/industry/新能源/leaf.json",
+      "rect": [
+        21.03719,
+        2.83213,
+        7,
+        23
+      ]
+    },
+    {
+      "type": "image",
+      "name": "symbols/industry/新能源/leaf.json",
+      "rotation": 2.0944,
+      "rect": [
+        35.70419,
+        19.72741,
+        7,
+        23
+      ]
+    },
+    {
+      "type": "image",
+      "name": "symbols/industry/新能源/leaf.json",
+      "rotation": -2.0944,
+      "rect": [
+        13.79071,
+        23.95296,
+        7,
+        23
+      ]
+    }
+  ]
+}

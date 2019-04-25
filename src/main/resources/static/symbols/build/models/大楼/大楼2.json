@@ -1,0 +1,9 @@
+{
+  "modelType": "obj",
+  "obj": "assets/objs/大楼/大楼2.obj",
+  "mtl": "assets/objs/大楼/大楼2.mtl",
+  "reverseFlipMtls": "*",
+
+  "image": "",
+  "prefix": "assets/objs/大楼/"
+}

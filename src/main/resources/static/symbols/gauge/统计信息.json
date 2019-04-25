@@ -1,0 +1,354 @@
+{
+  "dataBindings": [],
+  "width": 350,
+  "height": 240,
+  "symbolType": "gauge",
+  "comps": [
+    {
+      "type": "circle",
+      "background": "rgba(3,12,33,0.60)",
+      "borderWidth": 8,
+      "borderColor": "rgba(67,175,222,0.38)",
+      "shadowColor": "#1ABC9C",
+      "rect": [
+        47.72545,
+        48.25837,
+        139.4907,
+        143.44534
+      ]
+    },
+    {
+      "type": "arc",
+      "borderWidth": 8,
+      "borderColor": "rgb(67,176,222)",
+      "arcFrom": 0.94248,
+      "arcTo": 2.35619,
+      "arcClose": false,
+      "shadowColor": "#1ABC9C",
+      "rect": [
+        47.25525,
+        47.77484,
+        140.43111,
+        144.4124
+      ]
+    },
+    {
+      "type": "circle",
+      "borderWidth": 2,
+      "borderColor": "rgb(67,176,222)",
+      "borderCap": "round",
+      "borderPattern": [
+        4,
+        4
+      ],
+      "shadowColor": "#1ABC9C",
+      "rect": [
+        39.3955,
+        39.69226,
+        156.1506,
+        160.57755
+      ]
+    },
+    {
+      "type": "circle",
+      "borderWidth": 1,
+      "borderColor": "rgb(67,176,222)",
+      "borderCap": "round",
+      "shadowColor": "#1ABC9C",
+      "rect": [
+        54.55022,
+        55.27663,
+        125.84115,
+        129.40881
+      ]
+    },
+    {
+      "type": "text",
+      "text": "视频",
+      "color": {
+        "func": "__ht__function(data, view) {\nreturn data.a('selected') === 'video' ? 'rgb(108,230,190)' : 'rgb(67,176,222)'\n}",
+        "value": "rgb(67,176,222)"
+      },
+      "scaleX": 1.5,
+      "scaleY": 1.5,
+      "rect": [
+        232.71562,
+        197.42627,
+        43.51184,
+        9.6898
+      ],
+      "onEnter": "__ht__function(event, data, view, point, width, height) {\ndata.a('selected', 'video')\n}"
+    },
+    {
+      "type": "text",
+      "text": "充电桩",
+      "color": {
+        "func": "__ht__function(data, view) {\nvar selected = data.a('selected')\nreturn (!selected || selected === 'charger') ? 'rgb(108,230,190)' : 'rgb(67,176,222)'\n}",
+        "value": "rgb(108,230,190)"
+      },
+      "scaleX": 1.5,
+      "scaleY": 1.5,
+      "rect": [
+        257.39838,
+        145.4016,
+        43.51184,
+        9.6898
+      ],
+      "onEnter": "__ht__function(event, data, view, point, width, height) {\ndata.a('selected', 'charger')\n}"
+    },
+    {
+      "type": "text",
+      "text": "光伏",
+      "color": {
+        "func": "__ht__function(data, view) {\nreturn data.a('selected') === 'pv' ? 'rgb(108,230,190)' : 'rgb(67,176,222)'\n}",
+        "value": "rgb(67,176,222)"
+      },
+      "scaleX": 1.5,
+      "scaleY": 1.5,
+      "rect": [
+        257.39838,
+        93.37693,
+        43.51184,
+        9.6898
+      ],
+      "onEnter": "__ht__function(event, data, view, point, width, height) {\ndata.a('selected', 'pv')\n}"
+    },
+    {
+      "type": "text",
+      "text": "风电",
+      "color": {
+        "func": "__ht__function(data, view) {\nreturn data.a('selected') === 'wind' ? 'rgb(108,230,190)' : 'rgb(67,176,222)'\n}",
+        "value": "rgb(67,176,222)"
+      },
+      "scaleX": 1.5,
+      "scaleY": 1.5,
+      "rect": [
+        232.71562,
+        41.35225,
+        43.51184,
+        9.6898
+      ],
+      "onEnter": "__ht__function(event, data, view, point, width, height) {\ndata.a('selected', 'wind')\n}"
+    },
+    {
+      "type": "shape",
+      "background": {
+        "func": "__ht__function(data, view) {\nreturn data.a('selected') === 'video' ? 'rgb(108,230,190)' : 'rgb(67,176,222)'\n}",
+        "value": "rgb(67,176,222)"
+      },
+      "shadowColor": "#1ABC9C",
+      "onEnter": "__ht__function(event, data, view, point, width, height) {\ndata.a('selected', 'video')\n}",
+      "points": [
+        195.93134,
+        179.85799,
+        184.71567,
+        170.85057,
+        174.88426,
+        183.44126,
+        161.6902,
+        193.2778,
+        146.48081,
+        198.97902,
+        151.21233,
+        212.55685,
+        168.98603,
+        205.95879,
+        184.42938,
+        194.52456,
+        195.93134,
+        179.85799,
+        195.93134,
+        179.85799
+      ],
+      "segments": [
+        1,
+        2,
+        4,
+        2,
+        4,
+        2
+      ]
+    },
+    {
+      "type": "shape",
+      "background": {
+        "func": "__ht__function(data, view) {\nvar selected = data.a('selected')\nreturn (!selected || selected === 'charger') ? 'rgb(108,230,190)' : 'rgb(67,176,222)'\n}",
+        "value": "rgb(108,230,190)"
+      },
+      "shadowColor": "#1ABC9C",
+      "rotation": 5.6579,
+      "onEnter": "__ht__function(event, data, view, point, width, height) {\ndata.a('selected', 'charger')\n}",
+      "points": [
+        228.24801,
+        134.79127,
+        217.03234,
+        125.78385,
+        207.20093,
+        138.37454,
+        194.00687,
+        148.21108,
+        178.79748,
+        153.91229,
+        183.52899,
+        167.49013,
+        201.3027,
+        160.89207,
+        216.74605,
+        149.45784,
+        228.24801,
+        134.79127,
+        228.24801,
+        134.79127
+      ],
+      "segments": [
+        1,
+        2,
+        4,
+        2,
+        4,
+        2
+      ]
+    },
+    {
+      "type": "shape",
+      "background": {
+        "func": "__ht__function(data, view) {\nreturn data.a('selected') === 'wind' ? 'rgb(108,230,190)' : 'rgb(67,176,222)'\n}",
+        "value": "rgb(67,176,222)"
+      },
+      "shadowColor": "#1ABC9C",
+      "scaleY": -1,
+      "onEnter": "__ht__function(event, data, view, point, width, height) {\ndata.a('selected', 'wind')\n}",
+      "points": [
+        195.93134,
+        36.41265,
+        184.71567,
+        27.40523,
+        174.88426,
+        39.99592,
+        161.6902,
+        49.83246,
+        146.48081,
+        55.53368,
+        151.21233,
+        69.11151,
+        168.98603,
+        62.51345,
+        184.42938,
+        51.07922,
+        195.93134,
+        36.41265,
+        195.93134,
+        36.41265
+      ],
+      "segments": [
+        1,
+        2,
+        4,
+        2,
+        4,
+        2
+      ]
+    },
+    {
+      "type": "shape",
+      "background": {
+        "func": "__ht__function(data, view) {\nreturn data.a('selected') === 'pv' ? 'rgb(108,230,190)' : 'rgb(67,176,222)'\n}",
+        "value": "rgb(67,176,222)"
+      },
+      "shadowColor": "#1ABC9C",
+      "scaleY": -1,
+      "rotation": 0.63922,
+      "onEnter": "__ht__function(event, data, view, point, width, height) {\ndata.a('selected', 'pv')\n}",
+      "points": [
+        228.27883,
+        82.2828,
+        217.06316,
+        73.27538,
+        207.23175,
+        85.86607,
+        194.03769,
+        95.70261,
+        178.8283,
+        101.40382,
+        183.55981,
+        114.98166,
+        201.33352,
+        108.3836,
+        216.77687,
+        96.94937,
+        228.27883,
+        82.2828,
+        228.27883,
+        82.2828
+      ],
+      "segments": [
+        1,
+        2,
+        4,
+        2,
+        4,
+        2
+      ]
+    },
+    {
+      "type": "image",
+      "name": "symbols/gauge/充电桩信息.json",
+      "visible": {
+        "func": "__ht__function(data, view) {\nvar selected = data.a('selected')\nreturn (!selected || selected === 'charger')\n}",
+        "value": true
+      },
+      "displayName": "充电桩信息",
+      "rect": [
+        65,
+        70,
+        110,
+        100
+      ]
+    },
+    {
+      "type": "image",
+      "name": "symbols/gauge/光伏信息.json",
+      "visible": {
+        "func": "__ht__function(data, view) {\nreturn data.a('selected') === 'pv'\n}",
+        "value": false
+      },
+      "displayName": "光伏信息",
+      "rect": [
+        71.26967,
+        70.85057,
+        100,
+        100
+      ]
+    },
+    {
+      "type": "image",
+      "name": "symbols/gauge/风电信息.json",
+      "visible": {
+        "func": "__ht__function(data, view) {\nreturn data.a('selected') === 'wind'\n}",
+        "value": false
+      },
+      "displayName": "风电信息",
+      "rect": [
+        70,
+        70.85057,
+        100,
+        100
+      ]
+    },
+    {
+      "type": "image",
+      "name": "symbols/gauge/视频信息.json",
+      "visible": {
+        "func": "__ht__function(data, view) {\nreturn data.a('selected') === 'video'\n}",
+        "value": false
+      },
+      "displayName": "视频信息",
+      "rect": [
+        71.20608,
+        69.98104,
+        100,
+        100
+      ]
+    }
+  ]
+}
