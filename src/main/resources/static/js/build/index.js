@@ -485,8 +485,8 @@ g3d.getHighlightHelper().mode = 1;
 g3d.setFar(1000000);
 g3d.isMovable = function () { return false; };
 g3d.enablePostProcessing('Fxaa', true);
-
-var buildingList, floorList,htmlNode;
+var htmlNode=null;
+var buildingList, floorList;
 var leftPanel, rightPanel, capacityNode;
 var navigation = ['building'];
 var currentRoom, currentCabinet;
@@ -643,11 +643,21 @@ g3d.mi(function (e) {
         //         navigation.push(tag);
         }
         else if (tag.indexOf('cgq') >= 0) {
+            if(htmlNode!=null){
+                htmlNode.s('2d.visible', false);
+                dm2d.remove(htmlNode);
+                htmlNode=null;
+            }
             htmlNode = new ht.HtmlNode();
-            htmlNode.setPosition(200, 50);
-            htmlNode.setName("Rendering HTML text");
-            htmlNode.setHtml("<div class='htmlWrapper' style='width: 500px;height: 400px;background-color: red'>Node's new name：<input type='text' value='{{value}}' bind='value'>\n\
-                                  <input type='button' value='Modify' nodeid='{{nodeid}}' onclick='modifyNodeName(event)'/></div>");
+            htmlNode.setPosition(500, 400);
+           // htmlNode.setName("Rendering HTML text");
+            htmlNode.setHtml("<div class='htmlWrapper' style='width: 300px;height: 200px;background-color:rgba(220,38,38,0.2);'>"
+                +"<label>实时温度：</label><label id='wendu1'>23℃</label><br>"
+                +"<label>今日最高：</label><label id='t_max_tem'>28℃</label><br>"
+                +"<label>今日最低：</label><label id='t_min_tem'>12℃</label><br>"
+                +"<label>历史最高：</label><label id='h_max_tem'>68℃</label><br>"
+                +"<label>历史最低：</label><label id='h_min_tem'>-23℃</label><br>"
+                +"</div>");
             htmlNode.setContext({
                 value:htmlNode.getName(),
                 nodeid:htmlNode.getId()
@@ -657,8 +667,11 @@ g3d.mi(function (e) {
         return;
     }
     else if (kind === 'clickBackground') {
-
-        htmlNode.s('2d.visible', false);
+        if(htmlNode!=null) {
+            htmlNode.s('2d.visible', false);
+            dm2d.remove(htmlNode);
+        }
+        htmlNode=null;
     }
     if (kind === 'doubleClickBackground') {
         if (capacityNode.a('capacityVisible')) {
