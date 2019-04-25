@@ -566,7 +566,7 @@ g3d.mi(function (e) {
 
                 dm = dmMap[tag] = new ht.DataModel();
                 var modelUrl = '';
-                if(tag.indexOf('floor101')>=0){
+                if(tag.indexOf('floor102')>=0){
                     modelUrl='/js/build/scenes/机房/floor101.json';
                 }else{
                     modelUrl='/js/build/scenes/机房/floor102.json';
