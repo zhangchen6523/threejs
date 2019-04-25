@@ -47,4 +47,9 @@ public class HtwebController {
         return "/shelves/shelves";
     }
 
+    @RequestMapping(value = "/airShip")
+    public String airShip() {
+        return "/airShip/airShip";
+    }
+
 }

@@ -1,0 +1,3714 @@
+{
+  "v": "6.2.7",
+  "p": {
+    "envmap": "assets/贴图/黄昏.jpg",
+    "autoAdjustIndex": true,
+    "hierarchicalRendering": true,
+    "postProcessingData": {
+      "Bloom": {
+        "enable": true,
+        "strength": 0.36,
+        "threshold": 0.18,
+        "radius": 0.4
+      }
+    }
+  },
+  "d": [
+    {
+      "c": "ht.Node",
+      "i": 1299,
+      "p": {
+        "displayName": "环境球",
+        "tag": "skyBox",
+        "scale": {
+          "x": 1.5,
+          "y": 1.5
+        },
+        "scaleTall": 1.5,
+        "width": 50000,
+        "height": 50000,
+        "tall": 50000
+      },
+      "s": {
+        "shape3d": "sphere",
+        "shape3d.color": "#DDDDDD",
+        "shape3d.reverse.flip": true,
+        "shape3d.image": "assets/background/天空球.jpg",
+        "2d.selectable": false,
+        "3d.selectable": false,
+        "2d.movable": false,
+        "3d.movable": false,
+        "select.brightness": 1,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.visible": false,
+        "3d.visible": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 1365,
+      "p": {
+        "displayName": "大地河流",
+        "position": {
+          "x": -964.89015,
+          "y": 4282.95747
+        },
+        "anchorElevation": 0,
+        "width": 55561.60024,
+        "height": 23541.67974,
+        "tall": 10,
+        "elevation": -447,
+        "segments": {
+          "__a": [
+            1,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": -28745.69027,
+              "y": -3899.15751
+            },
+            {
+              "x": -14177.4202,
+              "y": -4811.02225
+            },
+            {
+              "x": 14955.69353,
+              "y": -7487.8824
+            },
+            {
+              "x": 26815.90997,
+              "y": 2417.74404
+            },
+            {
+              "x": 16279.16223,
+              "y": 16053.79734
+            },
+            {
+              "x": -18406.93659,
+              "y": 15255.71011
+            },
+            {
+              "x": -24853.02576,
+              "y": 10528.57806
+            }
+          ]
+        },
+        "thickness": -1
+      },
+      "s": {
+        "shape3d.color": "#60ACFC",
+        "shape3d.top.color": "rgba(0,32,87,0.72)",
+        "shape3d.bottom.color": "rgb(25,39,89)",
+        "shape.background": "#EEEEEE",
+        "shape3d.top.uv.scale": [
+          40,
+          22
+        ],
+        "shape3d.transparent": true,
+        "shape3d.reverse.cull": true,
+        "shape3d.bottom.visible": false,
+        "shape3d.opacity": 0.46,
+        "2d.selectable": false,
+        "3d.selectable": false,
+        "2d.movable": false,
+        "3d.movable": false,
+        "2d.editable": false,
+        "3d.editable": false,
+        "select.brightness": 1
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 1357,
+      "p": {
+        "displayName": "室内区域下",
+        "parent": {
+          "__i": 1364
+        },
+        "host": {
+          "__i": 1364
+        },
+        "position": {
+          "x": -18313.30571,
+          "y": 6524.21092
+        },
+        "anchorElevation": 0,
+        "width": 7937.98099,
+        "height": 3682.63393,
+        "tall": 912,
+        "elevation": -565.63093,
+        "segments": {
+          "__a": [
+            1,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": -14344.31521,
+              "y": 4682.89395
+            },
+            {
+              "x": -15172.78884,
+              "y": 6059.45801
+            },
+            {
+              "x": -15172.78884,
+              "y": 6612.7372
+            },
+            {
+              "x": -18320.59175,
+              "y": 7310.35842
+            },
+            {
+              "x": -22282.2962,
+              "y": 8365.52788
+            },
+            {
+              "x": -22282.2962,
+              "y": 6998.1284
+            },
+            {
+              "x": -18320.59175,
+              "y": 5767.46886
+            },
+            {
+              "x": -18320.59175,
+              "y": 4682.89395
+            }
+          ]
+        },
+        "thickness": -1
+      },
+      "s": {
+        "shape3d.color": "#60ACFC",
+        "shape3d.top.color": "rgba(0,32,87,0.72)",
+        "shape3d.bottom.color": "rgb(25,39,89)",
+        "shape.background": "#EEEEEE",
+        "shape3d.top.uv.scale": [
+          1,
+          1
+        ],
+        "shape3d.transparent": true,
+        "shape3d.reverse.cull": true,
+        "shape3d.bottom.visible": false,
+        "shape3d.image": "symbols/build/3d场景用/渐变浅蓝.png",
+        "shape3d.top.image": "symbols/build/3d场景用/渐变浅蓝.png",
+        "2d.movable": false,
+        "3d.movable": false,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.selectable": false,
+        "3d.selectable": false,
+        "select.brightness": 1
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 1358,
+      "p": {
+        "displayName": "室内区域下",
+        "parent": {
+          "__i": 1364
+        },
+        "host": {
+          "__i": 1364
+        },
+        "position": {
+          "x": -16032.36053,
+          "y": 2613.92255
+        },
+        "anchorElevation": 0,
+        "width": 6064.45635,
+        "height": 1832.77886,
+        "tall": 1854,
+        "elevation": -565.63093,
+        "segments": {
+          "__a": [
+            1,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": -19064.5887,
+              "y": 2021.55065
+            },
+            {
+              "x": -13000.13235,
+              "y": 1697.53312
+            },
+            {
+              "x": -13000.13235,
+              "y": 2847.70283
+            },
+            {
+              "x": -15033.0402,
+              "y": 2953.92452
+            },
+            {
+              "x": -15379.71848,
+              "y": 3399.078
+            },
+            {
+              "x": -16833.38717,
+              "y": 3530.31198
+            },
+            {
+              "x": -17201.63561,
+              "y": 3067.23604
+            },
+            {
+              "x": -19064.5887,
+              "y": 3164.5774
+            }
+          ]
+        },
+        "thickness": -1
+      },
+      "s": {
+        "shape3d.color": "#60ACFC",
+        "shape3d.top.color": "rgba(0,32,87,0.72)",
+        "shape3d.bottom.color": "rgb(25,39,89)",
+        "shape.background": "#EEEEEE",
+        "shape3d.top.uv.scale": [
+          1,
+          1
+        ],
+        "shape3d.transparent": true,
+        "shape3d.reverse.cull": true,
+        "shape3d.bottom.visible": false,
+        "shape3d.image": "symbols/build/3d场景用/渐变浅蓝.png",
+        "shape3d.top.image": "symbols/build/3d场景用/渐变浅蓝.png",
+        "2d.movable": false,
+        "3d.movable": false,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.selectable": false,
+        "3d.selectable": false,
+        "select.brightness": 1
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 1359,
+      "p": {
+        "displayName": "室内区域下",
+        "parent": {
+          "__i": 1364
+        },
+        "host": {
+          "__i": 1364
+        },
+        "position": {
+          "x": -12920.28574,
+          "y": 5692.04059
+        },
+        "anchorElevation": 0,
+        "width": 3147.80291,
+        "height": 1841.39322,
+        "tall": 1629,
+        "elevation": -565.63093,
+        "segments": {
+          "__a": [
+            1,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": -13621.59382,
+              "y": 4771.34398
+            },
+            {
+              "x": -11346.38428,
+              "y": 6059.45801
+            },
+            {
+              "x": -11346.38428,
+              "y": 6612.7372
+            },
+            {
+              "x": -14494.18719,
+              "y": 6612.7372
+            },
+            {
+              "x": -14494.18719,
+              "y": 6059.45801
+            }
+          ]
+        },
+        "thickness": -1
+      },
+      "s": {
+        "shape3d.color": "#60ACFC",
+        "shape3d.top.color": "rgba(0,32,87,0.72)",
+        "shape3d.bottom.color": "rgb(25,39,89)",
+        "shape.background": "#EEEEEE",
+        "shape3d.top.uv.scale": [
+          1,
+          1
+        ],
+        "shape3d.transparent": true,
+        "shape3d.reverse.cull": true,
+        "shape3d.bottom.visible": false,
+        "shape3d.image": "symbols/build/3d场景用/渐变浅蓝.png",
+        "shape3d.top.image": "symbols/build/3d场景用/渐变浅蓝.png",
+        "2d.movable": false,
+        "3d.movable": false,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.selectable": false,
+        "3d.selectable": false,
+        "select.brightness": 1
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 1360,
+      "p": {
+        "displayName": "室内区域下",
+        "parent": {
+          "__i": 1364
+        },
+        "host": {
+          "__i": 1364
+        },
+        "position": {
+          "x": -16032.36053,
+          "y": -393.93835
+        },
+        "anchorElevation": 0,
+        "width": 6064.45635,
+        "height": 2259.78378,
+        "tall": 3240,
+        "elevation": -565.63093,
+        "segments": {
+          "__a": [
+            1,
+            2,
+            2,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": -19064.5887,
+              "y": -1024.72495
+            },
+            {
+              "x": -13000.13235,
+              "y": -1523.83024
+            },
+            {
+              "x": -13000.13235,
+              "y": 247.85102
+            },
+            {
+              "x": -19064.5887,
+              "y": 735.95354
+            }
+          ]
+        },
+        "thickness": -1
+      },
+      "s": {
+        "shape3d.color": "#60ACFC",
+        "shape3d.top.color": "rgba(0,32,87,0.72)",
+        "shape3d.bottom.color": "rgb(25,39,89)",
+        "shape.background": "#EEEEEE",
+        "shape3d.top.uv.scale": [
+          1,
+          1
+        ],
+        "shape3d.transparent": true,
+        "shape3d.reverse.cull": true,
+        "shape3d.bottom.visible": false,
+        "shape3d.image": "symbols/build/3d场景用/渐变浅蓝.png",
+        "shape3d.top.image": "symbols/build/3d场景用/渐变浅蓝.png",
+        "2d.movable": false,
+        "3d.movable": false,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.selectable": false,
+        "3d.selectable": false,
+        "select.brightness": 1
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 1346,
+      "p": {
+        "displayName": "室内区域下",
+        "parent": {
+          "__i": 1363
+        },
+        "host": {
+          "__i": 1363
+        },
+        "position": {
+          "x": 9355.31153,
+          "y": 10076.19806
+        },
+        "anchorElevation": 0,
+        "width": 3420.1453,
+        "height": 1367.39948,
+        "tall": 912,
+        "elevation": -565.63093,
+        "segments": {
+          "__a": [
+            1,
+            2,
+            2,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 11065.38418,
+              "y": 9797.77525
+            },
+            {
+              "x": 11065.38418,
+              "y": 10759.8978
+            },
+            {
+              "x": 7645.23888,
+              "y": 10759.8978
+            },
+            {
+              "x": 7645.23888,
+              "y": 9392.49832
+            }
+          ]
+        },
+        "thickness": -1
+      },
+      "s": {
+        "shape3d.color": "#60ACFC",
+        "shape3d.top.color": "rgba(0,32,87,0.72)",
+        "shape3d.bottom.color": "rgb(25,39,89)",
+        "shape.background": "#EEEEEE",
+        "shape3d.top.uv.scale": [
+          1,
+          1
+        ],
+        "shape3d.transparent": true,
+        "shape3d.reverse.cull": true,
+        "shape3d.bottom.visible": false,
+        "shape3d.image": "symbols/build/3d场景用/渐变浅蓝.png",
+        "shape3d.top.image": "symbols/build/3d场景用/渐变浅蓝.png",
+        "2d.movable": false,
+        "3d.movable": false,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.selectable": false,
+        "3d.selectable": false,
+        "select.brightness": 1
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 1347,
+      "p": {
+        "displayName": "室内区域下",
+        "parent": {
+          "__i": 1363
+        },
+        "host": {
+          "__i": 1363
+        },
+        "position": {
+          "x": 6664.28411,
+          "y": 10076.19806
+        },
+        "anchorElevation": 0,
+        "width": 1397.06114,
+        "height": 1367.39948,
+        "tall": 912,
+        "elevation": -565.63093,
+        "segments": {
+          "__a": [
+            1,
+            2,
+            2,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 7362.81468,
+              "y": 9392.49832
+            },
+            {
+              "x": 7362.81468,
+              "y": 10759.8978
+            },
+            {
+              "x": 5965.75354,
+              "y": 10759.8978
+            },
+            {
+              "x": 5965.75354,
+              "y": 9392.49832
+            }
+          ]
+        },
+        "thickness": -1
+      },
+      "s": {
+        "shape3d.color": "#60ACFC",
+        "shape3d.top.color": "rgba(0,32,87,0.72)",
+        "shape3d.bottom.color": "rgb(25,39,89)",
+        "shape.background": "#EEEEEE",
+        "shape3d.top.uv.scale": [
+          1,
+          1
+        ],
+        "shape3d.transparent": true,
+        "shape3d.reverse.cull": true,
+        "shape3d.bottom.visible": false,
+        "shape3d.image": "symbols/build/3d场景用/渐变浅蓝.png",
+        "shape3d.top.image": "symbols/build/3d场景用/渐变浅蓝.png",
+        "2d.movable": false,
+        "3d.movable": false,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.selectable": false,
+        "3d.selectable": false,
+        "select.brightness": 1
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 1348,
+      "p": {
+        "displayName": "室内区域下",
+        "parent": {
+          "__i": 1363
+        },
+        "host": {
+          "__i": 1363
+        },
+        "position": {
+          "x": 6355.63118,
+          "y": 12357.78071
+        },
+        "anchorElevation": 0,
+        "width": 3976.27654,
+        "height": 1863.0818,
+        "tall": 912,
+        "elevation": -565.63093,
+        "segments": {
+          "__a": [
+            1,
+            2,
+            2,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 8343.76945,
+              "y": 11426.23981
+            },
+            {
+              "x": 8343.76945,
+              "y": 12586.93228
+            },
+            {
+              "x": 4367.49291,
+              "y": 13289.32161
+            },
+            {
+              "x": 4367.49291,
+              "y": 11426.23981
+            }
+          ]
+        },
+        "thickness": -1
+      },
+      "s": {
+        "shape3d.color": "#60ACFC",
+        "shape3d.top.color": "rgba(0,32,87,0.72)",
+        "shape3d.bottom.color": "rgb(25,39,89)",
+        "shape.background": "#EEEEEE",
+        "shape3d.top.uv.scale": [
+          1,
+          1
+        ],
+        "shape3d.transparent": true,
+        "shape3d.reverse.cull": true,
+        "shape3d.bottom.visible": false,
+        "shape3d.image": "symbols/build/3d场景用/渐变浅蓝.png",
+        "shape3d.top.image": "symbols/build/3d场景用/渐变浅蓝.png",
+        "2d.movable": false,
+        "3d.movable": false,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.selectable": false,
+        "3d.selectable": false,
+        "select.brightness": 1
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 1349,
+      "p": {
+        "displayName": "室内区域下",
+        "parent": {
+          "__i": 1363
+        },
+        "host": {
+          "__i": 1363
+        },
+        "position": {
+          "x": 5066.02348,
+          "y": 10076.19806
+        },
+        "anchorElevation": 0,
+        "width": 1397.06114,
+        "height": 1367.39948,
+        "tall": 912,
+        "elevation": -565.63093,
+        "segments": {
+          "__a": [
+            1,
+            2,
+            2,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 5764.55405,
+              "y": 9392.49832
+            },
+            {
+              "x": 5764.55405,
+              "y": 10759.8978
+            },
+            {
+              "x": 4367.49291,
+              "y": 10759.8978
+            },
+            {
+              "x": 4367.49291,
+              "y": 9392.49832
+            }
+          ]
+        },
+        "thickness": -1
+      },
+      "s": {
+        "shape3d.color": "#60ACFC",
+        "shape3d.top.color": "rgba(0,32,87,0.72)",
+        "shape3d.bottom.color": "rgb(25,39,89)",
+        "shape.background": "#EEEEEE",
+        "shape3d.top.uv.scale": [
+          1,
+          1
+        ],
+        "shape3d.transparent": true,
+        "shape3d.reverse.cull": true,
+        "shape3d.bottom.visible": false,
+        "shape3d.image": "symbols/build/3d场景用/渐变浅蓝.png",
+        "shape3d.top.image": "symbols/build/3d场景用/渐变浅蓝.png",
+        "2d.movable": false,
+        "3d.movable": false,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.selectable": false,
+        "3d.selectable": false,
+        "select.brightness": 1
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 1350,
+      "p": {
+        "displayName": "室内区域下",
+        "parent": {
+          "__i": 1363
+        },
+        "host": {
+          "__i": 1363
+        },
+        "position": {
+          "x": 1649.53749,
+          "y": 10076.19806
+        },
+        "anchorElevation": 0,
+        "width": 3976.27654,
+        "height": 1367.39948,
+        "tall": 912,
+        "elevation": -565.63093,
+        "segments": {
+          "__a": [
+            1,
+            2,
+            2,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 3637.67576,
+              "y": 9392.49832
+            },
+            {
+              "x": 3637.67576,
+              "y": 10759.8978
+            },
+            {
+              "x": -338.60078,
+              "y": 10759.8978
+            },
+            {
+              "x": -338.60078,
+              "y": 9392.49832
+            }
+          ]
+        },
+        "thickness": -1
+      },
+      "s": {
+        "shape3d.color": "#60ACFC",
+        "shape3d.top.color": "rgba(0,32,87,0.72)",
+        "shape3d.bottom.color": "rgb(25,39,89)",
+        "shape.background": "#EEEEEE",
+        "shape3d.top.uv.scale": [
+          1,
+          1
+        ],
+        "shape3d.transparent": true,
+        "shape3d.reverse.cull": true,
+        "shape3d.bottom.visible": false,
+        "shape3d.image": "symbols/build/3d场景用/渐变浅蓝.png",
+        "shape3d.top.image": "symbols/build/3d场景用/渐变浅蓝.png",
+        "2d.movable": false,
+        "3d.movable": false,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.selectable": false,
+        "3d.selectable": false,
+        "select.brightness": 1
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 1351,
+      "p": {
+        "displayName": "室内区域下",
+        "parent": {
+          "__i": 1363
+        },
+        "host": {
+          "__i": 1363
+        },
+        "position": {
+          "x": 1649.53749,
+          "y": 12357.78071
+        },
+        "anchorElevation": 0,
+        "width": 3976.27654,
+        "height": 1863.0818,
+        "tall": 912,
+        "elevation": -565.63093,
+        "segments": {
+          "__a": [
+            1,
+            2,
+            2,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 3637.67576,
+              "y": 11426.23981
+            },
+            {
+              "x": 3637.67576,
+              "y": 13289.32161
+            },
+            {
+              "x": -338.60078,
+              "y": 13289.32161
+            },
+            {
+              "x": -338.60078,
+              "y": 11426.23981
+            }
+          ]
+        },
+        "thickness": -1
+      },
+      "s": {
+        "shape3d.color": "#60ACFC",
+        "shape3d.top.color": "rgba(0,32,87,0.72)",
+        "shape3d.bottom.color": "rgb(25,39,89)",
+        "shape.background": "#EEEEEE",
+        "shape3d.top.uv.scale": [
+          1,
+          1
+        ],
+        "shape3d.transparent": true,
+        "shape3d.reverse.cull": true,
+        "shape3d.bottom.visible": false,
+        "shape3d.image": "symbols/build/3d场景用/渐变浅蓝.png",
+        "shape3d.top.image": "symbols/build/3d场景用/渐变浅蓝.png",
+        "2d.movable": false,
+        "3d.movable": false,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.selectable": false,
+        "3d.selectable": false,
+        "select.brightness": 1
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 1352,
+      "p": {
+        "displayName": "室内区域下",
+        "parent": {
+          "__i": 1363
+        },
+        "host": {
+          "__i": 1363
+        },
+        "position": {
+          "x": -2989.28114,
+          "y": 10805.20815
+        },
+        "anchorElevation": 0,
+        "width": 3976.27654,
+        "height": 1869.60497,
+        "tall": 1087,
+        "elevation": -565.63093,
+        "segments": {
+          "__a": [
+            1,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": -1001.14287,
+              "y": 9870.40566
+            },
+            {
+              "x": -1001.14287,
+              "y": 11740.01063
+            },
+            {
+              "x": -1798.71151,
+              "y": 11740.01063
+            },
+            {
+              "x": -2226.9562,
+              "y": 11237.80515
+            },
+            {
+              "x": -3785.39163,
+              "y": 11237.80515
+            },
+            {
+              "x": -4077.50753,
+              "y": 11740.01063
+            },
+            {
+              "x": -4977.41941,
+              "y": 11740.01063
+            },
+            {
+              "x": -4977.41941,
+              "y": 9870.40566
+            }
+          ]
+        },
+        "thickness": -1
+      },
+      "s": {
+        "shape3d.color": "#60ACFC",
+        "shape3d.top.color": "rgba(0,32,87,0.72)",
+        "shape3d.bottom.color": "rgb(25,39,89)",
+        "shape.background": "#EEEEEE",
+        "shape3d.top.uv.scale": [
+          1,
+          1
+        ],
+        "shape3d.transparent": true,
+        "shape3d.reverse.cull": true,
+        "shape3d.bottom.visible": false,
+        "shape3d.image": "symbols/build/3d场景用/渐变浅蓝.png",
+        "shape3d.top.image": "symbols/build/3d场景用/渐变浅蓝.png",
+        "2d.movable": false,
+        "3d.movable": false,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.selectable": false,
+        "3d.selectable": false,
+        "select.brightness": 1
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 1353,
+      "p": {
+        "displayName": "室内区域下",
+        "parent": {
+          "__i": 1363
+        },
+        "host": {
+          "__i": 1363
+        },
+        "position": {
+          "x": -7725.77486,
+          "y": 12357.04237
+        },
+        "anchorElevation": 0,
+        "width": 3976.27654,
+        "height": 1863.0818,
+        "tall": 912,
+        "elevation": -565.63093,
+        "segments": {
+          "__a": [
+            1,
+            2,
+            2,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": -5737.63659,
+              "y": 11425.50147
+            },
+            {
+              "x": -5737.63659,
+              "y": 13288.58327
+            },
+            {
+              "x": -9713.91313,
+              "y": 13288.58327
+            },
+            {
+              "x": -9713.91313,
+              "y": 11425.50147
+            }
+          ]
+        },
+        "thickness": -1
+      },
+      "s": {
+        "shape3d.color": "#60ACFC",
+        "shape3d.top.color": "rgba(0,32,87,0.72)",
+        "shape3d.bottom.color": "rgb(25,39,89)",
+        "shape.background": "#EEEEEE",
+        "shape3d.top.uv.scale": [
+          1,
+          1
+        ],
+        "shape3d.transparent": true,
+        "shape3d.reverse.cull": true,
+        "shape3d.bottom.visible": false,
+        "shape3d.image": "symbols/build/3d场景用/渐变浅蓝.png",
+        "shape3d.top.image": "symbols/build/3d场景用/渐变浅蓝.png",
+        "2d.movable": false,
+        "3d.movable": false,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.selectable": false,
+        "3d.selectable": false,
+        "select.brightness": 1
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 1354,
+      "p": {
+        "displayName": "室内区域下",
+        "parent": {
+          "__i": 1363
+        },
+        "host": {
+          "__i": 1363
+        },
+        "position": {
+          "x": -17506.0027,
+          "y": 12262.82504
+        },
+        "anchorElevation": 0,
+        "width": 3976.27654,
+        "height": 2051.51647,
+        "tall": 912,
+        "elevation": -565.63093,
+        "segments": {
+          "__a": [
+            1,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": -15517.86443,
+              "y": 11237.0668
+            },
+            {
+              "x": -15517.86443,
+              "y": 13288.58327
+            },
+            {
+              "x": -18762.99566,
+              "y": 13288.58327
+            },
+            {
+              "x": -19494.14097,
+              "y": 12570.2813
+            },
+            {
+              "x": -19494.14097,
+              "y": 11237.0668
+            }
+          ]
+        },
+        "thickness": -1
+      },
+      "s": {
+        "shape3d.color": "#60ACFC",
+        "shape3d.top.color": "rgba(0,32,87,0.72)",
+        "shape3d.bottom.color": "rgb(25,39,89)",
+        "shape.background": "#EEEEEE",
+        "shape3d.top.uv.scale": [
+          1,
+          1
+        ],
+        "shape3d.transparent": true,
+        "shape3d.reverse.cull": true,
+        "shape3d.bottom.visible": false,
+        "shape3d.image": "symbols/build/3d场景用/渐变浅蓝.png",
+        "shape3d.top.image": "symbols/build/3d场景用/渐变浅蓝.png",
+        "2d.movable": false,
+        "3d.movable": false,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.selectable": false,
+        "3d.selectable": false,
+        "select.brightness": 1
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 1355,
+      "p": {
+        "displayName": "室内区域下",
+        "parent": {
+          "__i": 1363
+        },
+        "host": {
+          "__i": 1363
+        },
+        "position": {
+          "x": -12617.54955,
+          "y": 11425.50147
+        },
+        "anchorElevation": 0,
+        "width": 3976.27654,
+        "height": 3726.1636,
+        "tall": 912,
+        "elevation": -565.63093,
+        "segments": {
+          "__a": [
+            1,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": -10629.41128,
+              "y": 9562.41967
+            },
+            {
+              "x": -10629.41128,
+              "y": 13288.58327
+            },
+            {
+              "x": -14605.68782,
+              "y": 13288.58327
+            },
+            {
+              "x": -14605.68782,
+              "y": 10861.44918
+            },
+            {
+              "x": -12397.44298,
+              "y": 9938.45453
+            }
+          ]
+        },
+        "thickness": -1
+      },
+      "s": {
+        "shape3d.color": "#60ACFC",
+        "shape3d.top.color": "rgba(0,32,87,0.72)",
+        "shape3d.bottom.color": "rgb(25,39,89)",
+        "shape.background": "#EEEEEE",
+        "shape3d.top.uv.scale": [
+          1,
+          1
+        ],
+        "shape3d.transparent": true,
+        "shape3d.reverse.cull": true,
+        "shape3d.bottom.visible": false,
+        "shape3d.image": "symbols/build/3d场景用/渐变浅蓝.png",
+        "shape3d.top.image": "symbols/build/3d场景用/渐变浅蓝.png",
+        "2d.movable": false,
+        "3d.movable": false,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.selectable": false,
+        "3d.selectable": false,
+        "select.brightness": 1
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 1356,
+      "p": {
+        "displayName": "室内区域下",
+        "parent": {
+          "__i": 1363
+        },
+        "host": {
+          "__i": 1363
+        },
+        "position": {
+          "x": -7725.77486,
+          "y": 9976.89462
+        },
+        "anchorElevation": 0,
+        "width": 3976.27654,
+        "height": 2520.34437,
+        "tall": 912,
+        "elevation": -565.63093,
+        "segments": {
+          "__a": [
+            1,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": -5737.63659,
+              "y": 8716.72243
+            },
+            {
+              "x": -5737.63659,
+              "y": 11237.0668
+            },
+            {
+              "x": -9713.91313,
+              "y": 11237.0668
+            },
+            {
+              "x": -9713.91313,
+              "y": 9869.66732
+            },
+            {
+              "x": -7616.93673,
+              "y": 8716.72243
+            }
+          ]
+        },
+        "thickness": -1
+      },
+      "s": {
+        "shape3d.color": "#60ACFC",
+        "shape3d.top.color": "rgba(0,32,87,0.72)",
+        "shape3d.bottom.color": "rgb(25,39,89)",
+        "shape.background": "#EEEEEE",
+        "shape3d.top.uv.scale": [
+          1,
+          1
+        ],
+        "shape3d.transparent": true,
+        "shape3d.reverse.cull": true,
+        "shape3d.bottom.visible": false,
+        "shape3d.image": "symbols/build/3d场景用/渐变浅蓝.png",
+        "shape3d.top.image": "symbols/build/3d场景用/渐变浅蓝.png",
+        "2d.movable": false,
+        "3d.movable": false,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.selectable": false,
+        "3d.selectable": false,
+        "select.brightness": 1
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 1362,
+      "p": {
+        "displayName": "大地板4",
+        "position": {
+          "x": 18031.90651,
+          "y": 1307.0957
+        },
+        "anchorElevation": 0,
+        "width": 13454.49456,
+        "height": 12093.72638,
+        "tall": 80,
+        "elevation": -102.96802,
+        "segments": {
+          "__a": [
+            1,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 24759.15379,
+              "y": 2993.63577
+            },
+            {
+              "x": 20873.20058,
+              "y": 7353.95889
+            },
+            {
+              "x": 11304.65923,
+              "y": 7353.95889
+            },
+            {
+              "x": 11304.65923,
+              "y": -4739.76749
+            },
+            {
+              "x": 16182.89702,
+              "y": -4739.76749
+            }
+          ]
+        },
+        "thickness": -1
+      },
+      "s": {
+        "shape3d.color": "#60ACFC",
+        "shape3d.top.color": "rgba(0,32,87,0.72)",
+        "shape3d.bottom.color": "rgb(25,39,89)",
+        "shape.background": "#EEEEEE",
+        "shape3d.top.uv.scale": [
+          22,
+          22
+        ],
+        "shape3d.transparent": true,
+        "shape3d.reverse.cull": true,
+        "shape3d.bottom.visible": false,
+        "2d.selectable": false,
+        "3d.selectable": false,
+        "shape3d.top.image": "symbols/build/3d场景用/格子地面.png",
+        "shape3d.opacity": 0.46,
+        "2d.movable": false,
+        "3d.movable": false,
+        "2d.editable": false,
+        "3d.editable": false,
+        "select.brightness": 1
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 1342,
+      "p": {
+        "displayName": "室内区域下",
+        "parent": {
+          "__i": 1362
+        },
+        "host": {
+          "__i": 1362
+        },
+        "position": {
+          "x": 17102.8948,
+          "y": 354.28518
+        },
+        "anchorElevation": 0,
+        "width": 823.65798,
+        "height": 2753.98981,
+        "tall": 1819,
+        "elevation": -565.63093,
+        "segments": {
+          "__a": [
+            1,
+            2,
+            2,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 16691.06581,
+              "y": -1022.70973
+            },
+            {
+              "x": 17514.72379,
+              "y": -351.64383
+            },
+            {
+              "x": 17514.72379,
+              "y": 1731.28008
+            },
+            {
+              "x": 16729.59735,
+              "y": 1731.28008
+            }
+          ]
+        },
+        "thickness": -1
+      },
+      "s": {
+        "shape3d.color": "#60ACFC",
+        "shape3d.top.color": "rgba(0,32,87,0.72)",
+        "shape3d.bottom.color": "rgb(25,39,89)",
+        "shape.background": "#EEEEEE",
+        "shape3d.top.uv.scale": [
+          1,
+          1
+        ],
+        "shape3d.transparent": true,
+        "shape3d.reverse.cull": true,
+        "shape3d.bottom.visible": false,
+        "shape3d.image": "symbols/build/3d场景用/渐变浅蓝.png",
+        "shape3d.top.image": "symbols/build/3d场景用/渐变浅蓝.png",
+        "2d.movable": false,
+        "3d.movable": false,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.selectable": false,
+        "3d.selectable": false,
+        "select.brightness": 1
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 1343,
+      "p": {
+        "displayName": "室内区域下",
+        "parent": {
+          "__i": 1362
+        },
+        "host": {
+          "__i": 1362
+        },
+        "position": {
+          "x": 18601.33923,
+          "y": 354.28518
+        },
+        "anchorElevation": 0,
+        "width": 823.65798,
+        "height": 2753.98981,
+        "tall": 3240,
+        "elevation": -565.63093,
+        "segments": {
+          "__a": [
+            1,
+            2,
+            2,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 18189.51024,
+              "y": -1022.70973
+            },
+            {
+              "x": 19013.16822,
+              "y": -351.64383
+            },
+            {
+              "x": 19013.16822,
+              "y": 1731.28008
+            },
+            {
+              "x": 18228.04178,
+              "y": 1731.28008
+            }
+          ]
+        },
+        "thickness": -1
+      },
+      "s": {
+        "shape3d.color": "#60ACFC",
+        "shape3d.top.color": "rgba(0,32,87,0.72)",
+        "shape3d.bottom.color": "rgb(25,39,89)",
+        "shape.background": "#EEEEEE",
+        "shape3d.top.uv.scale": [
+          1,
+          1
+        ],
+        "shape3d.transparent": true,
+        "shape3d.reverse.cull": true,
+        "shape3d.bottom.visible": false,
+        "shape3d.image": "symbols/build/3d场景用/渐变浅蓝.png",
+        "shape3d.top.image": "symbols/build/3d场景用/渐变浅蓝.png",
+        "2d.movable": false,
+        "3d.movable": false,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.selectable": false,
+        "3d.selectable": false,
+        "select.brightness": 1
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 1344,
+      "p": {
+        "displayName": "室内区域下",
+        "parent": {
+          "__i": 1362
+        },
+        "host": {
+          "__i": 1362
+        },
+        "rotation": 1.5708,
+        "rotationX": -1.5708,
+        "position": {
+          "x": 11971.36938,
+          "y": 4197.97375
+        },
+        "anchorElevation": 0,
+        "width": 3379.48128,
+        "height": 2028.17217,
+        "tall": 7174,
+        "elevation": 592.36692,
+        "segments": {
+          "__a": [
+            1,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 13661.11002,
+              "y": 3183.88766
+            },
+            {
+              "x": 13661.11002,
+              "y": 4345.96258
+            },
+            {
+              "x": 12004.22155,
+              "y": 5212.05983
+            },
+            {
+              "x": 10281.62874,
+              "y": 4345.96258
+            },
+            {
+              "x": 10281.62874,
+              "y": 3183.88766
+            }
+          ]
+        },
+        "thickness": -1
+      },
+      "s": {
+        "shape3d.color": "#60ACFC",
+        "shape3d.top.color": "rgba(0,32,87,0.72)",
+        "shape3d.bottom.color": "rgb(25,39,89)",
+        "shape.background": "#EEEEEE",
+        "shape3d.top.uv.scale": [
+          1,
+          1
+        ],
+        "shape3d.transparent": true,
+        "shape3d.reverse.cull": true,
+        "shape3d.image": "symbols/build/3d场景用/渐变浅蓝.png",
+        "shape3d.top.image": "symbols/build/3d场景用/渐变浅蓝.png",
+        "shape3d.bottom.image": "symbols/build/3d场景用/渐变浅蓝.png",
+        "2d.movable": false,
+        "3d.movable": false,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.selectable": false,
+        "3d.selectable": false,
+        "select.brightness": 1
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 1345,
+      "p": {
+        "displayName": "室内区域下",
+        "parent": {
+          "__i": 1362
+        },
+        "host": {
+          "__i": 1362
+        },
+        "rotation": 1.5708,
+        "position": {
+          "x": 13932.07829,
+          "y": -958.27231
+        },
+        "anchorElevation": 0,
+        "width": 5691.97844,
+        "height": 3667.66028,
+        "tall": 1087,
+        "elevation": -565.63093,
+        "segments": {
+          "__a": [
+            1,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 16778.06751,
+              "y": -2792.10245
+            },
+            {
+              "x": 16778.06751,
+              "y": 875.55783
+            },
+            {
+              "x": 15636.36032,
+              "y": 875.55783
+            },
+            {
+              "x": 15023.33466,
+              "y": -109.63377
+            },
+            {
+              "x": 12792.45841,
+              "y": -109.63377
+            },
+            {
+              "x": 12374.29902,
+              "y": 875.55783
+            },
+            {
+              "x": 11086.08907,
+              "y": 875.55783
+            },
+            {
+              "x": 11086.08907,
+              "y": -2792.10245
+            }
+          ]
+        },
+        "thickness": -1
+      },
+      "s": {
+        "shape3d.color": "#60ACFC",
+        "shape3d.top.color": "rgba(0,32,87,0.72)",
+        "shape3d.bottom.color": "rgb(25,39,89)",
+        "shape.background": "#EEEEEE",
+        "shape3d.top.uv.scale": [
+          1,
+          1
+        ],
+        "shape3d.transparent": true,
+        "shape3d.reverse.cull": true,
+        "shape3d.bottom.visible": false,
+        "shape3d.image": "symbols/build/3d场景用/渐变浅蓝.png",
+        "shape3d.top.image": "symbols/build/3d场景用/渐变浅蓝.png",
+        "2d.movable": false,
+        "3d.movable": false,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.selectable": false,
+        "3d.selectable": false,
+        "select.brightness": 1
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 1303,
+      "p": {
+        "displayName": "建筑列表",
+        "tag": "buildingList",
+        "anchorElevation": 0,
+        "width": 50,
+        "height": 50,
+        "tall": 50
+      },
+      "s": {
+        "all.color": "#DDDDDD",
+        "2d.selectable": false,
+        "3d.selectable": false,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.visible": false,
+        "3d.visible": false,
+        "2d.movable": false,
+        "3d.movable": false,
+        "select.brightness": 1
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 1308,
+      "p": {
+        "displayName": "1号楼",
+        "parent": {
+          "__i": 1303
+        },
+        "tag": "building1",
+        "host": {
+          "__i": 1303
+        },
+        "rotation": -0.10472,
+        "position": {
+          "x": -801.9336,
+          "y": -127.14785
+        },
+        "anchorElevation": 0,
+        "scale": {
+          "x": 1,
+          "y": 1.57
+        },
+        "scaleTall": 1,
+        "width": 5107,
+        "height": 5107,
+        "tall": 8113
+      },
+      "s": {
+        "shape3d": "symbols/build/models/大楼/大楼2.json",
+        "shape3d.blend": "rgb(194,223,255)",
+        "select.brightness": 1,
+        "envmap": 0.07,
+        "2d.movable": false,
+        "3d.movable": false,
+        "2d.editable": false,
+        "3d.editable": false,
+        "wf.short": true
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 1309,
+      "p": {
+        "displayName": "投影",
+        "parent": {
+          "__i": 1308
+        },
+        "host": {
+          "__i": 1308
+        },
+        "rotation": -0.10472,
+        "position": {
+          "x": 2024.68929,
+          "y": 1735
+        },
+        "anchor": {
+          "x": 0.9842,
+          "y": 0.97843
+        },
+        "anchorElevation": 0,
+        "scale": {
+          "x": 0.97,
+          "y": 1.31
+        },
+        "width": 9825.93347,
+        "height": 8375.0866,
+        "tall": 50,
+        "elevation": -121.23849
+      },
+      "s": {
+        "all.color": "#DDDDDD",
+        "shape3d": "plane",
+        "shape3d.image": "assets/贴图/建筑投影.png",
+        "shape3d.transparent": true,
+        "shape3d.reverse.flip": true,
+        "shape3d.vector.dynamic": false,
+        "shape3d.image.cache": true,
+        "2d.selectable": false,
+        "3d.selectable": false,
+        "select.brightness": 1,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.movable": false,
+        "3d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 1310,
+      "p": {
+        "displayName": "属性面板",
+        "parent": {
+          "__i": 1308
+        },
+        "host": {
+          "__i": 1308
+        },
+        "rotation": -0.10472,
+        "position": {
+          "x": 4308.8947,
+          "y": 4126.97186
+        },
+        "anchorElevation": 0,
+        "width": 5006.08508,
+        "height": 2953.02772,
+        "tall": 50
+      },
+      "s": {
+        "all.color": "#DDDDDD",
+        "shape3d": "plane",
+        "shape3d.image": "symbols/build/3d场景用/属性框.json",
+        "shape3d.transparent": true,
+        "shape3d.reverse.flip": true,
+        "shape3d.vector.dynamic": true,
+        "2d.movable": false,
+        "3d.movable": false,
+        "2d.selectable": false,
+        "3d.selectable": false,
+        "select.brightness": 1,
+        "2d.editable": false,
+        "3d.editable": false
+      },
+      "a": {
+        "ups": "52",
+        "air": "116",
+        "transformer": "10"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 1311,
+      "p": {
+        "displayName": "属性面板",
+        "parent": {
+          "__i": 1310
+        },
+        "host": {
+          "__i": 1310
+        },
+        "rotation": -0.10472,
+        "position": {
+          "x": -3427.26863,
+          "y": 2654.76753
+        },
+        "anchorElevation": 0,
+        "width": 3606.00435,
+        "height": 337.48888,
+        "tall": 50,
+        "elevation": 40.11991
+      },
+      "s": {
+        "all.color": "#DDDDDD",
+        "shape3d": "plane",
+        "shape3d.image": "symbols/build/3d场景用/属性框标题.json",
+        "shape3d.transparent": true,
+        "shape3d.reverse.flip": true,
+        "shape3d.vector.dynamic": true,
+        "2d.movable": false,
+        "3d.movable": false,
+        "2d.selectable": false,
+        "3d.selectable": false,
+        "select.brightness": 1,
+        "2d.editable": false,
+        "3d.editable": false
+      },
+      "a": {
+        "name": "1 号楼"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 1312,
+      "p": {
+        "displayName": "楼层列表",
+        "tag": "floorList",
+        "position": {
+          "x": -50,
+          "y": 0
+        },
+        "anchorElevation": 0,
+        "width": 50,
+        "height": 50,
+        "tall": 50
+      },
+      "s": {
+        "all.color": "#DDDDDD",
+        "2d.selectable": false,
+        "3d.selectable": false,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.visible": false,
+        "3d.visible": false,
+        "2d.movable": false,
+        "3d.movable": false,
+        "select.brightness": 1
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 1313,
+      "p": {
+        "displayName": "#2",
+        "parent": {
+          "__i": 1312
+        },
+        "tag": "floor2",
+        "host": {
+          "__i": 1312
+        },
+        "rotation": -0.10472,
+        "position": {
+          "x": 2548.2981,
+          "y": 327.63559
+        },
+        "width": 5107,
+        "height": 2820,
+        "tall": 3113,
+        "elevation": 1556.5
+      },
+      "s": {
+        "all.color": "#DDDDDD",
+        "2d.visible": false,
+        "3d.visible": false,
+        "2d.selectable": false,
+        "3d.selectable": false,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.movable": false,
+        "3d.movable": false,
+        "all.reverse.cull": true,
+        "all.visible": false,
+        "select.brightness": 1
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 1460,
+      "p": {
+        "displayName": "投影",
+        "parent": {
+          "__i": 1313
+        },
+        "host": {
+          "__i": 1313
+        },
+        "rotation": -0.10472,
+        "position": {
+          "x": 5301.65263,
+          "y": 2257.05176
+        },
+        "anchor": {
+          "x": 0.9842,
+          "y": 0.97843
+        },
+        "anchorElevation": 0,
+        "scale": {
+          "x": 0.97,
+          "y": 1.31
+        },
+        "width": 9825.93347,
+        "height": 8375.0866,
+        "tall": 50,
+        "elevation": -31.59716
+      },
+      "s": {
+        "all.color": "#DDDDDD",
+        "shape3d": "plane",
+        "shape3d.image": "assets/贴图/建筑投影.png",
+        "shape3d.transparent": true,
+        "shape3d.reverse.flip": true,
+        "shape3d.vector.dynamic": false,
+        "shape3d.image.cache": true,
+        "2d.selectable": false,
+        "3d.selectable": false,
+        "select.brightness": 1,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.movable": false,
+        "3d.movable": false,
+        "2d.visible": false,
+        "3d.visible": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 1315,
+      "p": {
+        "displayName": "01",
+        "parent": {
+          "__i": 1313
+        },
+        "tag": "floor201",
+        "host": {
+          "__i": 1313
+        },
+        "rotation": -0.10472,
+        "position": {
+          "x": 2540.77639,
+          "y": 248.79129
+        },
+        "anchorElevation": 0,
+        "scale": {
+          "x": 2.43,
+          "y": 2.43
+        },
+        "scaleTall": 2.43,
+        "width": -1,
+        "height": -1,
+        "tall": -1
+      },
+      "s": {
+        "shape3d": "symbols/build/models/大楼/一楼墙.json",
+        "2d.visible": false,
+        "3d.visible": false,
+        "shape3d.blend": "#60ACFC",
+        "shape3d.transparent": true,
+        "shape3d.opacity": 0.21,
+        "select.brightness": 1,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.movable": false,
+        "3d.movable": false,
+        "shape3d.polygonOffset": 0
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 1316,
+      "p": {
+        "displayName": "1号楼101地板",
+        "parent": {
+          "__i": 1315
+        },
+        "host": {
+          "__i": 1315
+        },
+        "rotation": -0.10472,
+        "position": {
+          "x": 2540.77637,
+          "y": 248.79129
+        },
+        "anchorElevation": 1,
+        "scale": {
+          "x": 2.43,
+          "y": 2.43
+        },
+        "scaleTall": 3.11,
+        "width": 2047,
+        "height": 1600,
+        "tall": 50,
+        "elevation": 152.16552
+      },
+      "s": {
+        "all.color": "rgb(13,28,122)",
+        "2d.visible": false,
+        "3d.visible": false,
+        "select.brightness": 1,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.movable": false,
+        "3d.movable": false,
+        "shape3d.polygonOffset": 0,
+        "polygonOffset": [
+          0,
+          -3
+        ],
+        "all.reverse.cull": true
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 1317,
+      "p": {
+        "displayName": "02",
+        "parent": {
+          "__i": 1313
+        },
+        "tag": "floor202",
+        "host": {
+          "__i": 1313
+        },
+        "rotation": -0.10472,
+        "position": {
+          "x": 2540,
+          "y": 248.79129
+        },
+        "anchorElevation": 0,
+        "scale": {
+          "x": 2.43,
+          "y": 2.43
+        },
+        "scaleTall": 2.43,
+        "width": -1,
+        "height": -1,
+        "tall": -1,
+        "elevation": 954.00569
+      },
+      "s": {
+        "shape3d": "symbols/build/models/大楼/二楼墙.json",
+        "2d.visible": false,
+        "3d.visible": false,
+        "shape3d.blend": "#60ACFC",
+        "shape3d.transparent": true,
+        "shape3d.opacity": 0.21,
+        "select.brightness": 1,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.movable": false,
+        "3d.movable": false,
+        "shape3d.polygonOffset": 0
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 1318,
+      "p": {
+        "displayName": "1号楼102地板",
+        "parent": {
+          "__i": 1317
+        },
+        "host": {
+          "__i": 1317
+        },
+        "rotation": -0.10472,
+        "position": {
+          "x": 2540,
+          "y": 248.79129
+        },
+        "anchorElevation": 0,
+        "scale": {
+          "x": 2.43,
+          "y": 2.43
+        },
+        "width": 2047,
+        "height": 1600,
+        "tall": 50,
+        "elevation": 911.41219
+      },
+      "s": {
+        "all.color": "rgb(13,28,122)",
+        "2d.visible": false,
+        "3d.visible": false,
+        "select.brightness": 1,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.movable": false,
+        "3d.movable": false,
+        "shape3d.polygonOffset": 0,
+        "polygonOffset": [
+          0,
+          -3
+        ]
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 1319,
+      "p": {
+        "displayName": "03",
+        "parent": {
+          "__i": 1313
+        },
+        "tag": "floor203",
+        "host": {
+          "__i": 1313
+        },
+        "rotation": -0.10472,
+        "position": {
+          "x": 2540,
+          "y": 248.79129
+        },
+        "anchorElevation": 0,
+        "scale": {
+          "x": 2.43,
+          "y": 2.43
+        },
+        "scaleTall": 2.43,
+        "width": -1,
+        "height": -1,
+        "tall": -1,
+        "elevation": 1501.99456
+      },
+      "s": {
+        "shape3d": "symbols/build/models/大楼/二楼墙.json",
+        "2d.visible": false,
+        "3d.visible": false,
+        "shape3d.blend": "#60ACFC",
+        "shape3d.transparent": true,
+        "shape3d.opacity": 0.21,
+        "select.brightness": 1,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.movable": false,
+        "3d.movable": false,
+        "shape3d.polygonOffset": 0
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 1320,
+      "p": {
+        "displayName": "1号楼103地板",
+        "parent": {
+          "__i": 1319
+        },
+        "host": {
+          "__i": 1319
+        },
+        "rotation": -0.10472,
+        "position": {
+          "x": 2540,
+          "y": 248.79129
+        },
+        "anchorElevation": 0,
+        "scale": {
+          "x": 2.43,
+          "y": 2.43
+        },
+        "width": 2047,
+        "height": 1600,
+        "tall": 50,
+        "elevation": 1459.40106
+      },
+      "s": {
+        "all.color": "rgb(13,28,122)",
+        "2d.visible": false,
+        "3d.visible": false,
+        "select.brightness": 1,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.movable": false,
+        "3d.movable": false,
+        "shape3d.polygonOffset": 0,
+        "polygonOffset": [
+          0,
+          -3
+        ]
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 1321,
+      "p": {
+        "displayName": "04",
+        "parent": {
+          "__i": 1313
+        },
+        "tag": "floor204",
+        "host": {
+          "__i": 1313
+        },
+        "rotation": -0.10472,
+        "position": {
+          "x": 2540,
+          "y": 248.79129
+        },
+        "anchorElevation": 0,
+        "scale": {
+          "x": 2.43,
+          "y": 2.43
+        },
+        "scaleTall": 2.43,
+        "width": -1,
+        "height": -1,
+        "tall": -1,
+        "elevation": 2051.27599
+      },
+      "s": {
+        "shape3d": "symbols/build/models/大楼/二楼墙.json",
+        "2d.visible": false,
+        "3d.visible": false,
+        "shape3d.blend": "#60ACFC",
+        "shape3d.transparent": true,
+        "shape3d.opacity": 0.21,
+        "select.brightness": 1,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.movable": false,
+        "3d.movable": false,
+        "shape3d.polygonOffset": 0
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 1322,
+      "p": {
+        "displayName": "1号楼104地板",
+        "parent": {
+          "__i": 1321
+        },
+        "host": {
+          "__i": 1321
+        },
+        "rotation": -0.10472,
+        "position": {
+          "x": 2540,
+          "y": 248.79129
+        },
+        "anchorElevation": 0,
+        "scale": {
+          "x": 2.43,
+          "y": 2.43
+        },
+        "width": 2047,
+        "height": 1600,
+        "tall": 50,
+        "elevation": 2008.68249
+      },
+      "s": {
+        "all.color": "rgb(13,28,122)",
+        "2d.visible": false,
+        "3d.visible": false,
+        "select.brightness": 1,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.movable": false,
+        "3d.movable": false,
+        "shape3d.polygonOffset": 0,
+        "polygonOffset": [
+          0,
+          -3
+        ]
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 1323,
+      "p": {
+        "displayName": "05",
+        "parent": {
+          "__i": 1313
+        },
+        "tag": "floor205",
+        "host": {
+          "__i": 1313
+        },
+        "rotation": -0.10472,
+        "position": {
+          "x": 2540,
+          "y": 248.79129
+        },
+        "anchorElevation": 0,
+        "scale": {
+          "x": 2.43,
+          "y": 2.43
+        },
+        "scaleTall": 2.43,
+        "width": -1,
+        "height": -1,
+        "tall": -1,
+        "elevation": 2597.19456
+      },
+      "s": {
+        "shape3d": "symbols/build/models/大楼/二楼墙.json",
+        "2d.visible": false,
+        "3d.visible": false,
+        "shape3d.blend": "#60ACFC",
+        "shape3d.transparent": true,
+        "shape3d.opacity": 0.21,
+        "select.brightness": 1,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.movable": false,
+        "3d.movable": false,
+        "shape3d.polygonOffset": 0
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 1324,
+      "p": {
+        "displayName": "1号楼105地板",
+        "parent": {
+          "__i": 1323
+        },
+        "host": {
+          "__i": 1323
+        },
+        "rotation": -0.10472,
+        "position": {
+          "x": 2540,
+          "y": 248.79129
+        },
+        "anchorElevation": 0,
+        "scale": {
+          "x": 2.43,
+          "y": 2.43
+        },
+        "width": 2047,
+        "height": 1600,
+        "tall": 50,
+        "elevation": 2554.60106
+      },
+      "s": {
+        "all.color": "rgb(13,28,122)",
+        "2d.visible": false,
+        "3d.visible": false,
+        "select.brightness": 1,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.movable": false,
+        "3d.movable": false,
+        "shape3d.polygonOffset": 0,
+        "polygonOffset": [
+          0,
+          -3
+        ]
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 1325,
+      "p": {
+        "displayName": "屋顶",
+        "parent": {
+          "__i": 1313
+        },
+        "host": {
+          "__i": 1313
+        },
+        "rotation": -0.10472,
+        "position": {
+          "x": 2540,
+          "y": 248.79129
+        },
+        "anchorElevation": 0,
+        "width": 5199,
+        "height": -1,
+        "tall": -1,
+        "elevation": 3140.79456
+      },
+      "s": {
+        "shape3d": "symbols/build/models/大楼/大楼屋顶.json",
+        "2d.visible": false,
+        "3d.visible": false,
+        "shape3d.blend": "#60ACFC",
+        "shape3d.transparent": true,
+        "shape3d.opacity": 0.21,
+        "select.brightness": 1,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.movable": false,
+        "3d.movable": false,
+        "shape3d.polygonOffset": 0
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 1326,
+      "p": {
+        "displayName": "1号楼屋顶地板",
+        "parent": {
+          "__i": 1325
+        },
+        "host": {
+          "__i": 1325
+        },
+        "rotation": -0.10472,
+        "position": {
+          "x": 2540,
+          "y": 248.79129
+        },
+        "anchorElevation": 0,
+        "width": 5199,
+        "height": 4065,
+        "tall": 50,
+        "elevation": 3099.75688
+      },
+      "s": {
+        "all.color": "rgb(13,28,122)",
+        "2d.visible": false,
+        "3d.visible": false,
+        "select.brightness": 1,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.movable": false,
+        "3d.movable": false,
+        "shape3d.polygonOffset": 0,
+        "polygonOffset": [
+          0,
+          -3
+        ]
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 1327,
+      "p": {
+        "displayName": "#1",
+        "parent": {
+          "__i": 1312
+        },
+        "tag": "floor1",
+        "host": {
+          "__i": 1312
+        },
+        "rotation": -0.10472,
+        "position": {
+          "x": -3801.93359,
+          "y": -198.14784
+        },
+        "width": 5107,
+        "height": 2788,
+        "tall": 3113,
+        "elevation": 1556.5
+      },
+      "s": {
+        "all.color": "#DDDDDD",
+        "2d.visible": false,
+        "3d.visible": false,
+        "2d.selectable": false,
+        "3d.selectable": false,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.movable": false,
+        "3d.movable": false,
+        "shape3d.polygonOffset": 0,
+        "all.visible": false,
+        "all.reverse.cull": true,
+        "select.brightness": 1
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 1456,
+      "p": {
+        "displayName": "投影",
+        "parent": {
+          "__i": 1327
+        },
+        "host": {
+          "__i": 1327
+        },
+        "rotation": -0.10472,
+        "position": {
+          "x": -1024,
+          "y": 1735
+        },
+        "anchor": {
+          "x": 0.9842,
+          "y": 0.97843
+        },
+        "anchorElevation": 0,
+        "scale": {
+          "x": 0.97,
+          "y": 1.31
+        },
+        "width": 9825.93347,
+        "height": 8375.0866,
+        "tall": 50,
+        "elevation": -121.23849
+      },
+      "s": {
+        "all.color": "#DDDDDD",
+        "shape3d": "plane",
+        "shape3d.image": "assets/贴图/建筑投影.png",
+        "shape3d.transparent": true,
+        "shape3d.reverse.flip": true,
+        "shape3d.vector.dynamic": false,
+        "shape3d.image.cache": true,
+        "2d.selectable": false,
+        "3d.selectable": false,
+        "select.brightness": 1,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.movable": false,
+        "3d.movable": false,
+        "2d.visible": false,
+        "3d.visible": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 1329,
+      "p": {
+        "displayName": "01",
+        "parent": {
+          "__i": 1327
+        },
+        "tag": "floor101",
+        "host": {
+          "__i": 1327
+        },
+        "rotation": -0.10472,
+        "position": {
+          "x": -3810.00196,
+          "y": -266.00332
+        },
+        "anchorElevation": 0,
+        "scale": {
+          "x": 2.43,
+          "y": 2.43
+        },
+        "scaleTall": 2.43,
+        "width": 2000,
+        "height": 2400,
+        "tall": 360
+      },
+      "s": {
+        "shape3d": "symbols/build/models/大楼/202.json",
+        "shape3d.blend": "#60ACFC",
+        "shape3d.transparent": true,
+        "shape3d.opacity": 0.21,
+        "select.brightness": 1,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.movable": false,
+        "3d.movable": false,
+        "shape3d.polygonOffset": 0,
+        "2d.visible": false,
+        "3d.visible": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 1330,
+      "p": {
+        "displayName": "2号楼201地板",
+        "parent": {
+          "__i": 1329
+        },
+        "host": {
+          "__i": 1329
+        },
+        "rotation": -0.10472,
+        "position": {
+          "x": -3809.7644,
+          "y": -263.74213
+        },
+        "anchorElevation": 1,
+        "scale": {
+          "x": 2.43,
+          "y": 2.43
+        },
+        "scaleTall": 3.04,
+        "width": 2048,
+        "height": 1600,
+        "tall": 50,
+        "elevation": 33.29209
+      },
+      "s": {
+        "all.color": "rgb(13,28,122)",
+        "2d.visible": false,
+        "3d.visible": false,
+        "select.brightness": 1,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.movable": false,
+        "3d.movable": false,
+        "shape3d.polygonOffset": 0,
+        "polygonOffset": [
+          0,
+          -3
+        ]
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 1331,
+      "p": {
+        "displayName": "02",
+        "parent": {
+          "__i": 1327
+        },
+        "tag": "floor102",
+        "host": {
+          "__i": 1327
+        },
+        "rotation": -0.10472,
+        "position": {
+          "x": -3821.00196,
+          "y": -266.00332
+        },
+        "anchorElevation": 0,
+        "scale": {
+          "x": 2.43,
+          "y": 2.43
+        },
+        "scaleTall": 2.43,
+        "width": 2000,
+        "height": 2400,
+        "tall": 300,
+        "elevation": 959.38582
+      },
+      "s": {
+        "shape3d": "symbols/build/models/大楼/201.json",
+        "shape3d.blend": "#60ACFC",
+        "shape3d.transparent": true,
+        "shape3d.opacity": 0.21,
+        "2d.visible": false,
+        "3d.visible": false,
+        "select.brightness": 1,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.movable": false,
+        "3d.movable": false,
+        "shape3d.polygonOffset": 0
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 1332,
+      "p": {
+        "displayName": "2号楼202地板",
+        "parent": {
+          "__i": 1331
+        },
+        "host": {
+          "__i": 1331
+        },
+        "rotation": -0.10472,
+        "position": {
+          "x": -3821.00196,
+          "y": -266.00332
+        },
+        "anchorElevation": 0,
+        "scale": {
+          "x": 2.43,
+          "y": 2.43
+        },
+        "width": 2047,
+        "height": 1600,
+        "tall": 50,
+        "elevation": 955.38582
+      },
+      "s": {
+        "all.color": "rgb(13,28,122)",
+        "2d.visible": false,
+        "3d.visible": false,
+        "select.brightness": 1,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.movable": false,
+        "3d.movable": false,
+        "shape3d.polygonOffset": 0,
+        "polygonOffset": [
+          0,
+          -3
+        ]
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 1333,
+      "p": {
+        "displayName": "03",
+        "parent": {
+          "__i": 1327
+        },
+        "tag": "floor103",
+        "host": {
+          "__i": 1327
+        },
+        "rotation": -0.10472,
+        "position": {
+          "x": -3821.00196,
+          "y": -266.00332
+        },
+        "anchorElevation": 0,
+        "scale": {
+          "x": 2.43,
+          "y": 2.43
+        },
+        "scaleTall": 2.43,
+        "width": 2000,
+        "height": 2400,
+        "tall": 300,
+        "elevation": 1809.71913
+      },
+      "s": {
+        "shape3d": "symbols/build/models/大楼/202.json",
+        "shape3d.blend": "#60ACFC",
+        "shape3d.transparent": true,
+        "shape3d.opacity": 0.21,
+        "2d.visible": false,
+        "3d.visible": false,
+        "select.brightness": 1,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.movable": false,
+        "3d.movable": false,
+        "shape3d.polygonOffset": 0
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 1334,
+      "p": {
+        "displayName": "2号楼203地板",
+        "parent": {
+          "__i": 1333
+        },
+        "host": {
+          "__i": 1333
+        },
+        "rotation": -0.10472,
+        "position": {
+          "x": -3821.00196,
+          "y": -266.00332
+        },
+        "anchorElevation": 0,
+        "scale": {
+          "x": 2.43,
+          "y": 2.43
+        },
+        "width": 2047,
+        "height": 1600,
+        "tall": 50,
+        "elevation": 1760.71913
+      },
+      "s": {
+        "all.color": "rgb(13,28,122)",
+        "2d.visible": false,
+        "3d.visible": false,
+        "select.brightness": 1,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.movable": false,
+        "3d.movable": false,
+        "shape3d.polygonOffset": 0,
+        "polygonOffset": [
+          0,
+          -3
+        ]
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 1335,
+      "p": {
+        "displayName": "04",
+        "parent": {
+          "__i": 1327
+        },
+        "tag": "floor104",
+        "host": {
+          "__i": 1327
+        },
+        "rotation": -0.10472,
+        "position": {
+          "x": -3821.00196,
+          "y": -266.00332
+        },
+        "anchorElevation": 0,
+        "scale": {
+          "x": 2.43,
+          "y": 2.43
+        },
+        "scaleTall": 2.43,
+        "width": 2000,
+        "height": 2400,
+        "tall": 300,
+        "elevation": 2600.31913
+      },
+      "s": {
+        "shape3d": "symbols/build/models/大楼/202.json",
+        "shape3d.blend": "#60ACFC",
+        "shape3d.transparent": true,
+        "shape3d.opacity": 0.21,
+        "2d.visible": false,
+        "3d.visible": false,
+        "select.brightness": 1,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.movable": false,
+        "3d.movable": false,
+        "shape3d.polygonOffset": 0
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 1336,
+      "p": {
+        "displayName": "2号楼204地板",
+        "parent": {
+          "__i": 1335
+        },
+        "host": {
+          "__i": 1335
+        },
+        "rotation": -0.10472,
+        "position": {
+          "x": -3821.00196,
+          "y": -266.00332
+        },
+        "anchorElevation": 0,
+        "scale": {
+          "x": 2.43,
+          "y": 2.43
+        },
+        "width": 2047,
+        "height": 1600,
+        "tall": 50,
+        "elevation": 2559.31913
+      },
+      "s": {
+        "all.color": "rgb(13,28,122)",
+        "2d.visible": false,
+        "3d.visible": false,
+        "select.brightness": 1,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.movable": false,
+        "3d.movable": false,
+        "shape3d.polygonOffset": 0,
+        "polygonOffset": [
+          0,
+          -3
+        ]
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 1337,
+      "p": {
+        "displayName": "05",
+        "parent": {
+          "__i": 1327
+        },
+        "tag": "floor105",
+        "host": {
+          "__i": 1327
+        },
+        "rotation": -0.10472,
+        "position": {
+          "x": -3821.00196,
+          "y": -266.00332
+        },
+        "anchorElevation": 0,
+        "scale": {
+          "x": 2.43,
+          "y": 2.43
+        },
+        "scaleTall": 2.43,
+        "width": 2000,
+        "height": 2400,
+        "tall": 300,
+        "elevation": 3408.91913
+      },
+      "s": {
+        "shape3d": "symbols/build/models/大楼/202.json",
+        "shape3d.blend": "#60ACFC",
+        "shape3d.transparent": true,
+        "shape3d.opacity": 0.21,
+        "select.brightness": 1,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.movable": false,
+        "3d.movable": false,
+        "shape3d.polygonOffset": 0,
+        "2d.visible": false,
+        "3d.visible": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 1338,
+      "p": {
+        "displayName": "2号楼205地板",
+        "parent": {
+          "__i": 1337
+        },
+        "host": {
+          "__i": 1337
+        },
+        "rotation": -0.10472,
+        "position": {
+          "x": -3821.00196,
+          "y": -266.00332
+        },
+        "anchorElevation": 0,
+        "scale": {
+          "x": 2.43,
+          "y": 2.43
+        },
+        "width": 2047,
+        "height": 1600,
+        "tall": 50,
+        "elevation": 3358.91913
+      },
+      "s": {
+        "all.color": "rgb(13,28,122)",
+        "2d.visible": false,
+        "3d.visible": false,
+        "select.brightness": 1,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.movable": false,
+        "3d.movable": false,
+        "shape3d.polygonOffset": 0,
+        "polygonOffset": [
+          0,
+          -3
+        ]
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 1337,
+      "p": {
+        "displayName": "06",
+        "parent": {
+          "__i": 1327
+        },
+        "tag": "floor106",
+        "host": {
+          "__i": 1327
+        },
+        "rotation": -0.10472,
+        "position": {
+          "x": -3821.00196,
+          "y": -266.00332
+        },
+        "anchorElevation": 0,
+        "scale": {
+          "x": 2.43,
+          "y": 2.43
+        },
+        "scaleTall": 2.43,
+        "width": 2000,
+        "height": 2400,
+        "tall": 300,
+        "elevation": 4208.91913
+      },
+      "s": {
+        "shape3d": "symbols/build/models/大楼/202.json",
+        "shape3d.blend": "#60ACFC",
+        "shape3d.transparent": true,
+        "shape3d.opacity": 0.21,
+        "select.brightness": 1,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.movable": false,
+        "3d.movable": false,
+        "shape3d.polygonOffset": 0,
+        "2d.visible": false,
+        "3d.visible": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 1338,
+      "p": {
+        "displayName": "2号楼206地板",
+        "parent": {
+          "__i": 1337
+        },
+        "host": {
+          "__i": 1337
+        },
+        "rotation": -0.10472,
+        "position": {
+          "x": -3821.00196,
+          "y": -266.00332
+        },
+        "anchorElevation": 0,
+        "scale": {
+          "x": 2.43,
+          "y": 2.43
+        },
+        "width": 2047,
+        "height": 1600,
+        "tall": 50,
+        "elevation": 4158.91913
+      },
+      "s": {
+        "all.color": "rgb(13,28,122)",
+        "2d.visible": false,
+        "3d.visible": false,
+        "select.brightness": 1,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.movable": false,
+        "3d.movable": false,
+        "shape3d.polygonOffset": 0,
+        "polygonOffset": [
+          0,
+          -3
+        ]
+      }
+    },{
+      "c": "ht.Node",
+      "i": 1337,
+      "p": {
+        "displayName": "07",
+        "parent": {
+          "__i": 1327
+        },
+        "tag": "floor107",
+        "host": {
+          "__i": 1327
+        },
+        "rotation": -0.10472,
+        "position": {
+          "x": -3821.00196,
+          "y": -266.00332
+        },
+        "anchorElevation": 0,
+        "scale": {
+          "x": 2.43,
+          "y": 2.43
+        },
+        "scaleTall": 2.43,
+        "width": 2000,
+        "height": 2400,
+        "tall": 300,
+        "elevation": 5008.91913
+      },
+      "s": {
+        "shape3d": "symbols/build/models/大楼/202.json",
+        "shape3d.blend": "#60ACFC",
+        "shape3d.transparent": true,
+        "shape3d.opacity": 0.21,
+        "select.brightness": 1,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.movable": false,
+        "3d.movable": false,
+        "shape3d.polygonOffset": 0,
+        "2d.visible": false,
+        "3d.visible": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 1338,
+      "p": {
+        "displayName": "2号楼207地板",
+        "parent": {
+          "__i": 1337
+        },
+        "host": {
+          "__i": 1337
+        },
+        "rotation": -0.10472,
+        "position": {
+          "x": -3821.00196,
+          "y": -266.00332
+        },
+        "anchorElevation": 0,
+        "scale": {
+          "x": 2.43,
+          "y": 2.43
+        },
+        "width": 2047,
+        "height": 1600,
+        "tall": 50,
+        "elevation": 4908.91913
+      },
+      "s": {
+        "all.color": "rgb(13,28,122)",
+        "2d.visible": false,
+        "3d.visible": false,
+        "select.brightness": 1,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.movable": false,
+        "3d.movable": false,
+        "shape3d.polygonOffset": 0,
+        "polygonOffset": [
+          0,
+          -3
+        ]
+      }
+    },{
+      "c": "ht.Node",
+      "i": 1337,
+      "p": {
+        "displayName": "08",
+        "parent": {
+          "__i": 1327
+        },
+        "tag": "floor108",
+        "host": {
+          "__i": 1327
+        },
+        "rotation": -0.10472,
+        "position": {
+          "x": -3821.00196,
+          "y": -266.00332
+        },
+        "anchorElevation": 0,
+        "scale": {
+          "x": 2.43,
+          "y": 2.43
+        },
+        "scaleTall": 2.43,
+        "width": 2000,
+        "height": 2400,
+        "tall": 300,
+        "elevation": 5708.91913
+      },
+      "s": {
+        "shape3d": "symbols/build/models/大楼/202.json",
+        "shape3d.blend": "#60ACFC",
+        "shape3d.transparent": true,
+        "shape3d.opacity": 0.21,
+        "select.brightness": 1,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.movable": false,
+        "3d.movable": false,
+        "shape3d.polygonOffset": 0,
+        "2d.visible": false,
+        "3d.visible": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 1338,
+      "p": {
+        "displayName": "2号楼208地板",
+        "parent": {
+          "__i": 1337
+        },
+        "host": {
+          "__i": 1337
+        },
+        "rotation": -0.10472,
+        "position": {
+          "x": -3821.00196,
+          "y": -266.00332
+        },
+        "anchorElevation": 0,
+        "scale": {
+          "x": 2.43,
+          "y": 2.43
+        },
+        "width": 2047,
+        "height": 1600,
+        "tall": 50,
+        "elevation": 5658.91913
+      },
+      "s": {
+        "all.color": "rgb(13,28,122)",
+        "2d.visible": false,
+        "3d.visible": false,
+        "select.brightness": 1,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.movable": false,
+        "3d.movable": false,
+        "shape3d.polygonOffset": 0,
+        "polygonOffset": [
+          0,
+          -3
+        ]
+      }
+    },{
+      "c": "ht.Node",
+      "i": 1337,
+      "p": {
+        "displayName": "09",
+        "parent": {
+          "__i": 1327
+        },
+        "tag": "floor109",
+        "host": {
+          "__i": 1327
+        },
+        "rotation": -0.10472,
+        "position": {
+          "x": -3821.00196,
+          "y": -266.00332
+        },
+        "anchorElevation": 0,
+        "scale": {
+          "x": 2.43,
+          "y": 2.43
+        },
+        "scaleTall": 2.43,
+        "width": 2000,
+        "height": 2400,
+        "tall": 300,
+        "elevation": 6458.91913
+      },
+      "s": {
+        "shape3d": "symbols/build/models/大楼/202.json",
+        "shape3d.blend": "#60ACFC",
+        "shape3d.transparent": true,
+        "shape3d.opacity": 0.21,
+        "select.brightness": 1,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.movable": false,
+        "3d.movable": false,
+        "shape3d.polygonOffset": 0,
+        "2d.visible": false,
+        "3d.visible": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 1338,
+      "p": {
+        "displayName": "2号楼209地板",
+        "parent": {
+          "__i": 1337
+        },
+        "host": {
+          "__i": 1337
+        },
+        "rotation": -0.10472,
+        "position": {
+          "x": -3821.00196,
+          "y": -266.00332
+        },
+        "anchorElevation": 0,
+        "scale": {
+          "x": 2.43,
+          "y": 2.43
+        },
+        "width": 2047,
+        "height": 1600,
+        "tall": 50,
+        "elevation": 6408.91913
+      },
+      "s": {
+        "all.color": "rgb(13,28,122)",
+        "2d.visible": false,
+        "3d.visible": false,
+        "select.brightness": 1,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.movable": false,
+        "3d.movable": false,
+        "shape3d.polygonOffset": 0,
+        "polygonOffset": [
+          0,
+          -3
+        ]
+      }
+    },{
+      "c": "ht.Node",
+      "i": 1337,
+      "p": {
+        "displayName": "10",
+        "parent": {
+          "__i": 1327
+        },
+        "tag": "floor110",
+        "host": {
+          "__i": 1327
+        },
+        "rotation": -0.10472,
+        "position": {
+          "x": -3821.00196,
+          "y": -266.00332
+        },
+        "anchorElevation": 0,
+        "scale": {
+          "x": 2.43,
+          "y": 2.43
+        },
+        "scaleTall": 2.43,
+        "width": 2000,
+        "height": 2400,
+        "tall": 300,
+        "elevation": 7208.91913
+      },
+      "s": {
+        "shape3d": "symbols/build/models/大楼/202.json",
+        "shape3d.blend": "#60ACFC",
+        "shape3d.transparent": true,
+        "shape3d.opacity": 0.21,
+        "select.brightness": 1,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.movable": false,
+        "3d.movable": false,
+        "shape3d.polygonOffset": 0,
+        "2d.visible": false,
+        "3d.visible": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 1338,
+      "p": {
+        "displayName": "2号楼210地板",
+        "parent": {
+          "__i": 1337
+        },
+        "host": {
+          "__i": 1337
+        },
+        "rotation": -0.10472,
+        "position": {
+          "x": -3821.00196,
+          "y": -266.00332
+        },
+        "anchorElevation": 0,
+        "scale": {
+          "x": 2.43,
+          "y": 2.43
+        },
+        "width": 2047,
+        "height": 1600,
+        "tall": 50,
+        "elevation": 7158.91913
+      },
+      "s": {
+        "all.color": "rgb(13,28,122)",
+        "2d.visible": false,
+        "3d.visible": false,
+        "select.brightness": 1,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.movable": false,
+        "3d.movable": false,
+        "shape3d.polygonOffset": 0,
+        "polygonOffset": [
+          0,
+          -3
+        ]
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 1337,
+      "p": {
+        "displayName": "11",
+        "parent": {
+          "__i": 1327
+        },
+        "tag": "floor111",
+        "host": {
+          "__i": 1327
+        },
+        "rotation": -0.10472,
+        "position": {
+          "x": -3821.00196,
+          "y": -266.00332
+        },
+        "anchorElevation": 0,
+        "scale": {
+          "x": 2.43,
+          "y": 2.43
+        },
+        "scaleTall": 2.43,
+        "width": 2000,
+        "height": 2400,
+        "tall": 300,
+        "elevation": 7958.91913
+      },
+      "s": {
+        "shape3d": "symbols/build/models/大楼/202.json",
+        "shape3d.blend": "#60ACFC",
+        "shape3d.transparent": true,
+        "shape3d.opacity": 0.21,
+        "select.brightness": 1,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.movable": false,
+        "3d.movable": false,
+        "shape3d.polygonOffset": 0,
+        "2d.visible": false,
+        "3d.visible": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 1338,
+      "p": {
+        "displayName": "2号楼211地板",
+        "parent": {
+          "__i": 1337
+        },
+        "host": {
+          "__i": 1337
+        },
+        "rotation": -0.10472,
+        "position": {
+          "x": -3821.00196,
+          "y": -266.00332
+        },
+        "anchorElevation": 0,
+        "scale": {
+          "x": 2.43,
+          "y": 2.43
+        },
+        "width": 2047,
+        "height": 1600,
+        "tall": 50,
+        "elevation": 7908.91913
+      },
+      "s": {
+        "all.color": "rgb(13,28,122)",
+        "2d.visible": false,
+        "3d.visible": false,
+        "select.brightness": 1,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.movable": false,
+        "3d.movable": false,
+        "shape3d.polygonOffset": 0,
+        "polygonOffset": [
+          0,
+          -3
+        ]
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 1337,
+      "p": {
+        "displayName": "12",
+        "parent": {
+          "__i": 1327
+        },
+        "tag": "floor112",
+        "host": {
+          "__i": 1327
+        },
+        "rotation": -0.10472,
+        "position": {
+          "x": -3821.00196,
+          "y": -266.00332
+        },
+        "anchorElevation": 0,
+        "scale": {
+          "x": 2.43,
+          "y": 2.43
+        },
+        "scaleTall": 2.43,
+        "width": 2000,
+        "height": 2400,
+        "tall": 300,
+        "elevation": 8708.91913
+      },
+      "s": {
+        "shape3d": "symbols/build/models/大楼/202.json",
+        "shape3d.blend": "#60ACFC",
+        "shape3d.transparent": true,
+        "shape3d.opacity": 0.21,
+        "select.brightness": 1,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.movable": false,
+        "3d.movable": false,
+        "shape3d.polygonOffset": 0,
+        "2d.visible": false,
+        "3d.visible": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 1338,
+      "p": {
+        "displayName": "2号楼212地板",
+        "parent": {
+          "__i": 1337
+        },
+        "host": {
+          "__i": 1337
+        },
+        "rotation": -0.10472,
+        "position": {
+          "x": -3821.00196,
+          "y": -266.00332
+        },
+        "anchorElevation": 0,
+        "scale": {
+          "x": 2.43,
+          "y": 2.43
+        },
+        "width": 2047,
+        "height": 1600,
+        "tall": 50,
+        "elevation": 8658.91913
+      },
+      "s": {
+        "all.color": "rgb(13,28,122)",
+        "2d.visible": false,
+        "3d.visible": false,
+        "select.brightness": 1,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.movable": false,
+        "3d.movable": false,
+        "shape3d.polygonOffset": 0,
+        "polygonOffset": [
+          0,
+          -3
+        ]
+      }
+    },{
+      "c": "ht.Node",
+      "i": 1337,
+      "p": {
+        "displayName": "13",
+        "parent": {
+          "__i": 1327
+        },
+        "tag": "floor113",
+        "host": {
+          "__i": 1327
+        },
+        "rotation": -0.10472,
+        "position": {
+          "x": -3821.00196,
+          "y": -266.00332
+        },
+        "anchorElevation": 0,
+        "scale": {
+          "x": 2.43,
+          "y": 2.43
+        },
+        "scaleTall": 2.43,
+        "width": 2000,
+        "height": 2400,
+        "tall": 300,
+        "elevation": 9458.91913
+      },
+      "s": {
+        "shape3d": "symbols/build/models/大楼/202.json",
+        "shape3d.blend": "#60ACFC",
+        "shape3d.transparent": true,
+        "shape3d.opacity": 0.21,
+        "select.brightness": 1,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.movable": false,
+        "3d.movable": false,
+        "shape3d.polygonOffset": 0,
+        "2d.visible": false,
+        "3d.visible": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 1338,
+      "p": {
+        "displayName": "2号楼213地板",
+        "parent": {
+          "__i": 1337
+        },
+        "host": {
+          "__i": 1337
+        },
+        "rotation": -0.10472,
+        "position": {
+          "x": -3821.00196,
+          "y": -266.00332
+        },
+        "anchorElevation": 0,
+        "scale": {
+          "x": 2.43,
+          "y": 2.43
+        },
+        "width": 2047,
+        "height": 1600,
+        "tall": 50,
+        "elevation": 9408.91913
+      },
+      "s": {
+        "all.color": "rgb(13,28,122)",
+        "2d.visible": false,
+        "3d.visible": false,
+        "select.brightness": 1,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.movable": false,
+        "3d.movable": false,
+        "shape3d.polygonOffset": 0,
+        "polygonOffset": [
+          0,
+          -3
+        ]
+      }
+    }
+  ],
+  "scene": {
+    "eye": [
+      -11202.8432,
+      15243.88329,
+      25584.45108
+    ],
+    "center": [
+      -153.90135,
+      -5,
+      -1592.28699
+    ],
+    "near": 10,
+    "far": 100000,
+    "gridSize": 50,
+    "gridGap": 75,
+    "gridColor": [
+      0.4,
+      0.75,
+      0.85,
+      1
+    ]
+  }
+}
