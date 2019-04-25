@@ -1,0 +1,357 @@
+# OBJ Material Export by Luxion KeyShot
+
+newmtl 油漆磨砂白色 Paint Matte White
+Kd 1 1 1
+Ks 0 0 0
+
+newmtl 油漆磨砂黄色 Paint Matte Yellow #1
+Kd 0.98 0.840351 0.0489933
+Ks 0 0 0
+
+newmtl 油漆磨砂黄色 Paint Matte Yellow
+Kd 0.98 0.840351 0.0489933
+Ks 0 0 0
+
+newmtl 玻璃折射灰色 Glass refractive grey #1
+Kd 0 0 0
+Ks 0.529412 0.529412 0.529412
+
+newmtl 玻璃折射灰色 Glass refractive grey #1
+Kd 0 0 0
+Ks 0.529412 0.529412 0.529412
+
+newmtl 玻璃折射灰色 Glass refractive grey #1
+Kd 0 0 0
+Ks 0.529412 0.529412 0.529412
+
+newmtl 玻璃折射灰色 Glass refractive grey #1
+Kd 0 0 0
+Ks 0.529412 0.529412 0.529412
+
+newmtl 玻璃折射灰色 Glass refractive grey
+Kd 0 0 0
+Ks 0.529412 0.529412 0.529412
+
+newmtl 玻璃折射灰色 Glass refractive grey
+Kd 0 0 0
+Ks 0.529412 0.529412 0.529412
+
+newmtl 天鹅绒黑色 Velvet Black
+Kd 0.01 0.01 0.01
+Ks 2.38386e-007 0 0
+
+newmtl wq-Chest:color:92:92:92
+Kd 0.360784 0.360784 0.360784
+Ks 0 0 0
+
+newmtl 天鹅绒黑色 Velvet Black #1
+Kd 0.01 0.01 0.01
+Ks 0 0 0
+
+newmtl 天鹅绒黑色 Velvet Black #4
+Kd 0.01 0.01 0.01
+Ks 0 0 0
+
+newmtl wq-Hand:color:252:230:199
+Kd 0.988235 0.901961 0.780392
+Ks 0 0 0
+
+newmtl 天鹅绒黑色 Velvet Black #3
+Kd 0.01 0.01 0.01
+Ks 0 0 0
+
+newmtl wq-Calf:color:192:192:192
+Kd 0.752941 0.752941 0.752941
+Ks 0 0 0
+
+newmtl wq-Foot:color:0:0:0
+Kd 0 0 0
+Ks 0 0 0
+
+newmtl 天鹅绒黑色 Velvet Black #1
+Kd 0.01 0.01 0.01
+Ks 0 0 0
+
+newmtl 天鹅绒黑色 Velvet Black #4
+Kd 0.01 0.01 0.01
+Ks 0 0 0
+
+newmtl wq-Hand:color:252:230:199
+Kd 0.988235 0.901961 0.780392
+Ks 0 0 0
+
+newmtl 天鹅绒黑色 Velvet Black #3
+Kd 0.01 0.01 0.01
+Ks 0 0 0
+
+newmtl wq-Calf:color:192:192:192
+Kd 0.752941 0.752941 0.752941
+Ks 0 0 0
+
+newmtl wq-Foot:color:0:0:0
+Kd 0 0 0
+Ks 0 0 0
+
+newmtl wq-neck:color:252:230:199
+Kd 0.988235 0.901961 0.780392
+Ks 0 0 0
+
+newmtl wq-Head:color:23:23:23
+Kd 0.0901961 0.0901961 0.0901961
+Ks 0 0 0
+
+newmtl wq-Head:color:0:0:0
+Kd 0 0 0
+Ks 0 0 0
+
+newmtl wq-Head:color:252:230:199
+Kd 0.988235 0.901961 0.780392
+Ks 0 0 0
+
+newmtl 天鹅绒黑色 Velvet Black
+Kd 0.01 0.01 0.01
+Ks 2.87971e-013 5.31366 3.87682e-025
+
+newmtl wq-Chest:color:92:92:92
+Kd 0.360784 0.360784 0.360784
+Ks 0 0 0
+
+newmtl 天鹅绒黑色 Velvet Black #1
+Kd 0.01 0.01 0.01
+Ks 0 0 0
+
+newmtl 天鹅绒黑色 Velvet Black #4
+Kd 0.01 0.01 0.01
+Ks 0 0 0
+
+newmtl wq-Hand:color:252:230:199
+Kd 0.988235 0.901961 0.780392
+Ks 0 0 0
+
+newmtl 天鹅绒黑色 Velvet Black #3
+Kd 0.01 0.01 0.01
+Ks 0 0 0
+
+newmtl wq-Calf:color:192:192:192
+Kd 0.752941 0.752941 0.752941
+Ks 0 0 0
+
+newmtl wq-Foot:color:0:0:0
+Kd 0 0 0
+Ks 0 0 0
+
+newmtl 天鹅绒黑色 Velvet Black #1
+Kd 0.01 0.01 0.01
+Ks 0 0 0
+
+newmtl 天鹅绒黑色 Velvet Black #4
+Kd 0.01 0.01 0.01
+Ks 0 0 0
+
+newmtl wq-Hand:color:252:230:199
+Kd 0.988235 0.901961 0.780392
+Ks 0 0 0
+
+newmtl 天鹅绒黑色 Velvet Black #3
+Kd 0.01 0.01 0.01
+Ks 0 0 0
+
+newmtl wq-Calf:color:192:192:192
+Kd 0.752941 0.752941 0.752941
+Ks 0 0 0
+
+newmtl wq-Foot:color:0:0:0
+Kd 0 0 0
+Ks 0 0 0
+
+newmtl wq-neck:color:252:230:199
+Kd 0.988235 0.901961 0.780392
+Ks 0 0 0
+
+newmtl wq-Head:color:23:23:23
+Kd 0.0901961 0.0901961 0.0901961
+Ks 0 0 0
+
+newmtl wq-Head:color:0:0:0
+Kd 0 0 0
+Ks 0 0 0
+
+newmtl wq-Head:color:252:230:199
+Kd 0.988235 0.901961 0.780392
+Ks 0 0 0
+
+newmtl 油漆抛光暗酷灰 Paint gloss dark cool grey
+Kd 0.215686 0.258824 0.290196
+Ks 0 0 0
+
+newmtl 油漆抛光暗酷灰 Paint gloss dark cool grey #1
+Kd 0.215686 0.258824 0.290196
+Ks 0 0 0
+
+newmtl 油漆抛光暗酷灰 Paint gloss dark cool grey
+Kd 0.215686 0.258824 0.290196
+Ks 0 0 0
+
+newmtl 油漆抛光暗酷灰 Paint gloss dark cool grey #1
+Kd 0.215686 0.258824 0.290196
+Ks 0 0 0
+
+newmtl 油漆抛光暗酷灰 Paint gloss dark cool grey
+Kd 0.215686 0.258824 0.290196
+Ks 0 0 0
+
+newmtl 油漆抛光暗酷灰 Paint gloss dark cool grey #1
+Kd 0.215686 0.258824 0.290196
+Ks 0 0 0
+
+newmtl 油漆抛光暗酷灰 Paint gloss dark cool grey
+Kd 0.215686 0.258824 0.290196
+Ks 0 0 0
+
+newmtl 油漆抛光暗酷灰 Paint gloss dark cool grey #1
+Kd 0.215686 0.258824 0.290196
+Ks 0 0 0
+
+newmtl 坚硬粗糙塑料白色 Hard Rough Plastic White
+Kd 1 1 1
+Ks 0.992157 0.992157 0.992157
+
+newmtl 油漆抛光暗森林绿 Paint gloss dark forest green #2
+Kd 0.12549 0.215686 0.164706
+Ks 0 0 0
+
+newmtl 油漆抛光暗森林绿 Paint gloss dark forest green #1
+Kd 0.12549 0.215686 0.164706
+Ks 0 0 0
+
+newmtl 油漆抛光暗森林绿 Paint gloss dark forest green #1
+Kd 0.12549 0.215686 0.164706
+Ks 0 0 0
+
+newmtl 油漆抛光暗森林绿 Paint gloss dark forest green #1
+Kd 0.12549 0.215686 0.164706
+Ks 0 0 0
+
+newmtl 油漆抛光暗森林绿 Paint gloss dark forest green
+Kd 0.12549 0.215686 0.164706
+Ks 0 0 0
+
+newmtl 油漆抛光暗森林绿 Paint gloss dark forest green #3
+Kd 0.12549 0.215686 0.164706
+Ks 0 0 0
+
+newmtl 油漆抛光暗森林绿 Paint gloss dark forest green #3
+Kd 0.12549 0.215686 0.164706
+Ks 0 0 0
+
+newmtl 油漆抛光暗森林绿 Paint gloss dark forest green #3
+Kd 0.12549 0.215686 0.164706
+Ks 0 0 0
+
+newmtl 油漆抛光暗森林绿 Paint gloss dark forest green #3
+Kd 0.12549 0.215686 0.164706
+Ks 0 0 0
+
+newmtl 油漆抛光暗森林绿 Paint gloss dark forest green #3
+Kd 0.12549 0.215686 0.164706
+Ks 0 0 0
+
+newmtl 油漆抛光暗森林绿 Paint gloss dark forest green #3
+Kd 0.12549 0.215686 0.164706
+Ks 0 0 0
+
+newmtl 油漆抛光暗森林绿 Paint gloss dark forest green #3
+Kd 0.12549 0.215686 0.164706
+Ks 0 0 0
+
+newmtl 坚硬粗糙塑料白色 Hard Rough Plastic White
+Kd 1 1 1
+Ks 0.992157 0.992157 0.992157
+
+newmtl 油漆抛光暗森林绿 Paint gloss dark forest green #2
+Kd 0.12549 0.215686 0.164706
+Ks 0 0 0
+
+newmtl 油漆抛光暗森林绿 Paint gloss dark forest green #1
+Kd 0.12549 0.215686 0.164706
+Ks 0 0 0
+
+newmtl 油漆抛光暗森林绿 Paint gloss dark forest green #1
+Kd 0.12549 0.215686 0.164706
+Ks 0 0 0
+
+newmtl 油漆抛光暗森林绿 Paint gloss dark forest green #1
+Kd 0.12549 0.215686 0.164706
+Ks 0 0 0
+
+newmtl 油漆抛光暗森林绿 Paint gloss dark forest green
+Kd 0.12549 0.215686 0.164706
+Ks 0 0 0
+
+newmtl 油漆抛光暗森林绿 Paint gloss dark forest green #3
+Kd 0.12549 0.215686 0.164706
+Ks 0 0 0
+
+newmtl 油漆抛光暗森林绿 Paint gloss dark forest green #3
+Kd 0.12549 0.215686 0.164706
+Ks 0 0 0
+
+newmtl 油漆抛光暗森林绿 Paint gloss dark forest green #3
+Kd 0.12549 0.215686 0.164706
+Ks 0 0 0
+
+newmtl 油漆抛光暗森林绿 Paint gloss dark forest green #3
+Kd 0.12549 0.215686 0.164706
+Ks 0 0 0
+
+newmtl 油漆抛光暗森林绿 Paint gloss dark forest green #3
+Kd 0.12549 0.215686 0.164706
+Ks 0 0 0
+
+newmtl 油漆抛光暗森林绿 Paint gloss dark forest green #3
+Kd 0.12549 0.215686 0.164706
+Ks 0 0 0
+
+newmtl 油漆抛光暗森林绿 Paint gloss dark forest green #3
+Kd 0.12549 0.215686 0.164706
+Ks 0 0 0
+
+newmtl office01-office_armchair_p-510-white_02:color:16:16:16
+Kd 0.0627451 0.0627451 0.0627451
+Ks 0 0 0
+
+newmtl office01-office_armchair_p-510-white_02:color:120:120:120
+Kd 0.470588 0.470588 0.470588
+Ks 0 0 0
+
+newmtl office01-office_armchair_p-510-white_02:color:255:255:255
+Kd 1 1 1
+Ks 0 0 0
+
+newmtl office01-office_armchair_p-510-white_02:color:16:16:16
+Kd 0.0627451 0.0627451 0.0627451
+Ks 0 0 0
+
+newmtl office01-office_armchair_p-510-white_02:color:120:120:120
+Kd 0.470588 0.470588 0.470588
+Ks 0 0 0
+
+newmtl office01-office_armchair_p-510-white_02:color:255:255:255
+Kd 1 1 1
+Ks 0 0 0
+
+newmtl 油漆磨砂白色 Paint Matte White #1
+Kd 1 1 1
+Ks 0 0 0
+
+newmtl 油漆磨砂黄色 Paint Matte Yellow #1
+Kd 0.98 0.840351 0.0489933
+Ks 0 0 0
+
+newmtl 油漆磨砂黄色 Paint Matte Yellow #1
+Kd 0.98 0.840351 0.0489933
+Ks 0 0 0
+
+newmtl 油漆磨砂黄色 Paint Matte Yellow #1
+Kd 0.98 0.840351 0.0489933
+Ks 0 0 0

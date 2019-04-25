@@ -1745,7 +1745,7 @@
         "tall": 8113
       },
       "s": {
-        "shape3d": "symbols/build/models/大楼/大楼2.json",
+        "shape3d": "symbols/airShip/airShip.json",
         "shape3d.blend": "rgb(194,223,255)",
         "select.brightness": 1,
         "envmap": 0.07,

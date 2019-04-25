@@ -1,0 +1,9 @@
+{
+  "modelType": "obj",
+  "obj": "assets/objs/airShip/airShip.obj",
+  "mtl": "assets/objs/airShip/airShip.mtl",
+  "reverseFlipMtls": "*",
+
+  "image": "",
+  "prefix": "assets/objs/airShip/"
+}
