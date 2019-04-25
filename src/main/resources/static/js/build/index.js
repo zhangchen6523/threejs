@@ -490,6 +490,7 @@ var buildingList, floorList;
 var leftPanel, rightPanel, capacityNode;
 var navigation = ['building'];
 var currentRoom, currentCabinet;
+var panel=null;
 g3d.mi(function (e) {
     var kind = e.kind;
     if (kind === 'clickData') {
@@ -514,24 +515,24 @@ g3d.mi(function (e) {
         var data = e.data;
 
 
-        if (data.getDisplayName() === 'room' && g3d.dm().a('cabinetPanel')) {
-            var panel = g3d.dm().a('cabinetPanel');
+        if (data.getDisplayName() === '传感器1' && g3d.dm().a('cabinetPanel')) {
+            panel = g3d.dm().a('cabinetPanel');
             panel.s('3d.visible', true);
 
             var p3 = data.p3();
 
-            panel.p3(p3[0], p3[1] + data.getTall(), p3[2]);
-
-            g3d.flyTo(panel, {
-                animation: true
-            });
-
-            setNodeOpacity(currentRoom, data, 0.2);
-
-            currentCabinet = data;
-
-            if (navigation[navigation.length - 1] !== 'cabinet')
-                navigation.push('cabinet');
+            panel.p3(p3[0], p3[1] + data.getTall()+1200, p3[2]);
+            //
+            // g3d.flyTo(panel, {
+            //     animation: true
+            // });
+            //
+            // setNodeOpacity(currentRoom, data, 0.2);
+            //
+            // currentCabinet = data;
+            //
+            // if (navigation[navigation.length - 1] !== 'cabinet')
+            //     navigation.push('cabinet');
             return;
         }
 
@@ -671,6 +672,10 @@ g3d.mi(function (e) {
             htmlNode.s('2d.visible', false);
             dm2d.remove(htmlNode);
         }
+        if(panel!=null){
+            panel.s('3d.visible', false);
+        }
+        panel=null;
         htmlNode=null;
     }
     if (kind === 'doubleClickBackground') {

@@ -121,6 +121,44 @@
         "3d.editable": false,
         "select.brightness": 1
       }
+    },
+    {
+      "c": "ht.Node",
+      "i": 2253,
+      "p": {
+        "displayName": "面板",
+        "parent": {
+          "__i": 1002
+        },
+        "tag": "cabinetPanel",
+        "host": {
+          "__i": 1002
+        },
+        "position": {
+          "x": 2801.53586,
+          "y": -112.82683
+        },
+        "anchorElevation": 0,
+        "width": 4520.90079,
+        "height": 2400.96173,
+        "tall": 3400,
+        "elevation": 4520.71327
+      },
+      "s": {
+        "all.color": "#DDDDDD",
+        "shape3d": "billboard",
+        "shape3d.autorotate": true,
+        "shape3d.image": "symbols/3d场景用/标签/复杂标签.json",
+        "shape3d.transparent": true,
+        "shape3d.alwaysOnTop": true,
+        "wf.short": true,
+        "2d.movable": false,
+        "3d.movable": false,
+        "2d.editable": false,
+        "3d.editable": false,
+        "2d.visible": false,
+        "3d.visible": false
+      }
     }
   ],
   "scene": {
