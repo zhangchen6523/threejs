@@ -96,7 +96,7 @@
         "anchorElevation": 0,
         "scale": {
           "x": 1,
-          "y": 1.57
+          "y": 1
         },
         "anchorElevation": 0,
         "width": 300,
@@ -107,6 +107,7 @@
         "all.color": "#60ACFC",
         "all.reverse.cull": true,
         "all.transparent": true,
+        "shape3d": "sphere",
         "bottom.visible": false,
         "front.image": "symbols/build/3d场景用/建筑/半透渐变.png",
         "back.image": "symbols/build/3d场景用/建筑/半透渐变.png",
