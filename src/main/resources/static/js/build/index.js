@@ -515,7 +515,7 @@ g3d.mi(function (e) {
         var data = e.data;
 
 
-        if (data.getDisplayName() === '传感器1' && g3d.dm().a('cabinetPanel')) {
+        if (data.getDisplayName().indexOf('传感器')>-1 && g3d.dm().a('cabinetPanel')) {
             panel = g3d.dm().a('cabinetPanel');
             panel.s('3d.visible', true);
 
