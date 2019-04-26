@@ -491,268 +491,114 @@ var leftPanel, rightPanel, capacityNode;
 var navigation = ['building'];
 var currentRoom, currentCabinet;
 var panel=null;
-g3d.mi(function (e) {
-    var kind = e.kind;
-    if (kind === 'clickData') {
-        var data = e.data;
-        var tag = data.getTag();
-
-        if (!tag) {
-            data = data.getParent();
-            tag = data ? data.getTag() : null;
-        }
-
-        if (tag) {
-            if (tag.indexOf('building') >= 0 || tag.indexOf('floor') >= 0) {
-                rightPanel.a(data.getAttrObject());
-            }
-        }
-
-        return;
-    }
-    console.log(kind)
-    if (kind === 'doubleClickData') {
-        var data = e.data;
-
-
-        if (data.getDisplayName().indexOf('传感器')>-1 && g3d.dm().a('cabinetPanel')) {
-            panel = g3d.dm().a('cabinetPanel');
-            panel.s('3d.visible', true);
-
-            var p3 = data.p3();
-
-            panel.p3(p3[0], p3[1] + data.getTall()+1200, p3[2]);
-            //
-            // g3d.flyTo(panel, {
-            //     animation: true
-            // });
-            //
-            // setNodeOpacity(currentRoom, data, 0.2);
-            //
-            // currentCabinet = data;
-            //
-            // if (navigation[navigation.length - 1] !== 'cabinet')
-            //     navigation.push('cabinet');
-            return;
-        }
-
-        var tag = data.getTag();
-        if (!tag) return;
-
-        if (tag.indexOf('building') >= 0) {
-            hideAll();
-
-            leftPanel.a(data.getAttrObject());
-
-            var index = tag.substr('building'.length);
-            rightPanel.a(source['floor' + index + '01']);
-
-            var floor = 'floor' + index;
-            data = dm3d.getDataByTag(floor);
-            setNodeVisible(data, true);
-            // alert(1)
-            g3d.flyTo(data, {
-                animation: true,
-                center: data.p3(),
-                ratio: 0.2
-            });
-
-            navigation.push(tag);
-        }
-        else if (tag.indexOf('floor') >= 0) {
-            var dm = dmMap[tag];
-            var flyTo = true;
-            if (!dm) {
-                flyTo = false;
-
-                dm = dmMap[tag] = new ht.DataModel();
-                var modelUrl = '';
-                if(tag.indexOf('floor102')>=0){
-                    modelUrl='/js/build/scenes/机房/floor101.json';
-                }else{
-                    modelUrl='/js/build/scenes/机房/floor102.json';
-                }
-                ht.Default.xhrLoad(modelUrl, function (json) {
-                    if (!json) return;
-
-                    g3d.dm(dm);
-
-                    dm.deserialize(json);
-
-                   // alert(2)
-                    g3d.flyTo(null, {
-                        animation: true,
-                        worldDirection: [0.5, 2, 0],
-                        center: [1389.124766110275, 1190.809647904507, 702.6359369689474],
-                        ratio: 0.8
-                    });
-
-                    dm.a('cabinetPanel', dm.getDataByTag('cabinetPanel'));
-
-                    var cabinetList = dm.toDatas(function (d) { return d.getDisplayName() === 'cabinet'; });
-                    dm.a('cabinetList', cabinetList);
-                    initWarning(dm, cabinetList);
-
-                    initCapacity(dm, cabinetList);
-
-                    cylinderList = dm.toDatas(function(d) { return d.getDisplayName() === 'cylinder'; });
-
-                    navigation.push(tag);
-                });
-            }
-            else {
-                g3d.dm(dm);
-
-             //   alert(3)
-                if (flyTo) {
-                    g3d.flyTo(null, {
-                        // animation: true,
-                        // worldDirection: [0, 2, 0],
-                        // center: [0, 3000, 0],
-                        // ratio: 0.8
-                        animation: true,
-                        worldDirection: [0.5, 2, 0],
-                        center: [1389.124766110275, 1190.809647904507, 702.6359369689474],
-                        ratio: 0.8
-                    });
-                }
-
-                navigation.push(tag);
-            }
-        }
-        else if (tag.indexOf('room') >= 0) {
-        //     if (currentRoom) {
-        //         setNodeOpacity(currentRoom, null, 1);
-        //         currentCabinet = null;
-        //
-        //         setNodeVisible(currentRoom, false);
-        //     }
-        //
-        //     setNodeVisible(data, true);
-        //
-        //     g3d.flyTo(data, {
-        //         animation: true
-        //     });
-        //
-        //     currentRoom = data;
-        //
-        //     capacityNode.s('2d.visible', true);
-        //
-        //     if (navigation[navigation.length - 1].indexOf('room') >= 0)
-        //         navigation[navigation.length - 1] = tag;
-        //     else
-        //         navigation.push(tag);
-        }
-        else if (tag.indexOf('cgq') >= 0) {
-            if(htmlNode!=null){
-                htmlNode.s('2d.visible', false);
-                dm2d.remove(htmlNode);
-                htmlNode=null;
-            }
-            htmlNode = new ht.HtmlNode();
-            htmlNode.setPosition(500, 400);
-           // htmlNode.setName("Rendering HTML text");
-            htmlNode.setHtml("<div class='htmlWrapper' style='width: 300px;height: 200px;background-color:rgba(220,38,38,0.2);'>"
-                +"<label>实时温度：</label><label id='wendu1'>23℃</label><br>"
-                +"<label>今日最高：</label><label id='t_max_tem'>28℃</label><br>"
-                +"<label>今日最低：</label><label id='t_min_tem'>12℃</label><br>"
-                +"<label>历史最高：</label><label id='h_max_tem'>68℃</label><br>"
-                +"<label>历史最低：</label><label id='h_min_tem'>-23℃</label><br>"
-                +"</div>");
-            htmlNode.setContext({
-                value:htmlNode.getName(),
-                nodeid:htmlNode.getId()
-            });
-            dm2d.add(htmlNode);
-        }
-        return;
-    }
-    else if (kind === 'clickBackground') {
-        if(htmlNode!=null) {
-            htmlNode.s('2d.visible', false);
-            dm2d.remove(htmlNode);
-        }
-        if(panel!=null){
-            panel.s('3d.visible', false);
-        }
-        panel=null;
-        htmlNode=null;
-    }
-    if (kind === 'doubleClickBackground') {
-        if (capacityNode.a('capacityVisible')) {
-            capacityNode.s('onDown')({}, capacityNode, g2d);
-        }
-
-        if (g3d.dm().a('cabinetPanel')) {
-            g3d.dm().a('cabinetPanel').s('3d.visible', false);
-        }
-
-        if (navigation.length === 1) return;
-
-        hideAll();
-
-        navigation.pop();
-
-        var data = navigation[navigation.length - 1];
-        if (data === 'building') {
-            rightPanel.a(leftPanel.getAttrObject());
-            leftPanel.a(source.park);
-
-            buildingList.forEach(function (b) {
-                setNodeVisible(b, true);
-            });
-
-            fitScene();
-
-            return;
-        }
-
-        if (data.indexOf('building') >= 0) {
-            g3d.dm(dm3d);
-
-            var floor = dm3d.getDataByTag('floor' + data.substr('building'.length));
-            setNodeVisible(floor, true);
-
-            //alert(4)
-            console.log(floor.p3())
-            g3d.flyTo(floor, {
-                animation: true,
-                worldDirection: [-0.5086145611178792, 0.44796485138462094, 0.7352813884104654],
-                center: floor.p3(),
-                ratio: 0.2
-            });
-
-            return;
-        }
-
-        if (data.indexOf('floor') >= 0) {
-            setNodeOpacity(currentRoom, null, 1);
-            currentCabinet = null;
-
-            setNodeVisible(currentRoom, false);
-            currentRoom = null;
-
-            alert(5)
-            g3d.flyTo(null, { animation: true });
-
-            capacityNode.s('2d.visible', false);
-
-            return;
-        }
-
-        if (data.indexOf('room') >= 0) {
-            setNodeOpacity(currentRoom, null, 1);
-            currentCabinet = null;
-
-            alert(6)
-            g3d.flyTo(currentRoom, { animation: true });
-
-            return;
-        }
-
-        return;
-    }
-});
+// g3d.mi(function (e) {
+//     var kind = e.kind;
+//     if (kind === 'clickData') {
+//         var data = e.data;
+//         var tag = data.getTag();
+//
+//         if (!tag) {
+//             data = data.getParent();
+//             tag = data ? data.getTag() : null;
+//         }
+//
+//         if (tag) {
+//             if (tag.indexOf('building') >= 0 || tag.indexOf('floor') >= 0) {
+//                 rightPanel.a(data.getAttrObject());
+//             }
+//         }
+//
+//         return;
+//     }
+//     console.log(kind)
+//     if (kind === 'doubleClickData') {
+//     }
+//     else if (kind === 'clickBackground') {
+//         if(htmlNode!=null) {
+//             htmlNode.s('2d.visible', false);
+//             dm2d.remove(htmlNode);
+//         }
+//         if(panel!=null){
+//             panel.s('3d.visible', false);
+//         }
+//         panel=null;
+//         htmlNode=null;
+//     }
+//     if (kind === 'doubleClickBackground') {
+//         if (capacityNode.a('capacityVisible')) {
+//             capacityNode.s('onDown')({}, capacityNode, g2d);
+//         }
+//
+//         if (g3d.dm().a('cabinetPanel')) {
+//             g3d.dm().a('cabinetPanel').s('3d.visible', false);
+//         }
+//
+//         if (navigation.length === 1) return;
+//
+//         hideAll();
+//
+//         navigation.pop();
+//
+//         var data = navigation[navigation.length - 1];
+//         if (data === 'building') {
+//             rightPanel.a(leftPanel.getAttrObject());
+//             leftPanel.a(source.park);
+//
+//             buildingList.forEach(function (b) {
+//                 setNodeVisible(b, true);
+//             });
+//
+//             fitScene();
+//
+//             return;
+//         }
+//
+//         if (data.indexOf('building') >= 0) {
+//             g3d.dm(dm3d);
+//
+//             var floor = dm3d.getDataByTag('floor' + data.substr('building'.length));
+//             setNodeVisible(floor, true);
+//
+//             //alert(4)
+//             console.log(floor.p3())
+//             g3d.flyTo(floor, {
+//                 animation: true,
+//                 worldDirection: [-0.5086145611178792, 0.44796485138462094, 0.7352813884104654],
+//                 center: floor.p3(),
+//                 ratio: 0.2
+//             });
+//
+//             return;
+//         }
+//
+//         if (data.indexOf('floor') >= 0) {
+//             setNodeOpacity(currentRoom, null, 1);
+//             currentCabinet = null;
+//
+//             setNodeVisible(currentRoom, false);
+//             currentRoom = null;
+//
+//             alert(5)
+//             g3d.flyTo(null, { animation: true });
+//
+//             capacityNode.s('2d.visible', false);
+//
+//             return;
+//         }
+//
+//         if (data.indexOf('room') >= 0) {
+//             setNodeOpacity(currentRoom, null, 1);
+//             currentCabinet = null;
+//
+//             alert(6)
+//             g3d.flyTo(currentRoom, { animation: true });
+//
+//             return;
+//         }
+//
+//         return;
+//     }
+// });
 
 
 

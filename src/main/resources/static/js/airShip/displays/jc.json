@@ -40,7 +40,7 @@
       "p": {
         "displayName": "leftPanel",
         "tag": "leftPanel",
-        "image": "symbols/build/leftPanel.json",
+        "image": "symbols/airShip/leftPanel.json",
         "host": {
           "__i": 856
         },
@@ -107,7 +107,7 @@
       "p": {
         "displayName": "rightPanel",
         "tag": "rightPanel",
-        "image": "symbols/build/rightPanel.json",
+        "image": "symbols/airShip/rightPanel.json",
         "host": {
           "__i": 856
         },
