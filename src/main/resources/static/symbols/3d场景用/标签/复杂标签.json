@@ -97,7 +97,7 @@
     },
     {
       "type": "text",
-      "text": "iLock",
+      "text": "WD-001",
       "color": "#32D3EB",
       "scaleX": 2,
       "scaleY": 2,
@@ -110,7 +110,7 @@
     },
     {
       "type": "text",
-      "text": "卡斯柯出厂型号:",
+      "text": "出厂型号:",
       "color": "rgb(51,153,255)",
       "scaleX": 2,
       "scaleY": 2,
@@ -417,7 +417,7 @@
     },
     {
       "type": "text",
-      "text": "计轴机柜1#",
+      "text": "xx传感器",
       "align": "center",
       "color": "#32D3EB",
       "scaleX": 3,
@@ -579,7 +579,7 @@
     },
     {
       "type": "text",
-      "text": "打开机柜",
+      "text": "结构展示",
       "color": "rgb(51,153,255)",
       "scaleX": 2,
       "scaleY": 2,
