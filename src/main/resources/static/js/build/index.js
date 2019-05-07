@@ -304,7 +304,7 @@ var option = {
     },
     legend: {
         show: true,
-        left: '80%',
+        left: '75%',
         right: 0,
         top: '30%',
         orient: 'vertical',
@@ -316,7 +316,7 @@ var option = {
     },
     grid: {
         left: '30%',
-        right: '20%',
+        right: '25%',
         bottom: 0,
         top: '10%',
         containLabel: true
@@ -380,7 +380,7 @@ var ylOption = {
     },
     legend: {
         show: true,
-        left: '80%',
+        left: '75%',
         right: 0,
         top: '30%',
         orient: 'vertical',
@@ -392,7 +392,7 @@ var ylOption = {
     },
     grid: {
         left: '30%',
-        right: '20%',
+        right: '25%',
         bottom: 0,
         top: '10%',
         containLabel: true
@@ -578,12 +578,10 @@ g3d.mi(function (e) {
                     g3d.dm(dm);
 
                     dm.deserialize(json);
-
-                   // alert(2)
+                 //   alert(2)
                     g3d.flyTo(null, {
                         animation: true,
                         worldDirection: [0.5, 2, 0],
-                        center: [1389.124766110275, 1190.809647904507, 702.6359369689474],
                         ratio: 0.8
                     });
 
@@ -603,7 +601,7 @@ g3d.mi(function (e) {
             else {
                 g3d.dm(dm);
 
-             //   alert(3)
+               // alert(3)
                 if (flyTo) {
                     g3d.flyTo(null, {
                         // animation: true,
@@ -612,7 +610,6 @@ g3d.mi(function (e) {
                         // ratio: 0.8
                         animation: true,
                         worldDirection: [0.5, 2, 0],
-                        center: [1389.124766110275, 1190.809647904507, 702.6359369689474],
                         ratio: 0.8
                     });
                 }
@@ -713,7 +710,7 @@ g3d.mi(function (e) {
             var floor = dm3d.getDataByTag('floor' + data.substr('building'.length));
             setNodeVisible(floor, true);
 
-            //alert(4)
+           // alert(4)
             console.log(floor.p3())
             g3d.flyTo(floor, {
                 animation: true,
