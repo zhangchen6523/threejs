@@ -1,0 +1,9 @@
+{
+  "modelType": "obj",
+  "obj": "assets/objs/ballistic/ballistic.obj",
+  "mtl": "assets/objs/ballistic/ballistic.mtl",
+  "reverseFlipMtls": "*",
+
+  "image": "",
+  "prefix": "assets/objs/ballistic/"
+}

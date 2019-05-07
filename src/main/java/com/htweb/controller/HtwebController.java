@@ -52,4 +52,9 @@ public class HtwebController {
         return "/airShip/airShip";
     }
 
+    @RequestMapping(value = "/ballistic")
+    public String ballistic() {
+        return "/ballistic/ballistic";
+    }
+
 }
