@@ -1740,9 +1740,9 @@
           "y": 1
         },
         "scaleTall": 1,
-        "width": 15107,
-        "height": 15107,
-        "tall": 4000
+        "width": 23107,
+        "height": 3000,
+        "tall": 3000
       },
       "s": {
         "shape3d": "symbols/ballistic/ballistic.json",
