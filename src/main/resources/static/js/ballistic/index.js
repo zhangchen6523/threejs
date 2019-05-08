@@ -491,7 +491,33 @@ var leftPanel, rightPanel, capacityNode;
 var navigation = ['building'];
 var currentRoom, currentCabinet;
 var panel=null;
-// g3d.mi(function (e) {
+g3d.mi(function (e) {
+    var kind = e.kind;
+    if (kind === 'doubleClickData') {
+        var data = e.data;
+        if (data.getDisplayName().indexOf('传感器')>-1){
+            panel = g3d.dm()._78O.cabinetPanel;
+            // panel = g3d.dm().a('cabinetPanel');
+            panel.s('3d.visible', true);
+
+            var p3 = data.p3();
+
+            panel.p3(p3[0], p3[1] + data.getTall()+1200, p3[2]);
+            //
+            // g3d.flyTo(panel, {
+            //     animation: true
+            // });
+            //
+            // setNodeOpacity(currentRoom, data, 0.2);
+            //
+            // currentCabinet = data;
+            //
+            // if (navigation[navigation.length - 1] !== 'cabinet')
+            //     navigation.push('cabinet');
+            return;
+        }
+    }
+});
 //     var kind = e.kind;
 //     if (kind === 'clickData') {
 //         var data = e.data;
