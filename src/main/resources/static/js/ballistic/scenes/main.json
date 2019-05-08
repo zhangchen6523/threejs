@@ -1847,90 +1847,6 @@
     },
     {
       "c": "ht.Node",
-      "i": 1300,
-      "p": {
-        "displayName": "传感器1",
-        "parent": {
-          "__i": 1308
-        },
-        "tag": "传感器1",
-        "host": {
-          "__i": 1308
-        },
-        "rotation": -0.10472,
-        "position": {
-          "x": -4000,
-          "y": 200
-        },
-        "anchorElevation": -7.1,
-        "scale": {
-          "x": 1,
-          "y": 1
-        },
-        "scaleTall": 1,
-        "width": 300,
-        "height": 300,
-        "tall": 300
-      },
-      "s": {
-        "all.reverse.cull": true,
-        "all.transparent": true,
-        "shape3d": "sphere",
-        "shape3d.color": "green",
-        "bottom.visible": false,
-        "2d.selectable": true,
-        "3d.selectable": true,
-        "2d.movable": false,
-        "3d.movable": false,
-        "2d.editable": false,
-        "3d.editable": false,
-        "select.brightness": 1
-      }
-    },
-    {
-      "c": "ht.Node",
-      "i": 1301,
-      "p": {
-        "displayName": "传感器2",
-        "parent": {
-          "__i": 1308
-        },
-        "tag": "传感器2",
-        "host": {
-          "__i": 1308
-        },
-        "rotation": -0.10472,
-        "position": {
-          "x": -7900,
-          "y": 650
-        },
-        "anchorElevation": -7.1,
-        "scale": {
-          "x": 1,
-          "y": 1
-        },
-        "scaleTall": 1,
-        "width": 300,
-        "height": 300,
-        "tall": 300
-      },
-      "s": {
-        "all.reverse.cull": true,
-        "all.transparent": true,
-        "shape3d": "sphere",
-        "shape3d.color": "green",
-        "bottom.visible": false,
-        "2d.selectable": true,
-        "3d.selectable": true,
-        "2d.movable": false,
-        "3d.movable": false,
-        "2d.editable": false,
-        "3d.editable": false,
-        "select.brightness": 1
-      }
-    },
-    {
-      "c": "ht.Node",
       "i": 1312,
       "p": {
         "displayName": "楼层列表",
@@ -3729,6 +3645,384 @@
           0,
           -3
         ]
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 1400,
+      "p": {
+        "displayName": "传感器1",
+        "parent": {
+          "__i": 1308
+        },
+        "tag": "传感器1",
+        "host": {
+          "__i": 1308
+        },
+        "rotation": -0.10472,
+        "position": {
+          "x": -3500,
+          "y": 150
+        },
+        "anchorElevation": -8,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "scaleTall": 1,
+        "width": 300,
+        "height": 300,
+        "tall": 300
+      },
+      "s": {
+        "all.reverse.cull": true,
+        "all.transparent": true,
+        "shape3d": "sphere",
+        "shape3d.color": "red",
+        "bottom.visible": false,
+        "2d.selectable": true,
+        "3d.selectable": true,
+        "2d.movable": false,
+        "3d.movable": false,
+        "2d.editable": false,
+        "3d.editable": false,
+        "select.brightness": 1
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 1402,
+      "p": {
+        "displayName": "传感器2",
+        "parent": {
+          "__i": 1308
+        },
+        "tag": "传感器2",
+        "host": {
+          "__i": 1308
+        },
+        "rotation": -0.10472,
+        "position": {
+          "x": -7300,
+          "y": 550
+        },
+        "anchorElevation": -8.1,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "scaleTall": 1,
+        "width": 300,
+        "height": 300,
+        "tall": 300
+      },
+      "s": {
+        "all.reverse.cull": true,
+        "all.transparent": true,
+        "shape3d": "sphere",
+        "shape3d.color": "green",
+        "bottom.visible": false,
+        "2d.selectable": true,
+        "3d.selectable": true,
+        "2d.movable": false,
+        "3d.movable": false,
+        "2d.editable": false,
+        "3d.editable": false,
+        "select.brightness": 1
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 1403,
+      "p": {
+        "displayName": "传感器3",
+        "parent": {
+          "__i": 1308
+        },
+        "tag": "传感器3",
+        "host": {
+          "__i": 1308
+        },
+        "rotation": -0.10472,
+        "position": {
+          "x": -10600,
+          "y": 900
+        },
+        "anchorElevation": -5.5,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "scaleTall": 1,
+        "width": 300,
+        "height": 300,
+        "tall": 300
+      },
+      "s": {
+        "all.reverse.cull": true,
+        "all.transparent": true,
+        "shape3d": "sphere",
+        "shape3d.color": "yellow",
+        "bottom.visible": false,
+        "2d.selectable": true,
+        "3d.selectable": true,
+        "2d.movable": false,
+        "3d.movable": false,
+        "2d.editable": false,
+        "3d.editable": false,
+        "select.brightness": 1
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 1404,
+      "p": {
+        "displayName": "传感器4",
+        "parent": {
+          "__i": 1308
+        },
+        "tag": "传感器4",
+        "host": {
+          "__i": 1308
+        },
+        "rotation": -0.10472,
+        "position": {
+          "x": -11500,
+          "y": 1000
+        },
+        "anchorElevation": -5.1,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "scaleTall": 1,
+        "width": 300,
+        "height": 300,
+        "tall": 300
+      },
+      "s": {
+        "all.reverse.cull": true,
+        "all.transparent": true,
+        "shape3d": "sphere",
+        "shape3d.color": "green",
+        "bottom.visible": false,
+        "2d.selectable": true,
+        "3d.selectable": true,
+        "2d.movable": false,
+        "3d.movable": false,
+        "2d.editable": false,
+        "3d.editable": false,
+        "select.brightness": 1
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 1405,
+      "p": {
+        "displayName": "传感器5",
+        "parent": {
+          "__i": 1308
+        },
+        "tag": "传感器5",
+        "host": {
+          "__i": 1308
+        },
+        "rotation": -0.10472,
+        "position": {
+          "x": -400,
+          "y": -165
+        },
+        "anchorElevation": -5.5,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "scaleTall": 1,
+        "width": 300,
+        "height": 300,
+        "tall": 300
+      },
+      "s": {
+        "all.reverse.cull": true,
+        "all.transparent": true,
+        "shape3d": "sphere",
+        "shape3d.color": "green",
+        "bottom.visible": false,
+        "2d.selectable": true,
+        "3d.selectable": true,
+        "2d.movable": false,
+        "3d.movable": false,
+        "2d.editable": false,
+        "3d.editable": false,
+        "select.brightness": 1
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 1406,
+      "p": {
+        "displayName": "传感器6",
+        "parent": {
+          "__i": 1308
+        },
+        "tag": "传感器6",
+        "host": {
+          "__i": 1308
+        },
+        "rotation": -0.10472,
+        "position": {
+          "x": 1740,
+          "y": -400
+        },
+        "anchorElevation": -8.1,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "scaleTall": 1,
+        "width": 300,
+        "height": 300,
+        "tall": 300
+      },
+      "s": {
+        "all.reverse.cull": true,
+        "all.transparent": true,
+        "shape3d": "sphere",
+        "shape3d.color": "green",
+        "bottom.visible": false,
+        "2d.selectable": true,
+        "3d.selectable": true,
+        "2d.movable": false,
+        "3d.movable": false,
+        "2d.editable": false,
+        "3d.editable": false,
+        "select.brightness": 1
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 1407,
+      "p": {
+        "displayName": "传感器7",
+        "parent": {
+          "__i": 1308
+        },
+        "tag": "传感器7",
+        "host": {
+          "__i": 1308
+        },
+        "rotation": -0.10472,
+        "position": {
+          "x": 8650,
+          "y": -1120
+        },
+        "anchorElevation": -9.5,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "scaleTall": 1,
+        "width": 300,
+        "height": 300,
+        "tall": 300
+      },
+      "s": {
+        "all.reverse.cull": true,
+        "all.transparent": true,
+        "shape3d": "sphere",
+        "shape3d.color": "green",
+        "bottom.visible": false,
+        "2d.selectable": true,
+        "3d.selectable": true,
+        "2d.movable": false,
+        "3d.movable": false,
+        "2d.editable": false,
+        "3d.editable": false,
+        "select.brightness": 1
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 1408,
+      "p": {
+        "displayName": "传感器8",
+        "parent": {
+          "__i": 1308
+        },
+        "tag": "传感器8",
+        "host": {
+          "__i": 1308
+        },
+        "rotation": -0.10472,
+        "position": {
+          "x": 8800,
+          "y": -40
+        },
+        "anchorElevation": -8.1,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "scaleTall": 1,
+        "width": 300,
+        "height": 300,
+        "tall": 300
+      },
+      "s": {
+        "all.reverse.cull": true,
+        "all.transparent": true,
+        "shape3d": "sphere",
+        "shape3d.color": "green",
+        "bottom.visible": false,
+        "2d.selectable": true,
+        "3d.selectable": true,
+        "2d.movable": false,
+        "3d.movable": false,
+        "2d.editable": false,
+        "3d.editable": false,
+        "select.brightness": 1
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 1409,
+      "p": {
+        "displayName": "传感器9",
+        "parent": {
+          "__i": 1308
+        },
+        "tag": "传感器9",
+        "host": {
+          "__i": 1308
+        },
+        "rotation": -0.10472,
+        "position": {
+          "x": 8550,
+          "y": -2200
+        },
+        "anchorElevation": -8.1,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "scaleTall": 1,
+        "width": 300,
+        "height": 300,
+        "tall": 300
+      },
+      "s": {
+        "all.reverse.cull": true,
+        "all.transparent": true,
+        "shape3d": "sphere",
+        "shape3d.color": "green",
+        "bottom.visible": false,
+        "2d.selectable": true,
+        "3d.selectable": true,
+        "2d.movable": false,
+        "3d.movable": false,
+        "2d.editable": false,
+        "3d.editable": false,
+        "select.brightness": 1
       }
     }
   ],
