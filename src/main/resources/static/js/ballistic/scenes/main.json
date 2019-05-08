@@ -1847,86 +1847,43 @@
     },
     {
       "c": "ht.Node",
-      "i": 1300,
+      "i": 1311,
       "p": {
-        "displayName": "传感器1",
+        "displayName": "属性面板",
         "parent": {
-          "__i": 1308
+          "__i": 1310
         },
-        "tag": "传感器1",
         "host": {
-          "__i": 1308
+          "__i": 1310
         },
         "rotation": -0.10472,
         "position": {
-          "x": -4000,
-          "y": 200
+          "x": -3427.26863,
+          "y": 2654.76753
         },
-        "anchorElevation": -7.1,
-        "scale": {
-          "x": 1,
-          "y": 1
-        },
-        "scaleTall": 1,
-        "width": 300,
-        "height": 300,
-        "tall": 300
+        "anchorElevation": 0,
+        "width": 3606.00435,
+        "height": 337.48888,
+        "tall": 50,
+        "elevation": 40.11991
       },
       "s": {
-        "all.reverse.cull": true,
-        "all.transparent": true,
-        "shape3d": "sphere",
-        "shape3d.color": "green",
-        "bottom.visible": false,
-        "2d.selectable": true,
-        "3d.selectable": true,
+        "all.color": "#DDDDDD",
+        "shape3d": "plane",
+        "shape3d.image": "symbols/build/3d场景用/属性框标题.json",
+        "shape3d.transparent": true,
+        "shape3d.reverse.flip": true,
+        "shape3d.vector.dynamic": true,
         "2d.movable": false,
         "3d.movable": false,
+        "2d.selectable": false,
+        "3d.selectable": false,
+        "select.brightness": 1,
         "2d.editable": false,
-        "3d.editable": false,
-        "select.brightness": 1
-      }
-    },
-    {
-      "c": "ht.Node",
-      "i": 1301,
-      "p": {
-        "displayName": "传感器2",
-        "parent": {
-          "__i": 1308
-        },
-        "tag": "传感器2",
-        "host": {
-          "__i": 1308
-        },
-        "rotation": -0.10472,
-        "position": {
-          "x": -7900,
-          "y": 650
-        },
-        "anchorElevation": -7.1,
-        "scale": {
-          "x": 1,
-          "y": 1
-        },
-        "scaleTall": 1,
-        "width": 300,
-        "height": 300,
-        "tall": 300
+        "3d.editable": false
       },
-      "s": {
-        "all.reverse.cull": true,
-        "all.transparent": true,
-        "shape3d": "sphere",
-        "shape3d.color": "green",
-        "bottom.visible": false,
-        "2d.selectable": true,
-        "3d.selectable": true,
-        "2d.movable": false,
-        "3d.movable": false,
-        "2d.editable": false,
-        "3d.editable": false,
-        "select.brightness": 1
+      "a": {
+        "name": "1 号楼"
       }
     },
     {
