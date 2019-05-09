@@ -493,7 +493,7 @@ var currentRoom, currentCabinet;
 var panel=null;
 g3d.mi(function (e) {
     var kind = e.kind;
-    if (kind === 'doubleClickData') {
+    if (kind === 'clickData') {
         var data = e.data;
         if (data.getDisplayName().indexOf('传感器')>-1){
             panel = g3d.dm()._78O.cabinetPanel;
