@@ -1,7 +1,7 @@
 {
   "v": "6.2.7",
   "p": {
-    "envmap": "assets/贴图/黄昏.jpg",
+    "envmap": "黄昏.jpg",
     "autoAdjustIndex": true,
     "hierarchicalRendering": true,
     "postProcessingData": {
