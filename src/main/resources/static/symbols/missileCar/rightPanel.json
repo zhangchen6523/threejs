@@ -1,0 +1,936 @@
+{
+  "modified": "Fri Nov 02 2018 01:31:04 GMT+0800 (中国标准时间)",
+  "dataBindings": [
+    {
+      "attr": "value",
+      "valueType": "Percentage",
+      "defaultValue": 0,
+      "name": "电气用量"
+    },
+    {
+      "attr": "electricalCapacity",
+      "valueType": "String",
+      "name": "电气容量"
+    },
+    {
+      "attr": "floorSpace",
+      "valueType": "String",
+      "name": "占地面积"
+    },
+    {
+      "attr": "area",
+      "valueType": "String",
+      "name": "建筑面积"
+    },
+    {
+      "attr": "title",
+      "valueType": "String",
+      "name": "标题"
+    }
+  ],
+  "width": 315,
+  "height": 955,
+  "comps": [
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgba(41,155,217,0.51)",
+      "borderCap": "round",
+      "borderJoin": "bevel",
+      "rotation": -1.5708,
+      "points": [
+        -221.15894,
+        534.12629,
+        318.7311,
+        534.12827,
+        341.63493,
+        503.92221,
+        389.30826,
+        503.92204,
+        350.21298,
+        483.3817,
+        580.60933,
+        483.38255,
+        604.55042,
+        513.47713,
+        625.22118,
+        513.47713,
+        625.22174,
+        360.52478,
+        632.05353,
+        360.52481,
+        664.04817,
+        360.52492,
+        667.49348,
+        360.52494
+      ],
+      "segments": [
+        1,
+        2,
+        2,
+        2,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        2
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgb(6,138,158)",
+      "borderColor": "rgb(97,3,3)",
+      "fillRule": "evenodd",
+      "scaleY": -1,
+      "rotation": -1.5708,
+      "points": [
+        377.06562,
+        193.29944,
+        377.06562,
+        205.69377,
+        363.20561,
+        219.00113,
+        196.02847,
+        219.00113,
+        183.50307,
+        205.69377,
+        183.50307,
+        193.29944
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgb(29,110,122)",
+      "fillRule": "evenodd",
+      "scaleX": -1,
+      "rotation": -1.5708,
+      "points": [
+        278.86116,
+        308.27705,
+        286.18298,
+        315.54306,
+        265.46572,
+        315.54306,
+        257.9829,
+        308.27705
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgb(29,110,122)",
+      "fillRule": "evenodd",
+      "scaleX": -1,
+      "scaleY": -1,
+      "rotation": -1.5708,
+      "points": [
+        277.84473,
+        100.73416,
+        285.16655,
+        108.00017,
+        264.44929,
+        108.00017,
+        256.96647,
+        100.73416
+      ]
+    },
+    {
+      "type": "oval",
+      "background": "rgba(41,155,217,0.51)",
+      "borderColor": "#979797",
+      "rect": [
+        61.54028,
+        312.88024,
+        188.00254,
+        4.96448
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgba(18,18,61,0.2)",
+      "borderColor": "rgba(76,205,252,0.50)",
+      "points": [
+        61.82477,
+        314.93309,
+        45.16163,
+        298.44555,
+        45.16163,
+        213.59055,
+        234.96173,
+        213.59055,
+        249.54281,
+        231.62771,
+        249.54281,
+        314.93309,
+        61.82477,
+        314.93309
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@electricalCapacity",
+        "value": "9,000"
+      },
+      "align": "center",
+      "color": "#32D3EB",
+      "font": "18px arial, sans-serif",
+      "anchorX": 0.2884,
+      "anchorY": 0.35576,
+      "scaleX": 1.2,
+      "scaleY": 1.2,
+      "rect": [
+        90.64896,
+        251.15131,
+        106.62428,
+        26.40368
+      ]
+    },
+    {
+      "type": "text",
+      "text": "传感器存活情况:",
+      "color": "rgb(247,247,247)",
+      "font": "14px arial, sans-serif",
+      "anchorX": 0.2884,
+      "anchorY": 0.35576,
+      "rect": [
+        52.73145,
+        221.05735,
+        76.35095,
+        28.24931
+      ]
+    },
+    {
+      "type": "text",
+      "text": "个",
+      "color": "rgb(247,247,247)",
+      "font": "14px arial, sans-serif",
+      "anchorX": 0.2884,
+      "anchorY": 0.35576,
+      "rect": [
+        197.49188,
+        252.70773,
+        47.6933,
+        28.24931
+      ]
+    },
+    {
+      "type": "image",
+      "name": "symbols/build/lighting/进度条.json",
+      "displayName": "进度条",
+      "rect": [
+        50.9148,
+        288.91006,
+        184.41867,
+        18
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "__ht__function(data, view) {\nreturn ((data.a('value') || 0) * 100).toFixed(0) + '%';\n}",
+        "value": "0%"
+      },
+      "align": "center",
+      "color": "rgb(247,247,247)",
+      "font": "14px arial, sans-serif",
+      "rect": [
+        61.54028,
+        282.65673,
+        173.79319,
+        24.27793
+      ]
+    },
+    {
+      "type": "oval",
+      "background": "rgba(41,155,217,0.51)",
+      "borderColor": "#979797",
+      "rect": [
+        45.68073,
+        181.85201,
+        187.82698,
+        4.84446
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgba(18,18,61,0.2)",
+      "borderColor": "rgba(76,205,252,0.50)",
+      "points": [
+        45.16163,
+        184.27424,
+        45.16163,
+        86.4717,
+        61.83283,
+        70.67236,
+        249.54282,
+        70.67236,
+        249.54282,
+        167.89197,
+        233.32517,
+        184.27424,
+        45.16163,
+        184.27424
+      ]
+    },
+    {
+      "type": "arc",
+      "background": "rgba(18,18,61,0.2)",
+      "borderColor": "#979797",
+      "arcOval": true,
+      "rect": [
+        45.68072,
+        126.93168,
+        186.53436,
+        112.77605
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@floorSpace",
+        "value": "8,000"
+      },
+      "align": "center",
+      "color": "#32D3EB",
+      "font": "18px arial, sans-serif",
+      "anchorX": 0.2884,
+      "anchorY": 0.35576,
+      "scaleX": 1.2,
+      "scaleY": 1.2,
+      "rect": [
+        104.13827,
+        100.14234,
+        99.6938,
+        29.6721
+      ]
+    },
+    {
+      "type": "text",
+      "text": "温度传感器:",
+      "color": "rgb(247,247,247)",
+      "font": "14px arial, sans-serif",
+      "anchorX": 0.2884,
+      "anchorY": 0.35576,
+      "rect": [
+        54.86196,
+        75.9767,
+        69.37782,
+        30.35547
+      ]
+    },
+    {
+      "type": "text",
+      "text": "个",
+      "align": "right",
+      "color": "rgb(247,247,247)",
+      "font": "14px arial, sans-serif",
+      "anchorX": 0.2884,
+      "anchorY": 0.35576,
+      "rect": [
+        177.49813,
+        99.96128,
+        56.52827,
+        31.74621
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@area",
+        "value": "11,000"
+      },
+      "align": "center",
+      "color": "#32D3EB",
+      "font": "18px arial, sans-serif",
+      "anchorX": 0.2884,
+      "anchorY": 0.35576,
+      "scaleX": 1.2,
+      "scaleY": 1.2,
+      "rect": [
+        104.13827,
+        154.94703,
+        99.6938,
+        27.21326
+      ]
+    },
+    {
+      "type": "text",
+      "text": "应力传感器:",
+      "color": "rgb(247,247,247)",
+      "font": "14px arial, sans-serif",
+      "anchorX": 0.2884,
+      "anchorY": 0.35576,
+      "rect": [
+        54.86196,
+        126.45335,
+        69.37782,
+        27.84
+      ]
+    },
+    {
+      "type": "text",
+      "text": "个",
+      "align": "right",
+      "color": "rgb(247,247,247)",
+      "font": "14px arial, sans-serif",
+      "anchorX": 0.2884,
+      "anchorY": 0.35576,
+      "rect": [
+        177.49813,
+        154.78096,
+        56.52827,
+        29.11549
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(12,104,135)",
+      "borderJoin": "bevel",
+      "rotation": -1.5708,
+      "points": [
+        232.019,
+        718.05011,
+        232.019,
+        726.098,
+        227.44122,
+        733.02267,
+        203.44264,
+        735.20037,
+        197.42524,
+        726.098,
+        197.42524,
+        718.05011
+      ],
+      "segments": [
+        1,
+        2,
+        2,
+        1,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(12,104,135)",
+      "borderJoin": "bevel",
+      "rotation": -1.5708,
+      "points": [
+        62.14073,
+        735.58625,
+        62.14073,
+        725.81692,
+        67.30916,
+        718.49299,
+        89.25629,
+        718.48765,
+        94.42849,
+        725.81692,
+        94.42849,
+        735.58625
+      ],
+      "segments": [
+        1,
+        2,
+        2,
+        1,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgba(6,13,36,0.80)",
+      "borderColor": "rgb(12,104,135)",
+      "borderJoin": "bevel",
+      "rotation": -1.5708,
+      "points": [
+        148.84323,
+        649.03613,
+        162.12409,
+        670.08626,
+        162.12409,
+        781.38393,
+        148.84323,
+        805.03779,
+        135.56239,
+        781.38393,
+        135.56239,
+        670.08626
+      ]
+    },
+    {
+      "type": "text",
+      "text": "通道PY01YC",
+      "align": "center",
+      "color": "rgb(76,205,252)",
+      "font": "16px arial, sans-serif",
+      "anchorX": 0.2884,
+      "anchorY": 0.35576,
+      "rect": [
+        96.66241,
+        709.54596,
+        101.13627,
+        34.98199
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(12,104,135)",
+      "borderJoin": "bevel",
+      "rotation": -1.5708,
+      "points": [
+        232.95764,
+        504.33207,
+        232.95764,
+        512.37995,
+        228.37986,
+        519.30463,
+        204.38127,
+        521.48232,
+        198.36388,
+        512.37995,
+        198.36388,
+        504.33207
+      ],
+      "segments": [
+        1,
+        2,
+        2,
+        1,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(12,104,135)",
+      "borderJoin": "bevel",
+      "rotation": -1.5708,
+      "points": [
+        63.07936,
+        521.8682,
+        63.07936,
+        512.09887,
+        68.2478,
+        504.77494,
+        90.19493,
+        504.76961,
+        95.36713,
+        512.09887,
+        95.36713,
+        521.8682
+      ],
+      "segments": [
+        1,
+        2,
+        2,
+        1,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgba(6,13,36,0.80)",
+      "borderColor": "rgb(12,104,135)",
+      "borderJoin": "bevel",
+      "rotation": -1.5708,
+      "points": [
+        149.78187,
+        435.31808,
+        163.06273,
+        456.36821,
+        163.06273,
+        567.66588,
+        149.78187,
+        591.31974,
+        136.50102,
+        567.66588,
+        136.50102,
+        456.36821
+      ]
+    },
+    {
+      "type": "text",
+      "text": "通道PY01ZC",
+      "align": "center",
+      "color": "rgb(76,205,252)",
+      "font": "16px arial, sans-serif",
+      "anchorX": 0.2884,
+      "anchorY": 0.35576,
+      "rect": [
+        96.14225,
+        496.01748,
+        100.55867,
+        35.79062
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgba(18,18,61,0.2)",
+      "borderColor": "rgb(41,155,217)",
+      "rotation": 3.14159,
+      "points": [
+        15.97812,
+        772.88531,
+        264.13137,
+        772.88585,
+        275.71577,
+        779.69095,
+        275.71577,
+        820.22724,
+        269.47326,
+        825.56146,
+        269.47326,
+        895.428,
+        275.71577,
+        901.57399,
+        275.71577,
+        939.96453,
+        264.13082,
+        948.2489,
+        15.97755,
+        948.24835,
+        3.00024,
+        939.96453,
+        3.00024,
+        901.57399,
+        11.58869,
+        895.428,
+        11.58869,
+        825.56146,
+        3.00024,
+        820.22724,
+        3.00024,
+        779.69095,
+        15.97812,
+        772.88531
+      ]
+    },
+    {
+      "type": "text",
+      "text": "2 个",
+      "color": "#FF7C7C",
+      "font": "14px arial, sans-serif",
+      "anchorX": 0.2884,
+      "anchorY": 0.35576,
+      "rect": [
+        162.72035,
+        781.2095,
+        103.17268,
+        34.41687
+      ]
+    },
+    {
+      "type": "text",
+      "text": "3 个",
+      "color": "#FF7C7C",
+      "font": "14px arial, sans-serif",
+      "anchorX": 0.2884,
+      "anchorY": 0.35576,
+      "rect": [
+        162.72035,
+        824.57172,
+        103.17268,
+        34.41687
+      ]
+    },
+    {
+      "type": "text",
+      "text": "3 个",
+      "color": "#FF7C7C",
+      "font": "14px arial, sans-serif",
+      "anchorX": 0.2884,
+      "anchorY": 0.35576,
+      "rect": [
+        162.72035,
+        867.93395,
+        103.17268,
+        34.41687
+      ]
+    },
+    {
+      "type": "text",
+      "text": "2 个",
+      "color": "#FF7C7C",
+      "font": "14px arial, sans-serif",
+      "anchorX": 0.2884,
+      "anchorY": 0.35576,
+      "rect": [
+        162.72035,
+        911.29617,
+        103.17268,
+        34.41687
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgba(30,30,33,0.40)",
+      "borderColor": "rgba(76,205,252,0.50)",
+      "points": [
+        129.08241,
+        821.03662,
+        129.08241,
+        819.81593,
+        253.54399,
+        819.81593,
+        253.54399,
+        821.03662
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgba(30,30,33,0.40)",
+      "borderColor": "rgba(76,205,252,0.50)",
+      "points": [
+        129.08241,
+        864.39885,
+        129.08241,
+        863.17816,
+        253.54399,
+        863.17816,
+        253.54399,
+        864.39885
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgba(30,30,33,0.40)",
+      "borderColor": "rgba(76,205,252,0.50)",
+      "points": [
+        129.08241,
+        907.76107,
+        129.08241,
+        906.54038,
+        253.54399,
+        906.54038,
+        253.54399,
+        907.76107
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgb(138,26,26)",
+      "borderColor": "rgb(97,3,3)",
+      "fillRule": "evenodd",
+      "scaleY": -1,
+      "rotation": -1.5708,
+      "points": [
+        377.44884,
+        843.09028,
+        377.44884,
+        855.48461,
+        365.4806,
+        868.79197,
+        221.12165,
+        868.79197,
+        210.30585,
+        855.48461,
+        210.30585,
+        843.09028
+      ]
+    },
+    {
+      "type": "text",
+      "text": "当",
+      "align": "center",
+      "color": "rgb(247,247,247)",
+      "font": "16px arial, sans-serif",
+      "anchorX": 0.2884,
+      "anchorY": 0.35576,
+      "rotation": 6.28319,
+      "rect": [
+        281.4104,
+        784.90169,
+        25.31779,
+        34.99007
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgb(138,26,26)",
+      "fillRule": "evenodd",
+      "opacity": 0.65,
+      "scaleY": -1,
+      "rotation": -1.5708,
+      "points": [
+        312.39553,
+        857.25941,
+        306.75112,
+        864.52543,
+        243.08077,
+        864.52543,
+        238.43202,
+        857.25941
+      ]
+    },
+    {
+      "type": "text",
+      "text": "前",
+      "align": "center",
+      "color": "rgb(247,247,247)",
+      "font": "16px arial, sans-serif",
+      "anchorX": 0.2884,
+      "anchorY": 0.35576,
+      "rotation": 6.28319,
+      "rect": [
+        281.4104,
+        806.62426,
+        25.31779,
+        34.99007
+      ]
+    },
+    {
+      "type": "text",
+      "text": "故",
+      "align": "center",
+      "color": "rgb(247,247,247)",
+      "font": "16px arial, sans-serif",
+      "anchorX": 0.2884,
+      "anchorY": 0.35576,
+      "rotation": 6.28319,
+      "rect": [
+        281.4104,
+        828.34683,
+        25.31779,
+        34.99007
+      ]
+    },
+    {
+      "type": "text",
+      "text": "障",
+      "align": "center",
+      "color": "rgb(247,247,247)",
+      "font": "16px arial, sans-serif",
+      "anchorX": 0.2884,
+      "anchorY": 0.35576,
+      "rotation": 6.28319,
+      "rect": [
+        281.4104,
+        850.0694,
+        25.31779,
+        34.99007
+      ]
+    },
+    {
+      "type": "text",
+      "text": "设",
+      "align": "center",
+      "color": "rgb(247,247,247)",
+      "font": "16px arial, sans-serif",
+      "anchorX": 0.2884,
+      "anchorY": 0.35576,
+      "rotation": 6.28319,
+      "rect": [
+        281.4104,
+        871.79197,
+        25.31779,
+        34.99007
+      ]
+    },
+    {
+      "type": "text",
+      "text": "备",
+      "align": "center",
+      "color": "rgb(247,247,247)",
+      "font": "16px arial, sans-serif",
+      "anchorX": 0.2884,
+      "anchorY": 0.35576,
+      "rotation": 6.28319,
+      "rect": [
+        281.4104,
+        893.51454,
+        25.31779,
+        34.99007
+      ]
+    },
+    {
+      "type": "text",
+      "text": "台",
+      "color": "rgb(247,247,247)",
+      "font": "14px arial, sans-serif",
+      "anchorX": 0.2884,
+      "anchorY": 0.35576,
+      "rect": [
+        98.7968,
+        862.9854,
+        97.90411,
+        34.41687
+      ]
+    },
+    {
+      "type": "image",
+      "color": "#FF7C7C",
+      "name": "symbols/build/玖佰/icon/机房.json",
+      "displayName": "机房",
+      "rect": [
+        136.4581,
+        786.41794,
+        24,
+        24
+      ]
+    },
+    {
+      "type": "image",
+      "color": "#FF7C7C",
+      "name": "symbols/build/玖佰/icon/机柜 2.json",
+      "displayName": "机柜 2",
+      "rect": [
+        136.36389,
+        828.11932,
+        24,
+        24
+      ]
+    },
+    {
+      "type": "image",
+      "color": "#FF7C7C",
+      "name": "symbols/build/玖佰/icon/板卡.json",
+      "displayName": "板卡",
+      "rect": [
+        136.36389,
+        873.05955,
+        24,
+        24
+      ]
+    },
+    {
+      "type": "image",
+      "color": "#FF7C7C",
+      "name": "symbols/build/玖佰/icon/板卡.json",
+      "displayName": "板卡",
+      "rect": [
+        136.36389,
+        915.0096,
+        24,
+        24
+      ]
+    },
+    {
+      "type": "symbols/build/components/textBox/textBox.json",
+      "displayName": "textBox",
+      "rect": [
+        271.95765,
+        124.59183,
+        16,
+        164.31823
+      ],
+      "content": {
+        "func": "attr@title",
+        "value": "1号楼"
+      },
+      "autoScale": false,
+      "textAlign": "center",
+      "color": "rgb(255,255,255)",
+      "fillContent": false
+    }
+  ]
+}
