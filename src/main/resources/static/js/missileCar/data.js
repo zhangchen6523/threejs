@@ -1,13 +1,13 @@
 var source = {
     park: {
-        title: '岸防导弹车01',
+        title: '岸防导弹装备01',
         floorSpace: '10',
         area: '80',
         electricalCapacity: '90',
         value: 0.76
     },
     building1: {
-        title: '岸防导弹车01',
+        title: '岸防导弹装备01',
         floorSpace: '10',
         area: '80',
         electricalCapacity: '90',

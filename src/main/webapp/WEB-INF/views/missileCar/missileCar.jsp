@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>岸防导弹车故障预警与健康管理系统</title>
+    <title>岸防导弹装备故障预警与健康管理系统</title>
 
     <script src='guide/lib/core/ht.js'></script>
     <script src='libs/ht-obj.js'></script>

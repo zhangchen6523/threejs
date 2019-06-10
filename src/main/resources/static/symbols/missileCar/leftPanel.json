@@ -1640,7 +1640,7 @@
     },
     {
       "type": "text",
-      "text": "岸防导弹车故障预测与健康管理系统",
+      "text": "岸防导弹装备故障预测与健康管理系统",
       "color": "#32D3EB",
       "font": "18px arial, sans-serif",
       "scaleX": 1.2,
@@ -1679,7 +1679,7 @@
       ],
       "content": {
         "func": "attr@title",
-        "value": "岸防导弹车01"
+        "value": "岸防导弹装备01"
       },
       "autoScale": false,
       "textAlign": "center",
