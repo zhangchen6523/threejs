@@ -1,0 +1,296 @@
+{
+  "v": "6.2.7",
+  "p": {
+    "autoAdjustIndex": true,
+    "hierarchicalRendering": true
+  },
+  "a": {
+    "connectActionType": "CopySize",
+    "rotateAsClock": false
+  },
+  "d": [
+    {
+      "c": "ht.Node",
+      "i": 856,
+      "p": {
+        "position": {
+          "x": 928.82878,
+          "y": 516.40611
+        },
+        "width": 1920,
+        "height": 1080
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(61,61,61)",
+        "shape.border.width": 1,
+        "shape.border.color": "#979797",
+        "2d.selectable": false,
+        "2d.movable": false,
+        "2d.editable": false,
+        "pixelPerfect": false,
+        "fullscreen": "fill",
+        "fullscreen.lock": "v",
+        "2d.visible": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 857,
+      "p": {
+        "displayName": "leftPanel",
+        "tag": "leftPanel",
+        "image": "symbols/transport/leftPanel.json",
+        "host": {
+          "__i": 856
+        },
+        "position": {
+          "x": 125.38842,
+          "y": 481.29298
+        },
+        "width": 300,
+        "height": 970
+      },
+      "s": {
+        "layout.h": "left",
+        "layout.v": "center",
+        "2d.selectable": false,
+        "2d.movable": false,
+        "2d.editable": false,
+        "pixelPerfect": false
+      },
+      "a": {
+        "value": 0.73,
+        "title": "园区"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 858,
+      "p": {
+        "displayName": "textBox",
+        "parent": {
+          "__i": 857
+        },
+        "image": "symbols/build/basic/textBox.json",
+        "host": {
+          "__i": 857
+        },
+        "position": {
+          "x": 159.22782,
+          "y": 330.47659
+        },
+        "width": 200.75467,
+        "height": 100.56065
+      },
+      "s": {
+        "2d.selectable": false,
+        "2d.movable": false,
+        "2d.editable": false,
+        "pixelPerfect": false
+      },
+      "a": {
+        "cacheScaleMap": {
+          "key": "99-10014px sans-serif, arial18",
+          "content": "",
+          "scale": 0.49147
+        },
+        "tb.content": "任务信息                            编码：DF-01654               状态：开始                        开始：2018-05-03 00:01  结束：2018-05-03 10:01",
+        "tb.autoScale": false,
+        "tb.color": "rgb(255,255,255)",
+        "tb.fontSize": 16
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 859,
+      "p": {
+        "displayName": "rightPanel",
+        "tag": "rightPanel",
+        "image": "symbols/transport/rightPanel.json",
+        "host": {
+          "__i": 856
+        },
+        "position": {
+          "x": 1722.46699,
+          "y": 481.20143
+        },
+        "width": 315,
+        "height": 955
+      },
+      "s": {
+        "layout.h": "right",
+        "layout.v": "center",
+        "2d.selectable": false,
+        "2d.movable": false,
+        "2d.editable": false,
+        "pixelPerfect": false,
+        "select.width": 0,
+        "select.color": null
+      },
+      "a": {
+        "cacheScaleMap": {
+          "key": "16-16614px sans-serif, arial18",
+          "content": "",
+          "scale": 0.24962
+        }
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 334,
+      "p": {
+        "displayName": "areaChart",
+        "tag": "areaChart",
+        "position": {
+          "x": 1790.08312,
+          "y": 412.56166
+        },
+        "width": 450.19977,
+        "height": 170.79039
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": null,
+        "shape.border.width": 1,
+        "shape.border.color": "#979797",
+        "2d.selectable": false,
+        "2d.visible": false,
+        "select.width": 0,
+        "shape.gradient.color": null,
+        "2d.movable": false
+      }
+    }
+  ,
+    {
+      "c": "ht.Node",
+      "i": 335,
+      "p": {
+        "displayName": "ylChart",
+        "tag": "ylChart",
+        "position": {
+          "x": 1790.08312,
+          "y": 625.56166
+        },
+        "width": 450.19977,
+        "height": 170.79039
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": null,
+        "shape.border.width": 1,
+        "shape.border.color": "#979797",
+        "2d.selectable": false,
+        "2d.visible": false,
+        "select.width": 0,
+        "shape.gradient.color": null,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 860,
+      "p": {
+        "displayName": "date",
+        "parent": {
+          "__i": 859
+        },
+        "image": "symbols/build/date.json",
+        "host": {
+          "__i": 859
+        },
+        "position": {
+          "x": 1778.73008,
+          "y": 26.36829
+        },
+        "width": -1,
+        "height": -1
+      },
+      "s": {
+        "2d.selectable": false,
+        "2d.movable": false,
+        "2d.editable": false,
+        "pixelPerfect": false
+      },
+      "a": {
+        "time": "16:32",
+        "week": "星期二",
+        "date": "2018-11-20"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 861,
+      "p": {
+        "displayName": "number-pane",
+        "parent": {
+          "__i": 859
+        },
+        "image": "symbols/build/basic/number-pane.json",
+        "host": {
+          "__i": 859
+        },
+        "position": {
+          "x": 1618.79855,
+          "y": 864.46922
+        },
+        "scale": {
+          "x": 3,
+          "y": 3
+        },
+        "width": 30.2798,
+        "height": 28.69236
+      },
+      "s": {
+        "pixelPerfect": false,
+        "2d.editable": false,
+        "2d.movable": false,
+        "2d.selectable": false
+      },
+      "a": {
+        "ht.value": "10",
+        "ht.color": "rgb(242,83,75)"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 974,
+      "p": {
+        "displayName": "容量",
+        "tag": "capacity",
+        "image": "symbols/build/玖佰/icon/容量.json",
+        "host": {
+          "__i": 856
+        },
+        "position": {
+          "x": 1665.26373,
+          "y": 26.36829
+        },
+        "scale": {
+          "x": 1.3,
+          "y": 1.3
+        },
+        "width": 23.14155,
+        "height": 23.14155
+      },
+      "s": {
+        "body.color": "rgba(41,155,217,0.50)",
+        "onDown": "__ht__function(event, data, view) {\nvar visible = !data.a('capacityVisible');\nsetCapacityVisible(visible);\n\ndata.s('body.color', visible ? 'white' : 'rgba(41,155,217,0.51)');\n\ndata.a('capacityVisible', visible);\n}",
+        "interactive": true,
+        "2d.movable": false,
+        "2d.editable": false,
+        "select.width": 0,
+        "select.color": null,
+        "layout.h": "right",
+        "layout.v": "top"
+      }
+    }
+  ],
+  "modified": "Tue Nov 20 2018 16:32:04 GMT+0800 (中国标准时间)",
+  "contentRect": {
+    "x": -24.61158,
+    "y": -3.70702,
+    "width": 1904.57857,
+    "height": 971.21478
+  }
+}

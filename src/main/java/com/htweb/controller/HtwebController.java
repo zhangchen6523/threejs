@@ -62,6 +62,9 @@ public class HtwebController {
         return "/missileCar/missileCar";
     }
 
-
+    @RequestMapping(value = "/transport")
+    public String transport() {
+        return "/transport/transport";
+    }
 
 }
