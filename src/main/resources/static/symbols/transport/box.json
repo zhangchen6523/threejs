@@ -1,0 +1,9 @@
+{
+  "modelType": "obj",
+  "obj": "assets/objs/transport/箱子.obj",
+  "mtl": "assets/objs/transport/箱子.mtl",
+  "reverseFlipMtls": "*",
+
+  "image": "",
+  "prefix": "assets/objs/transport/"
+}

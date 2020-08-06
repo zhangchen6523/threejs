@@ -59,6 +59,30 @@
   "clip": true,
   "comps": [
     {
+      "type": "rect",
+      "background": "rgba(36,36,36,0.20)",
+      "borderColor": "#979797",
+      "rect": [
+        0,
+        0,
+        100,
+        100
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(124,145,155)",
+      "borderColor": "#979797",
+      "opacity": 0.16,
+      "rotation": 3.14159,
+      "rect": [
+        13.91682,
+        192.46725,
+        84.18612,
+        16.43272
+      ]
+    },
+    {
       "type": "symbols/build/components/textBox/textBox.json",
       "displayName": "TextBox",
       "rect": [

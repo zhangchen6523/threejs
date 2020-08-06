@@ -36,52 +36,22 @@
     },
     {
       "c": "ht.Node",
-      "i": 857,
-      "p": {
-        "displayName": "leftPanel",
-        "tag": "leftPanel",
-        "image": "symbols/transport/leftPanel.json",
-        "host": {
-          "__i": 856
-        },
-        "position": {
-          "x": 125.38842,
-          "y": 481.29298
-        },
-        "width": 300,
-        "height": 970
-      },
-      "s": {
-        "layout.h": "left",
-        "layout.v": "center",
-        "2d.selectable": false,
-        "2d.movable": false,
-        "2d.editable": false,
-        "pixelPerfect": false
-      },
-      "a": {
-        "value": 0.73,
-        "title": "园区"
-      }
-    },
-    {
-      "c": "ht.Node",
       "i": 858,
       "p": {
         "displayName": "textBox",
         "parent": {
-          "__i": 857
+          "__i": 856
         },
         "image": "symbols/build/basic/textBox.json",
         "host": {
-          "__i": 857
+          "__i": 856
         },
         "position": {
-          "x": 159.22782,
-          "y": 330.47659
+          "x": 1000.22782,
+          "y": 1050.47659
         },
-        "width": 200.75467,
-        "height": 100.56065
+        "width": 900.75467,
+        "height": 800.56065
       },
       "s": {
         "2d.selectable": false,
@@ -90,121 +60,30 @@
         "pixelPerfect": false
       },
       "a": {
-        "cacheScaleMap": {
-          "key": "99-10014px sans-serif, arial18",
-          "content": "",
-          "scale": 0.49147
-        },
-        "tb.content": "任务信息                            编码：DF-01654               状态：开始                        开始：2018-05-03 00:01  结束：2018-05-03 10:01",
+        "tb.content": "运输介质信息\n\n编号：DF-01654\n\n状态：运行中\n\n开始：2018-05-03 00:01\n\n预计结束：2018-05-03 10:01\n\n载重：100吨\n\n装载数量：8箱",
         "tb.autoScale": false,
         "tb.color": "rgb(255,255,255)",
-        "tb.fontSize": 16
+        "tb.fontSize": 25
       }
     },
     {
       "c": "ht.Node",
       "i": 859,
       "p": {
-        "displayName": "rightPanel",
-        "tag": "rightPanel",
-        "image": "symbols/transport/rightPanel.json",
+        "displayName": "textBox",
+        "parent": {
+          "__i": 856
+        },
+        "image": "symbols/build/basic/textBox.json",
         "host": {
           "__i": 856
         },
         "position": {
-          "x": 1722.46699,
-          "y": 481.20143
+          "x": 1500.22782,
+          "y": 1050.47659
         },
-        "width": 315,
-        "height": 955
-      },
-      "s": {
-        "layout.h": "right",
-        "layout.v": "center",
-        "2d.selectable": false,
-        "2d.movable": false,
-        "2d.editable": false,
-        "pixelPerfect": false,
-        "select.width": 0,
-        "select.color": null
-      },
-      "a": {
-        "cacheScaleMap": {
-          "key": "16-16614px sans-serif, arial18",
-          "content": "",
-          "scale": 0.24962
-        }
-      }
-    },
-    {
-      "c": "ht.Node",
-      "i": 334,
-      "p": {
-        "displayName": "areaChart",
-        "tag": "areaChart",
-        "position": {
-          "x": 1790.08312,
-          "y": 412.56166
-        },
-        "width": 450.19977,
-        "height": 170.79039
-      },
-      "s": {
-        "shape": "rect",
-        "shape.background": null,
-        "shape.border.width": 1,
-        "shape.border.color": "#979797",
-        "2d.selectable": false,
-        "2d.visible": false,
-        "select.width": 0,
-        "shape.gradient.color": null,
-        "2d.movable": false
-      }
-    }
-  ,
-    {
-      "c": "ht.Node",
-      "i": 335,
-      "p": {
-        "displayName": "ylChart",
-        "tag": "ylChart",
-        "position": {
-          "x": 1790.08312,
-          "y": 625.56166
-        },
-        "width": 450.19977,
-        "height": 170.79039
-      },
-      "s": {
-        "shape": "rect",
-        "shape.background": null,
-        "shape.border.width": 1,
-        "shape.border.color": "#979797",
-        "2d.selectable": false,
-        "2d.visible": false,
-        "select.width": 0,
-        "shape.gradient.color": null,
-        "2d.movable": false
-      }
-    },
-    {
-      "c": "ht.Node",
-      "i": 860,
-      "p": {
-        "displayName": "date",
-        "parent": {
-          "__i": 859
-        },
-        "image": "symbols/build/date.json",
-        "host": {
-          "__i": 859
-        },
-        "position": {
-          "x": 1778.73008,
-          "y": 26.36829
-        },
-        "width": -1,
-        "height": -1
+        "width": 900.75467,
+        "height": 800.56065
       },
       "s": {
         "2d.selectable": false,
@@ -213,76 +92,10 @@
         "pixelPerfect": false
       },
       "a": {
-        "time": "16:32",
-        "week": "星期二",
-        "date": "2018-11-20"
-      }
-    },
-    {
-      "c": "ht.Node",
-      "i": 861,
-      "p": {
-        "displayName": "number-pane",
-        "parent": {
-          "__i": 859
-        },
-        "image": "symbols/build/basic/number-pane.json",
-        "host": {
-          "__i": 859
-        },
-        "position": {
-          "x": 1618.79855,
-          "y": 864.46922
-        },
-        "scale": {
-          "x": 3,
-          "y": 3
-        },
-        "width": 30.2798,
-        "height": 28.69236
-      },
-      "s": {
-        "pixelPerfect": false,
-        "2d.editable": false,
-        "2d.movable": false,
-        "2d.selectable": false
-      },
-      "a": {
-        "ht.value": "10",
-        "ht.color": "rgb(242,83,75)"
-      }
-    },
-    {
-      "c": "ht.Node",
-      "i": 974,
-      "p": {
-        "displayName": "容量",
-        "tag": "capacity",
-        "image": "symbols/build/玖佰/icon/容量.json",
-        "host": {
-          "__i": 856
-        },
-        "position": {
-          "x": 1665.26373,
-          "y": 26.36829
-        },
-        "scale": {
-          "x": 1.3,
-          "y": 1.3
-        },
-        "width": 23.14155,
-        "height": 23.14155
-      },
-      "s": {
-        "body.color": "rgba(41,155,217,0.50)",
-        "onDown": "__ht__function(event, data, view) {\nvar visible = !data.a('capacityVisible');\nsetCapacityVisible(visible);\n\ndata.s('body.color', visible ? 'white' : 'rgba(41,155,217,0.51)');\n\ndata.a('capacityVisible', visible);\n}",
-        "interactive": true,
-        "2d.movable": false,
-        "2d.editable": false,
-        "select.width": 0,
-        "select.color": null,
-        "layout.h": "right",
-        "layout.v": "top"
+        "tb.content": "运输货物信息\n\n编号：鹰击-36\n\n容积：900*100*500(MM)\n\n重量：200KG",
+        "tb.autoScale": false,
+        "tb.color": "rgb(255,255,255)",
+        "tb.fontSize": 25
       }
     }
   ],

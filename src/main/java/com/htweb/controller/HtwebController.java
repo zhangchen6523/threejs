@@ -67,4 +67,14 @@ public class HtwebController {
         return "/transport/transport";
     }
 
+    @RequestMapping(value = "/threejs")
+    public String threejs() {
+        return "/threejs/threejs";
+    }
+
+    @RequestMapping(value = "/threejs1")
+    public String threejs1() {
+        return "/threejs/threejs1";
+    }
+
 }
