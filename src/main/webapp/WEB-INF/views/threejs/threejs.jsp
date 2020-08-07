@@ -82,7 +82,7 @@
                     texture.dispose();
                     pmremGenerator.dispose();
                     //加载obj和mtl文件
-                    loadMtl();
+                    //loadMtl();
                     //加载gltf文件
                     loadGltf();
                 });
@@ -109,13 +109,13 @@
         function draw(){
             var Models = document.getElementById('model');
 
-            camera = new THREE.PerspectiveCamera(45, window.innerWidth/window.innerHeight, 1, 500);
+            camera = new THREE.PerspectiveCamera(45, window.innerWidth/window.innerHeight, 1, 100);
             camera.position.x = 0;
             camera.position.y = 0;
-            camera.position.z = 500;
+            camera.position.z = 100;
             camera.lookAt(scene.position);
 
-            renderer.setClearColor(new THREE.Color(0xEEEEEE, 1.0));
+            // renderer.setClearColor(new THREE.Color(0xEEEEEE, 1.0));
             renderer.setClearAlpha(0.2);
             renderer.setPixelRatio(window.devicePixelRatio);
             renderer.setSize(window.innerWidth/2, window.innerHeight/2);
@@ -162,13 +162,13 @@
 
         function loadGltf(){
             var loder=new THREE.GLTFLoader();
-            loder.load("assets/objs/test/scene.gltf",function (obj) {
+            loder.load("assets/objs/transport/source/model.glb",function (obj) {
                 //获取模型，并添加到场景
                 var modelScene=obj.scene;
-                modelScene.scale.set(0.5, 0.5, 0.5);
-                modelScene.rotateY(93);
+                // modelScene.scale.set(0.01, 0.01, 0.01);
+                // modelScene.rotateY(93);
                 scene.add(modelScene);
-            })
+            }, onProgress, onError);
         }
 
         function onProgress( xhr ) {
