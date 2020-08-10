@@ -63,7 +63,6 @@
         render();
         stats.update();
         requestAnimationFrame(animate);
-
     }
 
     function render() {
@@ -192,7 +191,7 @@
 
         initAxes();
         loadHdrAndModel();
-        initStats()
+        initStats();
 
         document.addEventListener('mousemove', onDocumentMouseMove, false);
         document.getElementById("model").addEventListener('dblclick', mouseDblclick, false);
