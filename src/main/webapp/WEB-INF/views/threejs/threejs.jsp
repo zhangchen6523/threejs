@@ -50,31 +50,35 @@
 <script src="libs/threejs/loaders/GLTFLoader.js"></script>
 <script src="libs/threejs/loaders/RGBELoader.js"></script>
 <script src="libs/threejs/controls/OrbitControls.js"></script>
-<script src="libs/threejs/libs/stats.min.js"></script>
+<script src="libs/threejs/postprocessing/EffectComposer.js"></script>
+<script src="libs/threejs/postprocessing/ShaderPass.js"></script>
+<script src="libs/threejs/postprocessing/OutlinePass.js"></script>
+<script src="libs/threejs/postprocessing/RenderPass.js"></script>
+<script src="libs/threejs/shader/CopyShader.js"></script>
+
 <script>
     var camera, scene, renderer, envMap;
+    var composer, outlinePass;
+    var selectedObjects;
     var mouseX = 0, mouseY = 0;
     var windowHalfX = window.innerWidth / 2;
     var windowHalfY = window.innerHeight / 2;
     init();
     animate();
 
-    function animate() {
-        render();
-        stats.update();
-        requestAnimationFrame(animate);
-    }
-
+    //没有描边的处理方法
     function render() {
         camera.lookAt(scene.position);
         renderer.render(scene, camera);
     }
 
+    //创建辅助坐标，调整模型位置打开
     function initAxes() {
         var axes = new THREE.AxisHelper(20);
         scene.add(axes);
     }
 
+    //创建摄像机
     function initCamera() {
         camera = new THREE.PerspectiveCamera(30, window.innerWidth / window.innerHeight, 1, 1000);
         camera.position.x = 0;
@@ -83,6 +87,7 @@
         camera.lookAt(scene.position);
     }
 
+    //创建渲染器
     function initRenderer() {
         // renderer.setClearColor(new THREE.Color(0xEEEEEE, 1.0));//添加背景颜色
         renderer.setClearAlpha(0.2);
@@ -93,11 +98,13 @@
         renderer.render(scene, camera);
     }
 
+    //创建控制器
     function initControls() {
         var controls = new THREE.OrbitControls(camera, renderer.domElement);
         controls.autoRotate = true;// 设置平面自动旋转
     }
 
+    //添加hdr环境光文件和模型
     function loadHdrAndModel() {
         var pmremGenerator = new THREE.PMREMGenerator(renderer);
         pmremGenerator.compileEquirectangularShader();
@@ -106,7 +113,7 @@
         new THREE.RGBELoader()
             .setDataType(THREE.UnsignedByteType)
             .setPath('assets/objs/transport/textures/')
-            .load('Parking_Lot_Sunny.hdr', function (texture) {
+            .load('Sky.hdr', function (texture) {
                 envMap = pmremGenerator.fromEquirectangular(texture).texture;
                 //scene.background = envMap;
                 scene.environment = envMap;
@@ -115,27 +122,34 @@
                 //加载obj和mtl文件
                 //loadMtl();
                 //加载gltf文件
-                loadGltf();
-                loadGltf1();
+                loadBoxGltf();
+                loadTruckGltf();
             });
 
         // loadGltf();
+        // loadGltf1();
     }
 
-    //初始化性能插件
-    var stats;
-    function initStats() {
-        stats = new Stats();
-        document.body.appendChild(stats.dom);
+
+    //添加模型描边效果控制器
+    function initModelOutline(){
+        composer = new THREE.EffectComposer(renderer);
+        var renderPass = new THREE.RenderPass(scene, camera);//原始场景渲染结果
+
+        composer.addPass(renderPass);
+        outlinePass = new THREE.OutlinePass(new THREE.Vector2( window.innerWidth/2, window.innerHeight/2 ), scene, camera );//轮廓通道
+
+        composer.addPass(outlinePass);
     }
 
-    function loadGltf(){
+
+    //加载弹箱gltf模型方法
+    function loadBoxGltf(){
         var loder=new THREE.GLTFLoader();
         loder.load("assets/objs/transport/dx.gltf",function (obj) {
             //获取模型，并添加到场景
             var modelScene=obj.scene;
-            modelScene.scale.set(0.07, 0.07, 0.07);
-            // modelScene.rotateY(Math.PI);//Y旋转
+            modelScene.scale.set(0.1, 0.1, 0.1);
             modelScene.traverse(function(child){
                 //调整模型显示环境配合内容，模型更接近原样
                 if (child.isMesh) {
@@ -148,16 +162,17 @@
         }, onProgress, onError);
     }
 
-    function loadGltf1(){
+    //加载弹箱gltf模型方法
+    function loadTruckGltf(){
         var loder=new THREE.GLTFLoader();
-        loder.load("assets/objs/transport/tru.gltf",function (obj) {
+        loder.load("assets/objs/transport/truck.gltf",function (obj) {
             //获取模型，并添加到场景
             var modelScene=obj.scene;
             modelScene.scale.set(0.01, 0.01, 0.01);
             modelScene.rotateY(Math.PI/2);//Y旋转
-            modelScene.translateX(7);
+            modelScene.translateX(9);
             modelScene.translateY(-13.6);
-            modelScene.translateZ(-13);
+            modelScene.translateZ(-20);
             modelScene.traverse(function(child){
                 //调整模型显示环境配合内容，模型更接近原样
                 if (child.isMesh) {
@@ -170,14 +185,19 @@
         }, onProgress, onError);
     }
 
+    //添加光
     var ambientLight,pointLight;
     function initLight() {
         ambientLight = new THREE.AmbientLight("#ffffff");
         scene.add(ambientLight);
 
         pointLight = new THREE.PointLight("#ffffff");
-        pointLight.position.set(100, 30, 10);
+        pointLight.position.set(100, 100, 100);
         scene.add(pointLight);
+
+        var pointLight1 = new THREE.PointLight("#ffffff");
+        pointLight1.position.set(-100, 100, -100);
+        scene.add(pointLight1);
     }
 
     function init() {
@@ -191,7 +211,6 @@
 
         initAxes();
         loadHdrAndModel();
-        initStats();
 
         document.addEventListener('mousemove', onDocumentMouseMove, false);
         document.getElementById("model").addEventListener('dblclick', mouseDblclick, false);
@@ -204,10 +223,18 @@
         initCamera();
         initRenderer();
         initControls();
+        initModelOutline();
     }
 
     function mouseDblclick(){
         initDraw();
+    }
+
+    function animate() {
+        composer.render();
+        //render();
+        requestAnimationFrame(animate);
+
     }
 
     var raycaster = new THREE.Raycaster();
@@ -217,16 +244,21 @@
         //通过鼠标点击的位置计算出raycaster所需要的点的位置，以屏幕中心为原点，值的范围为-1到1.
         mouse.x = (event.clientX / window.innerWidth ) * 2 - 1;
         mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
+
         // 通过鼠标点的位置和当前相机的矩阵计算出raycaster
-        raycaster.setFromCamera( mouse, camera );
+        raycaster.setFromCamera(mouse, camera);
 
         // 获取raycaster直线和所有模型相交的数组集合
-        var intersects = raycaster.intersectObjects( scene.children );
+        var intersects = raycaster.intersectObjects(scene.children,true);
 
+        selectedObjects = [];
         //将所有的相交的模型的颜色设置为红色，如果只需要将第一个触发事件，那就数组的第一个模型改变颜色即可
-        for ( var i = 0; i < intersects.length; i++ ) {
-            intersects[ i ].object.material.color.set( 0xff0000 );
-        }
+        selectedObjects.push(intersects[0].object);//添加被拾取物体
+        // for ( var i = 0; i < intersects.length; i++ ) {
+        //     // intersects[i].object.material.color.set(0xff0000);
+        //     selectedObjects.push(intersects[i].object);//添加被拾取物体
+        // }
+        outlinePass.selectedObjects = selectedObjects;//被拾取物体显示轮廓效果
     }
 
     function loadMtl(){
