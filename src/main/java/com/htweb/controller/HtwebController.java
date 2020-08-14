@@ -72,9 +72,9 @@ public class HtwebController {
         return "/threejs/threejs";
     }
 
-    @RequestMapping(value = "/threejs1")
+    @RequestMapping(value = "/map")
     public String threejs1() {
-        return "/threejs/threejs1";
+        return "/threejs/map";
     }
 
 }

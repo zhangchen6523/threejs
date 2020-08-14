@@ -4,15 +4,10 @@
 <head>
     <title>threejs</title>
     <meta charset="utf-8">
-    <style>
-        body {
-            overflow: hidden;
-        }
-    </style>
 </head>
 <body>
-<div id="model" style="margin: 10px 0px 0px 25%;"></div>
-<div style="margin: 10px 0px 0px 35%;">
+<div id="model" style="margin: 0px 0px 0px 25%;"></div>
+<div style="margin: 0px 0px 0px 32%;">
     <table border="1" style="color:darkblue;font-size: 23px;font-family: sans-serif">
         <tr>
             <td>运输介质信息</td>
@@ -57,12 +52,10 @@
 <script src="libs/threejs/shader/CopyShader.js"></script>
 
 <script>
-    var camera, scene, renderer, envMap;
+    var camera, scene, renderer, envMap, controls;
     var composer, outlinePass;
     var selectedObjects;
-    var mouseX = 0, mouseY = 0;
-    var windowHalfX = window.innerWidth / 2;
-    var windowHalfY = window.innerHeight / 2;
+
     init();
     animate();
 
@@ -80,7 +73,7 @@
 
     //创建摄像机
     function initCamera() {
-        camera = new THREE.PerspectiveCamera(30, window.innerWidth / window.innerHeight, 1, 1000);
+        camera = new THREE.PerspectiveCamera(30, window.innerWidth / window.innerHeight, 0.01, 1000);
         camera.position.x = 0;
         camera.position.y = 20;
         camera.position.z = 130;
@@ -91,7 +84,7 @@
     function initRenderer() {
         // renderer.setClearColor(new THREE.Color(0xEEEEEE, 1.0));//添加背景颜色
         renderer.setClearAlpha(0.2);
-        renderer.setSize(window.innerWidth /2, window.innerHeight / 2);
+        renderer.setSize(window.innerWidth/2, window.innerHeight/2);
         // renderer.toneMappingExposure = 1.1;//曝光度
         renderer.outputEncoding = THREE.sRGBEncoding;//切换rgb模式输出，模型变亮
 
@@ -100,7 +93,7 @@
 
     //创建控制器
     function initControls() {
-        var controls = new THREE.OrbitControls(camera, renderer.domElement);
+        controls = new THREE.OrbitControls(camera, renderer.domElement);
         controls.autoRotate = true;// 设置平面自动旋转
     }
 
@@ -112,8 +105,8 @@
         //加载hdr文件
         new THREE.RGBELoader()
             .setDataType(THREE.UnsignedByteType)
-            .setPath('assets/objs/transport/textures/')
-            .load('Sky.hdr', function (texture) {
+            .setPath('assets/objs/transport/tex/')
+            .load('Sky1.hdr', function (texture) {
                 envMap = pmremGenerator.fromEquirectangular(texture).texture;
                 //scene.background = envMap;
                 scene.environment = envMap;
@@ -126,10 +119,9 @@
                 loadTruckGltf();
             });
 
-        // loadGltf();
-        // loadGltf1();
+        // loadBoxGltf();
+        // loadTruckGltf();
     }
-
 
     //添加模型描边效果控制器
     function initModelOutline(){
@@ -137,7 +129,7 @@
         var renderPass = new THREE.RenderPass(scene, camera);//原始场景渲染结果
 
         composer.addPass(renderPass);
-        outlinePass = new THREE.OutlinePass(new THREE.Vector2( window.innerWidth/2, window.innerHeight/2 ), scene, camera );//轮廓通道
+        outlinePass = new THREE.OutlinePass(new THREE.Vector2(window.innerWidth, window.innerHeight), scene, camera );//轮廓通道
 
         composer.addPass(outlinePass);
     }
@@ -150,6 +142,7 @@
             //获取模型，并添加到场景
             var modelScene=obj.scene;
             modelScene.scale.set(0.1, 0.1, 0.1);
+            modelScene.name = "box";
             modelScene.traverse(function(child){
                 //调整模型显示环境配合内容，模型更接近原样
                 if (child.isMesh) {
@@ -173,6 +166,7 @@
             modelScene.translateX(9);
             modelScene.translateY(-13.6);
             modelScene.translateZ(-20);
+            modelScene.name = "truck";
             modelScene.traverse(function(child){
                 //调整模型显示环境配合内容，模型更接近原样
                 if (child.isMesh) {
@@ -188,16 +182,12 @@
     //添加光
     var ambientLight,pointLight;
     function initLight() {
-        ambientLight = new THREE.AmbientLight("#ffffff");
-        scene.add(ambientLight);
+        // ambientLight = new THREE.AmbientLight("#ffffff",2);
+        // scene.add(ambientLight);
 
-        pointLight = new THREE.PointLight("#ffffff");
+        pointLight = new THREE.PointLight("#ffffff",2);
         pointLight.position.set(100, 100, 100);
         scene.add(pointLight);
-
-        var pointLight1 = new THREE.PointLight("#ffffff");
-        pointLight1.position.set(-100, 100, -100);
-        scene.add(pointLight1);
     }
 
     function init() {
@@ -206,28 +196,24 @@
         renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
 
         var models = document.getElementById('model');
-        initDraw();
-        models.appendChild(renderer.domElement);
-
-        initAxes();
-        loadHdrAndModel();
-
-        document.addEventListener('mousemove', onDocumentMouseMove, false);
-        document.getElementById("model").addEventListener('dblclick', mouseDblclick, false);
-        window.addEventListener('resize', onWindowResize, false);
-        window.addEventListener('click', onMouseClick, false );
-    }
-
-    function initDraw(){
         initLight();
         initCamera();
         initRenderer();
         initControls();
         initModelOutline();
+        models.appendChild(renderer.domElement);
+
+        initAxes();
+        loadHdrAndModel();
+
+        document.getElementById("model").addEventListener('mousemove', onMouseClick, false);
+        //document.getElementById("model").addEventListener('click', onMouseClick, false );
+        document.getElementById("model").addEventListener('dblclick', mouseDblclick, false);
+        window.addEventListener('resize', onWindowResize, false);
     }
 
     function mouseDblclick(){
-        initDraw();
+        controls.reset();//回归相机初始视角，将模型归位
     }
 
     function animate() {
@@ -242,8 +228,10 @@
 
     function onMouseClick(event) {
         //通过鼠标点击的位置计算出raycaster所需要的点的位置，以屏幕中心为原点，值的范围为-1到1.
-        mouse.x = (event.clientX / window.innerWidth ) * 2 - 1;
-        mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
+        mouse.x = (event.clientX / (window.innerWidth/2)) * 2 - 1;
+        mouse.y = -(event.clientY / (window.innerHeight/2))  * 2 + 1;
+
+        //alert("mouse.x:"+mouse.x+";mouse.y:"+mouse.y+";window.innerWidth:"+window.innerWidth+";window.innerHeight:"+window.innerHeight);
 
         // 通过鼠标点的位置和当前相机的矩阵计算出raycaster
         raycaster.setFromCamera(mouse, camera);
@@ -253,11 +241,12 @@
 
         selectedObjects = [];
         //将所有的相交的模型的颜色设置为红色，如果只需要将第一个触发事件，那就数组的第一个模型改变颜色即可
-        selectedObjects.push(intersects[0].object);//添加被拾取物体
-        // for ( var i = 0; i < intersects.length; i++ ) {
-        //     // intersects[i].object.material.color.set(0xff0000);
-        //     selectedObjects.push(intersects[i].object);//添加被拾取物体
-        // }
+        if (intersects != null && intersects[0] != null && intersects[0].object != undefined) {
+            var selectobj = intersects[0].object.parent;
+            if (selectobj.type == 'Group' && selectobj.name != '' ){
+                selectedObjects.push(selectobj);//添加被拾取物体
+            }
+        }
         outlinePass.selectedObjects = selectedObjects;//被拾取物体显示轮廓效果
     }
 
@@ -280,17 +269,9 @@
     }
 
     function onWindowResize() {
-        windowHalfX = window.innerWidth / 2;
-        windowHalfY = window.innerHeight / 2;
-
         camera.aspect = window.innerWidth / window.innerHeight;
         camera.updateProjectionMatrix();
-        renderer.setSize(window.innerWidth/2, window.innerHeight/2);
-    }
-
-    function onDocumentMouseMove(event) {
-        mouseX = (event.clientX - windowHalfX) / 2;
-        mouseY = (event.clientY - windowHalfY) / 2;
+        renderer.setSize(window.innerWidth/2 , window.innerHeight/2);
     }
 
     function onProgress( xhr ) {
