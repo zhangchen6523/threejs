@@ -73,8 +73,8 @@ public class HtwebController {
     }
 
     @RequestMapping(value = "/map")
-    public String threejs1() {
-        return "/threejs/map";
+    public String map() {
+        return "/baidumap/map";
     }
 
 }

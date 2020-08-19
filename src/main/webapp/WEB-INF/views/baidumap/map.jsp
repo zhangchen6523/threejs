@@ -13,7 +13,6 @@
 
     <script type="text/javascript" src="libs/map/map_load.js"></script>
     <script type="text/javascript" src="libs/map/jquery-3.5.1.js"></script>
-    <script type="text/javascript" src="libs/map/mapv.js"></script>
 
     <script type="text/javascript" src="libs/map/DrawingManager_min.js"></script>
     <link rel="stylesheet" href="libs/map/DrawingManager_min.css" />
@@ -31,6 +30,12 @@
 
     var circle = new BMap.Circle(point,30000,{fillColor:"blue", strokeWeight: 1 ,fillOpacity: 0.3, strokeOpacity: 0.3});//设置覆盖物的参数，中心坐标，半径，颜色
     map.addOverlay(circle);//在地图上显示圆形覆盖物
+
+
+    map.addEventListener("click",function(e){
+        alert("map click"+e.overlay);
+        console.log(e.overlay);
+    });
 
     var overlay =null;//圆覆盖物
     var label=null;//显示半径信息
@@ -65,12 +70,10 @@
     //添加鼠标绘制工具监听事件，用于获取绘制结果
     drawingManager.addEventListener('overlaycomplete', overlaycomplete);
 
-    drawingManager.prototype._bindCircle();
-
-
-
     $(document).ready(function(){
         $(".anchorBL").hide();
+
+        drawBoundary();
 
         var areasMap = new Map();
         var siteMap = new Map();
@@ -84,8 +87,8 @@
                     info.longitude = area.longitude;
                     info.latitude = area.latitude;
                     var point = new BMap.Point(info.longitude, info.latitude);  // 创建点坐标
-                    var marker=new BMap.Marker(point,{icon:new BMap.Icon("libs/map/images/user.png", new BMap.Size(12, 12))});
-                    initTip(marker,info);
+                    var marker=new BMap.Marker(point,{icon:new BMap.Icon("libs/map/images/user.png", new BMap.Size(20, 20))});
+                    //initTip(marker,info);
                     map.addOverlay(marker);
                 });
             });
@@ -106,6 +109,8 @@
                 }
             );
 
+
+
             //添加鼠标离开时关闭自定义信息窗口事件
             marker.addEventListener("mouseout",function () {
                     this.closeInfoWindow();
@@ -115,22 +120,39 @@
 
     });
 
-    var index;
-    var pArray;
-    function dealAreaLine(areaStyle){
-        index++;
-        $.each(areaStyle, function (infoIndex, info){
-            pArray.push(new BMap.Point(info[0],info[1]));
+    function drawBoundary() {
+        var pArray = [];
+        pArray.push(new BMap.Point(116.812128, 39.616018));
+        pArray.push(new BMap.Point(111.155341, 39.338918));
+
+        var sy = new BMap.Symbol(BMap_Symbol_SHAPE_FORWARD_CLOSED_ARROW, {
+            scale: 0.6,//图标缩放大小
+            strokeColor:'#fff',//设置矢量图标的线填充颜色
+            strokeWeight: 2,//设置线宽
         });
-    }
+        var icons = new BMap.IconSequence(sy, '100%', '10%',false);
+
+        var yi = new BMap.Polyline(pArray, {
+            strokeWeight: 8,
+            strokeColor: "#ff0000",
+            icons:[icons]
+        }); //建立多边形覆盖物
 
 
-    function drawBoundary(areaStyle) {
-        pArray = [];
-        index = 0;
-        dealAreaLine(areaStyle);
-        var sanjiaoxing = new BMap.Polygon(pArray,{strokeWeight: 1, strokeColor: "#ff0000"}); //建立多边形覆盖物
-        map.addOverlay(sanjiaoxing);
+        // var er = new BMapLib.CurveLine(pArray, {strokeColor:"red", strokeWeight:3, strokeOpacity:0.5});
+        // map.addOverlay(er);
+
+        // var trackAni = new BMapGLLib.TrackAnimation(map, yi, {
+        //     overallView: true, // 动画完成后自动调整视野到总览
+        //     tilt: 30,          // 轨迹播放的角度，默认为55
+        //     duration: 20000,   // 动画持续时长，默认为10000，单位ms
+        //     delay: 3000        // 动画开始的延迟，默认0，单位ms
+        // });
+        //
+        // trackAni.start();
+
+        map.addOverlay(yi);
+
     }
 
 
