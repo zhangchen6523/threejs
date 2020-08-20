@@ -20,6 +20,7 @@
 <body>
 <div id="container"></div>
 <script type="text/javascript">
+    var pArray = [];
     var map = new BMap.Map("container" ,{
         minZoom : 5,
         maxZoom : 6
@@ -73,7 +74,29 @@
     $(document).ready(function(){
         $(".anchorBL").hide();
 
-        drawBoundary();
+        pArray = [];
+        drawRoad("libs/map/b-c.json");
+        drawRoad("libs/map/b-s.json");
+        drawRoad("libs/map/s-c.json");
+
+
+
+        // $.getJSON("libs/map/b-c.json", function (dataList){
+        //     $.each(dataList, function (infoIndex, info){
+        //         pArray.push(new BMap.Point(info.lng*1,info.lat*1));
+        //     });
+        //     var yi = new BMap.Polyline(pArray, {
+        //         strokeWeight: 5,
+        //         strokeColor: "#ff0000"
+        //     }); //建立多边形覆盖物
+        //     map.addOverlay(yi);
+        // });
+
+
+
+
+
+        // drawBoundary();
 
         var areasMap = new Map();
         var siteMap = new Map();
@@ -118,13 +141,23 @@
             );
         }
 
+        function drawRoad(path) {
+            $.getJSON(path, function (dataList){
+                $.each(dataList, function (infoIndex, info){
+                    pArray.push(new BMap.Point(info.lng*1,info.lat*1));
+                });
+                var yi = new BMap.Polyline(pArray, {
+                    strokeWeight: 5,
+                    strokeColor: "#ff0000"
+                });
+                map.addOverlay(yi);
+            });
+
+        }
+
     });
 
     function drawBoundary() {
-        var pArray = [];
-        pArray.push(new BMap.Point(116.812128, 39.616018));
-        pArray.push(new BMap.Point(111.155341, 39.338918));
-
         var sy = new BMap.Symbol(BMap_Symbol_SHAPE_FORWARD_CLOSED_ARROW, {
             scale: 0.6,//图标缩放大小
             strokeColor:'#fff',//设置矢量图标的线填充颜色
@@ -137,7 +170,7 @@
             strokeColor: "#ff0000",
             icons:[icons]
         }); //建立多边形覆盖物
-
+        map.addOverlay(yi);
 
         // var er = new BMapLib.CurveLine(pArray, {strokeColor:"red", strokeWeight:3, strokeOpacity:0.5});
         // map.addOverlay(er);
