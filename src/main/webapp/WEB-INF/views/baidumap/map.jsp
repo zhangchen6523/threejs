@@ -14,9 +14,43 @@
     <script type="text/javascript" src="libs/map/map_load.js"></script>
     <script type="text/javascript" src="libs/map/jquery-3.5.1.js"></script>
 
+
     <script type="text/javascript" src="libs/map/DrawingManager_min.js"></script>
     <link rel="stylesheet" href="libs/map/DrawingManager_min.css" />
-</head>
+
+    <script type="text/javascript" src="libs/map/data/hebei.js"></script>
+    <script type="text/javascript" src="libs/map/data/shanxi.js"></script>
+    <script type="text/javascript" src="libs/map/data/liaoning.js"></script>
+    <script type="text/javascript" src="libs/map/data/jilin.js"></script>
+    <script type="text/javascript" src="libs/map/data/heilongjiang.js"></script>
+    <script type="text/javascript" src="libs/map/data/jiangsu.js"></script>
+    <script type="text/javascript" src="libs/map/data/zhejiang.js"></script>
+    <script type="text/javascript" src="libs/map/data/anhui.js"></script>
+    <script type="text/javascript" src="libs/map/data/fujian.js"></script>
+    <script type="text/javascript" src="libs/map/data/jiangxi.js"></script>
+    <script type="text/javascript" src="libs/map/data/shandong.js"></script>
+    <script type="text/javascript" src="libs/map/data/henan.js"></script>
+    <script type="text/javascript" src="libs/map/data/hubei.js"></script>
+    <script type="text/javascript" src="libs/map/data/hunan.js"></script>
+    <script type="text/javascript" src="libs/map/data/guangdong.js"></script>
+    <script type="text/javascript" src="libs/map/data/hainan.js"></script>
+    <script type="text/javascript" src="libs/map/data/sichuan.js"></script>
+    <script type="text/javascript" src="libs/map/data/guizhou.js"></script>
+    <script type="text/javascript" src="libs/map/data/yunnan.js"></script>
+    <script type="text/javascript" src="libs/map/data/shaanxi.js"></script>
+    <script type="text/javascript" src="libs/map/data/gansu.js"></script>
+    <script type="text/javascript" src="libs/map/data/qinghai.js"></script>
+    <script type="text/javascript" src="libs/map/data/neimenggu.js"></script>
+    <script type="text/javascript" src="libs/map/data/guangxi.js"></script>
+    <script type="text/javascript" src="libs/map/data/xizang.js"></script>
+    <script type="text/javascript" src="libs/map/data/ningxia.js"></script>
+    <script type="text/javascript" src="libs/map/data/xinjiang.js"></script>
+    <script type="text/javascript" src="libs/map/data/beijing.js"></script>
+    <script type="text/javascript" src="libs/map/data/tianjing.js"></script>
+    <script type="text/javascript" src="libs/map/data/shanghai.js"></script>
+    <script type="text/javascript" src="libs/map/data/chongqing.js"></script>
+
+    </head>
 <body>
 <div id="container"></div>
 <script type="text/javascript">
@@ -75,28 +109,10 @@
         $(".anchorBL").hide();
 
         pArray = [];
-        drawRoad("libs/map/b-c.json");
-        drawRoad("libs/map/b-s.json");
-        drawRoad("libs/map/s-c.json");
-
-
-
-        // $.getJSON("libs/map/b-c.json", function (dataList){
-        //     $.each(dataList, function (infoIndex, info){
-        //         pArray.push(new BMap.Point(info.lng*1,info.lat*1));
-        //     });
-        //     var yi = new BMap.Polyline(pArray, {
-        //         strokeWeight: 5,
-        //         strokeColor: "#ff0000"
-        //     }); //建立多边形覆盖物
-        //     map.addOverlay(yi);
-        // });
-
-
-
-
-
-        // drawBoundary();
+        // drawRoad("libs/map/b-c.json");
+        // drawRoad("libs/map/b-s.json");
+        // drawRoad("libs/map/s-c.json");
+        drawBoundary();
 
         var areasMap = new Map();
         var siteMap = new Map();
@@ -165,27 +181,55 @@
         });
         var icons = new BMap.IconSequence(sy, '100%', '10%',false);
 
-        var yi = new BMap.Polyline(pArray, {
-            strokeWeight: 8,
+        // var yi = new BMap.Polygon(line1, {
+        //     strokeWeight: 1,
+        //     strokeColor: "#ff0000"
+        // }); //建立多边形覆盖物
+        // map.addOverlay(yi);
+
+        drawLine(hebei);
+        drawLine(shanxi);
+        drawLine(liaoning);
+        drawLine(jilin);
+        drawLine(heilongjiang);
+        drawLine(jiangsu);
+        drawLine(zhejiang);
+        drawLine(anhui);
+        drawLine(fujian);
+        drawLine(jiangxi);
+        drawLine(shandong);
+        drawLine(henan);
+        drawLine(hubei);
+        drawLine(hunan);
+        drawLine(guangdong);
+        drawLine(hainan);
+        drawLine(sichuan);
+        drawLine(guizhou);
+        drawLine(yunnan);
+        drawLine(shaanxi);
+        drawLine(gansu);
+        drawLine(qinghai);
+        drawLine(neimenggu);
+        drawLine(guangxi);
+        drawLine(xizang);
+        drawLine(ningxia);
+        drawLine(xinjiang);
+        drawLine(beijing);
+        drawLine(tianjing);
+        drawLine(shanghai);
+        drawLine(chongqing);
+
+
+    }
+
+    function drawLine(line){
+        var lineObj = new BMap.Polygon(line, {
+            strokeWeight: 1,
             strokeColor: "#ff0000",
-            icons:[icons]
+            fillColor:"red",
+            fillColorOpacity:"0.4"
         }); //建立多边形覆盖物
-        map.addOverlay(yi);
-
-        // var er = new BMapLib.CurveLine(pArray, {strokeColor:"red", strokeWeight:3, strokeOpacity:0.5});
-        // map.addOverlay(er);
-
-        // var trackAni = new BMapGLLib.TrackAnimation(map, yi, {
-        //     overallView: true, // 动画完成后自动调整视野到总览
-        //     tilt: 30,          // 轨迹播放的角度，默认为55
-        //     duration: 20000,   // 动画持续时长，默认为10000，单位ms
-        //     delay: 3000        // 动画开始的延迟，默认0，单位ms
-        // });
-        //
-        // trackAni.start();
-
-        map.addOverlay(yi);
-
+        map.addOverlay(lineObj);
     }
 
 

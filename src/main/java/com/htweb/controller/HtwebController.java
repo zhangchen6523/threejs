@@ -82,4 +82,9 @@ public class HtwebController {
         return "/baidumap/map";
     }
 
+    @RequestMapping(value = "/area")
+    public String area() {
+        return "/baidumap/area";
+    }
+
 }
