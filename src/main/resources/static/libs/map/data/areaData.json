@@ -1,1 +1,126 @@
-[{"cnname":"河北省","name":"hebei"},{"cnname":"山西省","name":"shanxi"},{"cnname":"辽宁省","name":"liaoning"},{"cnname":"吉林省","name":"jilin"},{"cnname":"黑龙江省","name":"heilongjiang"},{"cnname":"江苏省","name":"jiangsu"},{"cnname":"浙江省","name":"zhejiang"},{"cnname":"安徽省","name":"anhui"},{"cnname":"福建省","name":"fujian"},{"cnname":"江西省","name":"jiangxi"},{"cnname":"山东省","name":"shandong"},{"cnname":"河南省","name":"henan"},{"cnname":"湖北省","name":"hubei"},{"cnname":"湖南省","name":"hunan"},{"cnname":"广东省","name":"guangdong"},{"cnname":"海南省","name":"hainan"},{"cnname":"四川省","name":"sichuan"},{"cnname":"贵州省","name":"guizhou"},{"cnname":"云南省","name":"yunnan"},{"cnname":"陕西省","name":"shaanxi"},{"cnname":"甘肃省","name":"gansu"},{"cnname":"青海省","name":"qinghai"},{"cnname":"内蒙古自治区","name":"neimenggu"},{"cnname":"广西壮族自治区","name":"guangxi"},{"cnname":"西藏自治区","name":"xizang"},{"cnname":"宁夏回族自治区","name":"ningxia"},{"cnname":"新疆维吾尔自治区","name":"xinjiang"},{"cnname":"北京市","name":"beijing"},{"cnname":"天津市","name":"tianjing"},{"cnname":"上海市","name":"shanghai"},{"cnname":"重庆市","name":"chongqing"}]
+[
+  {
+    "cnname": "河北省",
+    "name": "hebei"
+  },
+  {
+    "cnname": "山西省",
+    "name": "shanxi"
+  },
+  {
+    "cnname": "辽宁省",
+    "name": "liaoning"
+  },
+  {
+    "cnname": "吉林省",
+    "name": "jilin"
+  },
+  {
+    "cnname": "黑龙江省",
+    "name": "heilongjiang"
+  },
+  {
+    "cnname": "江苏省",
+    "name": "jiangsu"
+  },
+  {
+    "cnname": "浙江省",
+    "name": "zhejiang"
+  },
+  {
+    "cnname": "安徽省",
+    "name": "anhui"
+  },
+  {
+    "cnname": "福建省",
+    "name": "fujian"
+  },
+  {
+    "cnname": "江西省",
+    "name": "jiangxi"
+  },
+  {
+    "cnname": "山东省",
+    "name": "shandong"
+  },
+  {
+    "cnname": "河南省",
+    "name": "henan"
+  },
+  {
+    "cnname": "湖北省",
+    "name": "hubei"
+  },
+  {
+    "cnname": "湖南省",
+    "name": "hunan"
+  },
+  {
+    "cnname": "广东省",
+    "name": "guangdong"
+  },
+  {
+    "cnname": "海南省",
+    "name": "hainan"
+  },
+  {
+    "cnname": "四川省",
+    "name": "sichuan"
+  },
+  {
+    "cnname": "贵州省",
+    "name": "guizhou"
+  },
+  {
+    "cnname": "云南省",
+    "name": "yunnan"
+  },
+  {
+    "cnname": "陕西省",
+    "name": "shaanxi"
+  },
+  {
+    "cnname": "甘肃省",
+    "name": "gansu"
+  },
+  {
+    "cnname": "青海省",
+    "name": "qinghai"
+  },
+  {
+    "cnname": "内蒙古自治区",
+    "name": "neimenggu"
+  },
+  {
+    "cnname": "广西壮族自治区",
+    "name": "guangxi"
+  },
+  {
+    "cnname": "西藏自治区",
+    "name": "xizang"
+  },
+  {
+    "cnname": "宁夏回族自治区",
+    "name": "ningxia"
+  },
+  {
+    "cnname": "新疆维吾尔自治区",
+    "name": "xinjiang"
+  },
+  {
+    "cnname": "北京市",
+    "name": "beijing"
+  },
+  {
+    "cnname": "天津市",
+    "name": "tianjing"
+  },
+  {
+    "cnname": "上海市",
+    "name": "shanghai"
+  },
+  {
+    "cnname": "重庆市",
+    "name": "chongqing"
+  }
+]

@@ -32,14 +32,27 @@
 
 	function getBoundary(name,cnname){
 		var bdary = new BMap.Boundary();
-		bdary.get(cnname, function(rs){       //获取行政区域
-			var count = rs.boundaries.length; //行政区域的点有多少个
-			for (var i = 0; i < 1; i++) {
-                var file = new File(["var " + name +" = \""+rs.boundaries[i] + "\";"], name+ ".js", {type: "text/plain;charset=utf-8"});
+		if (name == "henan") {
+            bdary.get(cnname, function(rs){
+                var file = new File(["var " + name +" = \""+rs.boundaries[1] + "\";"], name+ ".js", {type: "text/plain;charset=utf-8"});
                 saveAs(file);
-				// var ply = new BMap.Polygon(rs.boundaries[i], {strokeWeight: 2, strokeColor: "#ff0000"}); //建立多边形覆盖物
-				// map.addOverlay(ply);  //添加覆盖物
-			}
-		});
+            });
+        } else if (name == "hubei") {
+            bdary.get(cnname, function(rs){
+                var file = new File(["var " + name +" = \""+rs.boundaries[2] + "\";"], name+ ".js", {type: "text/plain;charset=utf-8"});
+                saveAs(file);
+            });
+        } else if (name == "hunan") {
+            bdary.get(cnname, function(rs){
+                var file = new File(["var " + name +" = \""+rs.boundaries[3] + "\";"], name+ ".js", {type: "text/plain;charset=utf-8"});
+                saveAs(file);
+            });
+        } else {
+            bdary.get(cnname, function(rs){
+                var file = new File(["var " + name +" = \""+rs.boundaries[0] + "\";"], name+ ".js", {type: "text/plain;charset=utf-8"});
+                saveAs(file);
+            });
+        }
+
 	}
 </script>
