@@ -32,27 +32,18 @@
 
 	function getBoundary(name,cnname){
 		var bdary = new BMap.Boundary();
-		if (name == "henan") {
-            bdary.get(cnname, function(rs){
-                var file = new File(["var " + name +" = \""+rs.boundaries[1] + "\";"], name+ ".js", {type: "text/plain;charset=utf-8"});
-                saveAs(file);
-            });
-        } else if (name == "hubei") {
-            bdary.get(cnname, function(rs){
-                var file = new File(["var " + name +" = \""+rs.boundaries[2] + "\";"], name+ ".js", {type: "text/plain;charset=utf-8"});
-                saveAs(file);
-            });
-        } else if (name == "hunan") {
-            bdary.get(cnname, function(rs){
-                var file = new File(["var " + name +" = \""+rs.boundaries[3] + "\";"], name+ ".js", {type: "text/plain;charset=utf-8"});
-                saveAs(file);
-            });
-        } else {
-            bdary.get(cnname, function(rs){
-                var file = new File(["var " + name +" = \""+rs.boundaries[0] + "\";"], name+ ".js", {type: "text/plain;charset=utf-8"});
-                saveAs(file);
-            });
-        }
+        bdary.get(cnname, function(rs){
+            var index = 0;
+            if (name == "henan") {
+                index = 1;
+            } else if (name == "hubei") {
+                index = 2;
+            } else if (name == "hunan") {
+                index = 3;
+            }
+            var file = new File(["var " + name +" = \""+rs.boundaries[index] + "\";"], name+ ".js", {type: "text/plain;charset=utf-8"});
+            saveAs(file);
+        });
 
 	}
 </script>
