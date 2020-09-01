@@ -49,6 +49,7 @@
     <script type="text/javascript" src="libs/map/data/tianjing.js"></script>
     <script type="text/javascript" src="libs/map/data/shanghai.js"></script>
     <script type="text/javascript" src="libs/map/data/chongqing.js"></script>
+    <script type="text/javascript" src="libs/map/data/taiwan.js"></script>
 
     </head>
 <body>
@@ -187,46 +188,57 @@
         // }); //建立多边形覆盖物
         // map.addOverlay(yi);
 
-        drawLine(hebei);
-        drawLine(shanxi);
-        drawLine(liaoning);
-        drawLine(jilin);
-        drawLine(heilongjiang);
-        drawLine(jiangsu);
-        drawLine(zhejiang);
-        drawLine(anhui);
-        drawLine(fujian);
-        drawLine(jiangxi);
-        drawLine(shandong);
-        drawLine(henan);
-        drawLine(hubei);
-        drawLine(hunan);
-        drawLine(guangdong);
-        drawLine(hainan);
-        drawLine(sichuan);
-        drawLine(guizhou);
-        drawLine(yunnan);
-        drawLine(shaanxi);
-        drawLine(gansu);
-        drawLine(qinghai);
-        drawLine(neimenggu);
-        drawLine(guangxi);
-        drawLine(xizang);
-        drawLine(ningxia);
-        drawLine(xinjiang);
-        drawLine(beijing);
-        drawLine(tianjing);
-        drawLine(shanghai);
-        drawLine(chongqing);
+        //中部
+        drawLine(shanxi,"red");//山西
+        drawLine(hebei,"red");//河北
+        drawLine(hebei1,"red");//河北
+        drawLine(shaanxi,"red");//陕西
+        drawLine(henan,"red");//河南
+        drawLine(hubei,"red");//湖北
+        drawLine(beijing,"red");//北京
+        drawLine(tianjing,"red");//天津
 
+        //北部
+        drawLine(shandong,"green");//山东
+        drawLine(neimenggu,"green");//内蒙古
+        drawLine(heilongjiang,"green");//黑龙江
+        drawLine(liaoning,"green");//辽宁
+        drawLine(jilin,"green");//吉林
+
+        //东部
+        drawLine(shanghai,"blue");//上海
+        drawLine(anhui,"blue");//安徽
+        drawLine(jiangsu,"blue");//江苏
+        drawLine(zhejiang,"blue");//浙江
+        drawLine(taiwan,"blue");//台湾
+        drawLine(fujian,"blue");//福建
+        drawLine(jiangxi,"blue");//江西
+
+
+        //南部
+        drawLine(hunan,"purple");//湖南
+        drawLine(yunnan,"purple");//云南
+        drawLine(guangxi,"purple");//广西
+        drawLine(guizhou,"purple");//贵州
+        drawLine(guangdong,"purple");//广东
+        drawLine(hainan,"purple");//海南
+
+        //西部
+        drawLine(gansu,"yellow");//甘肃
+        drawLine(qinghai,"yellow");//青海
+        drawLine(xizang,"yellow");//西藏
+        drawLine(xinjiang,"yellow");//新疆
+        drawLine(chongqing,"yellow");//重庆
+        drawLine(sichuan,"yellow");//四川
+        drawLine(ningxia,"yellow");//宁夏
 
     }
 
-    function drawLine(line){
+    function drawLine(line,color){
         var lineObj = new BMap.Polygon(line, {
             strokeWeight: 1,
-            strokeColor: "#ff0000",
-            fillColor:"red",
+            strokeColor: color,
+            fillColor: color,
             fillColorOpacity:"0.4"
         }); //建立多边形覆盖物
         map.addOverlay(lineObj);

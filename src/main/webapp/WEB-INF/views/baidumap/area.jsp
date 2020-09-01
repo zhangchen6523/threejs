@@ -15,6 +15,7 @@
 </body>
 </html>
 <script type="text/javascript">
+    //http://lbsyun.baidu.com/jsdemo.htm#c1_10百度获取省区域轮廓界面
 
     //百度地图API功能
     var map = new BMap.Map("allmap");
@@ -34,7 +35,7 @@
 		var bdary = new BMap.Boundary();
         bdary.get(cnname, function(rs){
             var index = 0;
-            if (name == "henan") {
+            if (name == "henan" || name == "heilongjiang") {
                 index = 1;
             } else if (name == "hubei") {
                 index = 2;
