@@ -77,6 +77,11 @@ public class HtwebController {
         return "/threejs/earth";
     }
 
+    @RequestMapping(value = "/truck")
+    public String truck() {
+        return "/threejs/truck";
+    }
+
     @RequestMapping(value = "/map")
     public String map() {
         return "/baidumap/map";
