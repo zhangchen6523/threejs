@@ -163,6 +163,7 @@
             var modelScene=obj.scene;
             modelScene.scale.set(0.01, 0.01, 0.01);
             modelScene.rotateY(Math.PI/2);//Y旋转
+            //-20.0 -13.6 -9.0
             modelScene.translateX(9);
             modelScene.translateY(-13.6);
             modelScene.translateZ(-20);
