@@ -68,7 +68,7 @@
         new THREE.RGBELoader()
             .setDataType(THREE.UnsignedByteType)
             .setPath('assets/objs/transport/tex/')
-            .load('Sky1.hdr', function (texture) {
+            .load('Sky.hdr', function (texture) {
                 envMap = pmremGenerator.fromEquirectangular(texture).texture;
                 //scene.background = envMap;
                 scene.environment = envMap;
