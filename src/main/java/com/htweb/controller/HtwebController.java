@@ -92,4 +92,14 @@ public class HtwebController {
         return "/baidumap/area";
     }
 
+    @RequestMapping(value = "/tdearth")
+    public String tdearth() {
+        return "/cesium/3dearth";
+    }
+
+    @RequestMapping(value = "/lotbox")
+    public String lotBox() {
+        return "/threejs/lotbox";
+    }
+
 }
