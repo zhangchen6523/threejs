@@ -57,7 +57,7 @@
 
     //没有描边的处理方法
     function render() {
-        camera.lookAt(scene.position);
+        camera.lookAt(10,-10,0);//调整摄像机观察位置
         renderer.render(scene, camera);
     }
 
@@ -70,10 +70,9 @@
     //创建摄像机
     function initCamera() {
         camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.01, 10000);
-        camera.position.x = 150;
+        camera.position.x = 100;
         camera.position.y = 100;
-        camera.position.z = -150;
-        camera.lookAt(scene.position);
+        camera.position.z = -100;
     }
 
     //创建渲染器
@@ -94,7 +93,7 @@
     }
 
     //添加hdr环境光文件和模型
-    function loadHdrAndModel() {
+    function loadHdrAndModel(col,layer,row) {
         var pmremGenerator = new THREE.PMREMGenerator(renderer);
         pmremGenerator.compileEquirectangularShader();
 
@@ -108,17 +107,17 @@
                 scene.environment = envMap;
                 texture.dispose();
                 pmremGenerator.dispose();
-                loadBoxGltf();
+                loadBoxGltf(col,layer,row);
             });
     }
 
     //加载弹箱gltf模型方法
-    function loadBoxGltf(){
+    function loadBoxGltf(col,layer,row){
         var loder=new THREE.GLTFLoader();
         var group = new THREE.Group();
-        var col=10;
-        var layer=10;
-        var row=10;
+        // var col=10;
+        // var layer=10;
+        // var row=10;
         loder.load("assets/objs/transport/dxx.gltf",function (obj) {
             //获取模型，并添加到场景
             var modelScene = obj.scene;
@@ -188,14 +187,14 @@
         renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
 
         var models = document.getElementById('model');
-        initLight();
-        initCamera();
-        initRenderer();
-        initControls();
+        initLight();//设置灯光
+        initCamera();//设置摄像机位置
+        initRenderer();//设置渲染器
+        initControls();//设置控制器
         models.appendChild(renderer.domElement);
 
-        initAxes();
-        loadHdrAndModel();
+        initAxes();//设置辅助线
+        loadHdrAndModel(10,10,10);
 
         // document.getElementById("model").addEventListener('dblclick', mouseDblclick, false);
         window.addEventListener('resize', onWindowResize, false);
