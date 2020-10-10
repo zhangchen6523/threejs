@@ -93,7 +93,7 @@
     }
 
     //添加hdr环境光文件和模型
-    function loadHdrAndModel(col,layer,row) {
+    function loadHdrAndModel(layer,row,col,fulllayer,fullrow,renum) {
         var pmremGenerator = new THREE.PMREMGenerator(renderer);
         pmremGenerator.compileEquirectangularShader();
 
@@ -107,17 +107,14 @@
                 scene.environment = envMap;
                 texture.dispose();
                 pmremGenerator.dispose();
-                loadBoxGltf(col,layer,row);
+                loadBoxGltf(layer,row,col,fulllayer,fullrow,renum);
             });
     }
 
     //加载弹箱gltf模型方法
-    function loadBoxGltf(col,layer,row){
+    function loadBoxGltf(layer,row,col,fulllayer,fullrow,renum){
         var loder=new THREE.GLTFLoader();
         var group = new THREE.Group();
-        // var col=10;
-        // var layer=10;
-        // var row=10;
         loder.load("assets/objs/transport/dxx.gltf",function (obj) {
             //获取模型，并添加到场景
             var modelScene = obj.scene;
@@ -134,18 +131,52 @@
 
             var box = new THREE.Box3();
             box.expandByObject(modelScene);
-            // 平面阵列
-            for (var c = 0; c < col; c++) {
+
+            //满装处理
+            if (fulllayer == 0 && fullrow == 0 && renum == 0) {
+                // 平面阵列
                 for (var l = 0; l < layer; l++) {
                     for (var r = 0; r < row; r++) {
-                        //网格模型对象
+                        for (var c = 0; c < col; c++) {
+                            var cloneModel = modelScene.clone();
+                            cloneModel.position.set(-r * box.max.x * 2.17, l * box.max.z * 2.17, -c * box.max.y * 2.17);
+                            group.add(cloneModel);
+                        }
+                    }
+                }
+            } else {
+                //零车处理
+                //处理满层
+                for (var l = 0; l < fulllayer; l++) {
+                    for (var r = 0; r < row; r++) {
+                        for (var c = 0; c < col; c++) {
+                            var cloneModel = modelScene.clone();
+                            cloneModel.position.set(-r * box.max.x * 2.17, l * box.max.z * 2.17, -c * box.max.y * 2.17);
+                            group.add(cloneModel);
+                        }
+                    }
+                }
+
+                //处理满行
+                for (var r = 0; r < fullrow; r++) {
+                    for (var c = 0; c < col; c++) {
                         var cloneModel = modelScene.clone();
-                        //立方体间距15（阵列距离）
-                        cloneModel.position.set(r * box.max.x * 2.17, l * box.max.z * 2.17, c * box.max.y * 2.17);
+                        cloneModel.position.set(-r * box.max.x * 2.17, fulllayer * box.max.z * 2.17, -c * box.max.y * 2.17);
                         group.add(cloneModel);
                     }
                 }
+
+                //处理列余数
+                for (var c = 0; c < renum; c++) {
+                    var cloneModel = modelScene.clone();
+                    cloneModel.position.set(-fullrow * box.max.x * 2.17, fulllayer * box.max.z * 2.17, -c * box.max.y * 2.17);
+                    group.add(cloneModel);
+                }
             }
+
+
+
+
 
             var boxCenter = new THREE.Box3();
             boxCenter.expandByObject(group);
@@ -160,8 +191,6 @@
 
             group.position.set(-cx,-cy,-cz);
             scene.add(group);
-
-            // console.log(length+";"+width+";"+height);
 
         }, onProgress, onError);
 
@@ -194,14 +223,9 @@
         models.appendChild(renderer.domElement);
 
         initAxes();//设置辅助线
-        loadHdrAndModel(10,10,10);
+        loadHdrAndModel(3,3,3,2,1,2);
 
-        // document.getElementById("model").addEventListener('dblclick', mouseDblclick, false);
         window.addEventListener('resize', onWindowResize, false);
-    }
-
-    function mouseDblclick(){
-        controls.reset();//回归相机初始视角，将模型归位
     }
 
     function animate() {
@@ -220,8 +244,6 @@
             var percentComplete = xhr.loaded / xhr.total * 100;
             console.log( 'model ' + Math.round(percentComplete, 2) + '% downloaded' );
         }
-
-
     }
 
     function onError( xhr ) {
