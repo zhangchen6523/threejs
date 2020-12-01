@@ -1,3 +1,0 @@
-# htweb
-
-personal test project
