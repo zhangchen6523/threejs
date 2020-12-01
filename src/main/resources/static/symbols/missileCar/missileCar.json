@@ -1,9 +1,0 @@
-{
-  "modelType": "obj",
-  "obj": "assets/objs/missileCar/missileCar.obj",
-  "mtl": "assets/objs/missileCar/missileCar.mtl",
-  "reverseFlipMtls": "*",
-
-  "image": "",
-  "prefix": "assets/objs/missileCar/"
-}

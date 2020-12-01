@@ -1,9 +1,0 @@
-{
-  "modelType": "obj",
-  "obj": "assets/objs/transport/transport.obj",
-  "mtl": "assets/objs/transport/transport.mtl",
-  "reverseFlipMtls": "*",
-
-  "image": "",
-  "prefix": "assets/objs/transport/"
-}
