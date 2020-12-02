@@ -2,82 +2,151 @@
 <%@ page contentType="text/html;charset=utf-8"%>
 <html>
 <head>
-    <title>gas 3d</title>
-    <meta charset="UTF-8">
-    <!--<link rel="shortcut icon" href="custom/images/favicon.ico?v=2" />-->
-    <style>
-        html, body {
-            padding: 0px;
-            margin: 0px;
-        }
-        .main {
-            background: #426AA1;
-            margin: 0px;
-            padding: 0px;
-            position: absolute;
-            top: 0px;
-            bottom: 0px;
-            left: 0px;
-            right: 0px;
-        }
-    </style>
-    <script>
-        //通过全局样式设置 去掉默认选中样式（去掉绿色边框）
-        window.htconfig = {
-            Style: {
-                'select.width': 0
-            }
-        }
-    </script>
-    <!--<script src='../custom/configs/htconfig.js'></script>-->
-    <script src='guide/lib/core/ht.js'></script>
-    <script src='libs/ht-ui.js'></script>
-    <script src='libs/ht-edgetype.js'></script>
-    <script src='libs/ht-obj.js'></script>
-    <script src='libs/ht-vector.js'></script>
-    <script src="libs/ht-animation.js"></script>
-    <script>
-        function init(){
-            dataModel = new ht.DataModel();
-            g3d = new ht.graph3d.Graph3dView(dataModel);
-
-            view = g3d.getView();
-            view.className = 'main';
-            document.body.appendChild(view);
-            window.addEventListener('resize', function (e) {
-                g3d.invalidate();
-            }, false);
-
-            g3d.setEye([0, 500, 1000]);
-            g3d.setCenter([0, 200, 0]);
-            g3d.setGridVisible(true);
-            g3d.setGridColor('#74AADA');
-
-            loadObj('E1', -600, {r3: [0, Math.PI/2, 0], s3: [2, 1.5, 1]});
-        }
-
-        function loadObj(name, x, params){
-            params.prefix = 'assets/管道/';
-            params.center = true;
-            params.cube = true;
-            params.shape3d = name;
-            params.finishFunc = function(modelMap, array, rawS3){
-                var node = new ht.Node();
-                node.s({
-                    'shape3d': name,
-                    'wf.visible': 'selected',
-                    'wf.width': 3,
-                    'wf.color': '#F7F691'
-                });
-                node.s3(rawS3);
-                node.p3(x, rawS3[1]/2, 0);
-                dataModel.add(node);
-            };
-
-            ht.Default.loadObj('assets/submarine/i19/i19.obj', 'assets/submarine/i19/i19.mtl', params);
-        }
-    </script>
+    <title>threejs</title>
+    <meta charset="utf-8">
 </head>
-<body onload='setTimeout(init, 300)'>
+<body>
+<div id="model"></div>
+<script src="libs/threejs/three.js"></script>
+<script src="libs/threejs/loaders/OBJLoader.js"></script>
+<script src="libs/threejs/loaders/MTLLoader.js"></script>
+<script src="libs/threejs/loaders/GLTFLoader.js"></script>
+<script src="libs/threejs/loaders/RGBELoader.js"></script>
+<script src="libs/threejs/controls/OrbitControls.js"></script>
+<script src="libs/threejs/postprocessing/EffectComposer.js"></script>
+<script src="libs/threejs/postprocessing/ShaderPass.js"></script>
+<script src="libs/threejs/postprocessing/OutlinePass.js"></script>
+<script src="libs/threejs/postprocessing/RenderPass.js"></script>
+<script src="libs/threejs/shader/CopyShader.js"></script>
+
+<script>
+    var camera, scene, renderer, controls;
+    //https://threejs.org/editor/直接使用
+
+    init();
+    animate();
+
+    //没有描边的处理方法
+    function render() {
+        camera.lookAt(scene.position);
+        renderer.render(scene, camera);
+    }
+
+    //创建辅助坐标，调整模型位置打开
+    function initAxes() {
+        var axes = new THREE.AxisHelper(20);
+        scene.add(axes);
+    }
+
+    //创建摄像机
+    function initCamera() {
+        camera = new THREE.PerspectiveCamera(30, window.innerWidth / window.innerHeight, 0.01, 1000);
+        camera.position.x = 0;
+        camera.position.y = 20;
+        camera.position.z = 130;
+        camera.lookAt(scene.position);
+    }
+
+    //创建渲染器
+    function initRenderer() {
+        // renderer.setClearColor(new THREE.Color(0xEEEEEE, 1.0));//添加背景颜色
+        renderer.setClearAlpha(0.2);
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        // renderer.toneMappingExposure = 1.1;//曝光度
+        renderer.outputEncoding = THREE.sRGBEncoding;//切换rgb模式输出，模型变亮
+
+        renderer.render(scene, camera);
+    }
+
+    //创建控制器
+    function initControls() {
+        controls = new THREE.OrbitControls(camera, renderer.domElement);
+        controls.autoRotate = true;// 设置平面自动旋转
+    }
+
+    //加载Mtl模型方法
+    function loadMtl(){
+        var loder=new THREE.MTLLoader();
+        var path = 'assets/submarine/i19/';
+        loder.setPath(path);
+        loder.load("i19.mtl",function (materials) {
+            materials.preload();
+            var objLoader = new THREE.OBJLoader();
+            objLoader.setMaterials(materials);
+            objLoader.setPath(path);
+            objLoader.load('i19.obj', function(object) {
+                object.scale.set(0.01, 0.01, 0.01);
+                object.rotateY(-Math.PI/2);
+                // var box = new THREE.Box3();
+                // box.expandByObject(object);
+                // var length = box.max.x - box.min.x;
+                // var width = box.max.z - box.min.z;
+                // var height = box.max.y - box.min.y;
+                // alert(length);
+                scene.add(object);
+
+            }, onProgress, onError);
+        }, onProgress, onError);
+    }
+
+    function init() {
+        // scene
+        scene = new THREE.Scene();
+        renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+
+        var models = document.getElementById('model');
+        initLight();
+        initCamera();
+        initRenderer();
+        initControls();
+        // initModelOutline();
+        models.appendChild(renderer.domElement);
+
+        initAxes();
+        loadMtl();
+
+        document.getElementById("model").addEventListener('dblclick', mouseDblclick, false);
+        window.addEventListener('resize', onWindowResize, false);
+    }
+
+    //添加光
+    var ambientLight,pointLight;
+    function initLight() {
+        ambientLight = new THREE.AmbientLight("#ffffff",2);
+        scene.add(ambientLight);
+
+        pointLight = new THREE.PointLight("#ffffff",2);
+        pointLight.position.set(100, 100, 100);
+        scene.add(pointLight);
+    }
+
+    function mouseDblclick(){
+        controls.reset();//回归相机初始视角，将模型归位
+    }
+
+    function animate() {
+        // composer.render();
+        render();
+        requestAnimationFrame(animate);
+
+    }
+
+    function onWindowResize() {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth , window.innerHeight);
+    }
+
+    function onProgress( xhr ) {
+        if (xhr.lengthComputable) {
+            var percentComplete = xhr.loaded / xhr.total * 100;
+            console.log( 'model ' + Math.round(percentComplete, 2) + '% downloaded' );
+        }
+    }
+
+    function onError( xhr ) {
+        console.log( 'model ' + xhr + 'downloaded' );
+    }
+</script>
 </body>
 </html>
