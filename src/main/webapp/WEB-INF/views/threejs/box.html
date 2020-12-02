@@ -1,0 +1,127 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>装箱效果</title>
+    <style type="text/css">
+        .box {
+        }
+        .box-tr {
+            overflow: hidden;
+            margin-left: -10px;
+        }
+        .box-td {
+            height: 100px;
+            float: left;
+            padding-left: 10px;
+            margin-bottom: 10px;
+        }
+        .box .back {
+             width: 100px;
+             height: inherit;
+             background-image: url('back.png');
+             background-size:100% 100%;
+         }
+        .box .left {
+            width: 400px;
+            height: inherit;
+            background-image: url('left.png');
+            background-size:100% 100%;
+        }
+        .box .top {
+            width: 400px;
+            height: inherit;
+            background-image: url('top.png');
+            background-size:100% 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" style="border-left: red solid 1px;">
+        <div class="box-tr" style="border-top: red solid 1px;">
+            <div class="box-td">
+                <div class="back" style="border-top: red solid 1px;border-left: red solid 1px;">
+                </div>
+            </div>
+            <div class="box-td">
+                <div class="back">
+                </div>
+            </div>
+            <div class="box-td">
+                <div class="back">
+                </div>
+            </div>
+            <div class="box-td">
+                <div class="back">
+                </div>
+            </div>
+        </div>
+        <div class="box-tr">
+            <div class="box-td">
+                <div class="back">
+                </div>
+            </div>
+            <div class="box-td">
+                <div class="back">
+                </div>
+            </div>
+            <div class="box-td">
+                <div class="back" >
+                </div>
+            </div>
+            <div class="box-td">
+                <div class="back" >
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="box" style="border-left: red solid 1px;">
+        <div class="box-tr" style="border-top: red solid 1px;">
+            <div class="box-td">
+                <div class="left" style="border-top: red solid 1px;border-left: red solid 1px;">
+                </div>
+            </div>
+            <div class="box-td">
+                <div class="left">
+                </div>
+            </div>
+        </div>
+        <div class="box-tr">
+            <div class="box-td">
+                <div class="left">
+                </div>
+            </div>
+            <div class="box-td">
+                <div class="left">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="box" style="border-left: red solid 1px;">
+        <div class="box-tr" style="border-top: red solid 1px;">
+            <div class="box-td">
+                <div class="top" style="border-top: red solid 1px;border-left: red solid 1px;">
+                </div>
+            </div>
+            <div class="box-td">
+                <div class="top">
+                </div>
+            </div>
+        </div>
+        <div class="box-tr">
+            <div class="box-td">
+                <div class="top">
+                </div>
+            </div>
+            <div class="box-td">
+                <div class="top">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
