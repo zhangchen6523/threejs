@@ -63,6 +63,11 @@ public class HtwebController {
         return "/baidumap/area";
     }
 
+    @RequestMapping(value = "/openlayers")
+    public String openlayers() {
+        return "/openlayers/openlayers";
+    }
+
     @RequestMapping(value = "/lotbox")
     public String lotBox() {
         return "/threejs/lotbox";
